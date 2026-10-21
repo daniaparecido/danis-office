@@ -1,34 +1,43 @@
 {
   "$schema": "./site-config.schema.json",
-  "version": 1,
+  "version": 2,
   "generated_at": "2026-10-21T10:21:02-03:00",
-  "featured": [
-    {
-      "long_form_id": "DW3F1OHfZeo",
-      "short_form_ids": [
-        "1m9rl_lxits",
-        "scK-D1Eg7PY"
-      ]
-    },
-    {
-      "long_form_id": "D0tZ5NaRobM",
-      "short_form_ids": [
-        "de-cT8ZLQzs"
-      ]
-    },
-    {
-      "long_form_id": "DaEP-ij-1KA",
-      "short_form_ids": [
-        "AT9g-2yrS5s",
-        "UkEXXO-o8b8",
-        "i9px6iapZd4"
-      ]
-    }
-  ],
   "sections": [
+    {
+      "id": "featured",
+      "title": "Featured",
+      "layout": "hero",
+      "groups": [
+        {
+          "label": "",
+          "long_form_id": "DW3F1OHfZeo",
+          "short_form_ids": [
+            "1m9rl_lxits",
+            "scK-D1Eg7PY"
+          ]
+        },
+        {
+          "label": "",
+          "long_form_id": "D0tZ5NaRobM",
+          "short_form_ids": [
+            "de-cT8ZLQzs"
+          ]
+        },
+        {
+          "label": "",
+          "long_form_id": "DaEP-ij-1KA",
+          "short_form_ids": [
+            "AT9g-2yrS5s",
+            "UkEXXO-o8b8",
+            "i9px6iapZd4"
+          ]
+        }
+      ]
+    },
     {
       "id": "long-form",
       "title": "Long-form",
+      "layout": "wide",
       "video_ids": [
         "KZYFvgajyPE",
         "_lZYR2VkZTg",
@@ -47,6 +56,7 @@
     {
       "id": "short-form",
       "title": "Short-form",
+      "layout": "tall",
       "video_ids": [
         "7452871620013903150",
         "DIOkD4iMlUJ",
@@ -65,6 +75,7 @@
     {
       "id": "motion-design",
       "title": "Motion Design",
+      "layout": "wide",
       "video_ids": []
     }
   ]

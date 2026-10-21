@@ -395,58 +395,106 @@ def project_obj(category, item):
     return obj
 
 
-def resolve_featured(by_id, site_config):
-    """Resolve site-config.json `featured` groups into full project objects.
+SECTION_LAYOUTS = ("hero", "wide", "tall")
 
-    Each output group is {longForm: <project>, shortForm: [<project>, ...]}.
-    Missing IDs are skipped with a warning; a group with no resolvable long-form
-    is dropped entirely (nothing to anchor it on)."""
-    out = []
-    for group in site_config.get("featured", []):
-        lf_id = group.get("long_form_id")
-        lf = by_id.get(lf_id)
-        if lf is None:
-            print(f"  WARNING: featured long_form_id {lf_id!r} not found in library; skipping group")
-            continue
-        shorts = []
-        for sid in group.get("short_form_ids", []):
-            s = by_id.get(sid)
-            if s is None:
-                print(f"  WARNING: featured short_form_id {sid!r} not found in library; skipping")
-                continue
-            shorts.append(project_obj(s.get("category", "short-form"), s))
-        out.append({
-            "longForm": project_obj(lf.get("category", "long-form"), lf),
-            "shortForm": shorts,
+
+def migrate_site_config(cfg):
+    """Config v1 (a `featured` list plus category `sections`) -> v2 (one ordered
+    list of sections, each with a layout). v1's featured becomes a hero section
+    titled "Featured"; the old short-form section becomes a tall grid, every
+    other section a wide grid. Idempotent on v2 input."""
+    if cfg.get("version") == 2:
+        return cfg
+    out = {"$schema": "./site-config.schema.json", "version": 2,
+           "generated_at": cfg.get("generated_at", ""), "sections": []}
+    featured = cfg.get("featured") or []
+    if featured:
+        out["sections"].append({
+            "id": "featured", "title": "Featured", "layout": "hero",
+            "groups": [{"label": "", "long_form_id": g.get("long_form_id", "") or "",
+                        "short_form_ids": list(g.get("short_form_ids", []) or [])} for g in featured],
+        })
+    for s in cfg.get("sections") or []:
+        out["sections"].append({
+            "id": s.get("id", ""), "title": s.get("title", ""),
+            "layout": "tall" if s.get("id") == "short-form" else "wide",
+            "video_ids": list(s.get("video_ids", []) or []),
         })
     return out
 
 
-def generate_projects_js(library, site_config, totals):
-    """Build js/projects.js: a legacy-shaped `projects` array (the flat grids)
-    plus a resolved `featured` array (the curated hero groups), both filtered to
-    whatever data/site-config.json marks as visible.
+def resolve_sections(by_id, site_config):
+    """Turn site-config sections into the `sections` global the front end draws.
 
-    Iterates sections in order; within each section, iterates video_ids in
-    order. `featured` groups are resolved from site-config.json directly so the
-    front-end gets full video objects without fetching the big library.json.
+    hero: {id, title, layout, groups: [{label, longForm|null, shortForm: [...]}]}
+    wide / tall: {id, title, layout, items: [...]}
+    Each video becomes a full project object (project_obj) so the page never
+    needs library.json. Unknown ids are skipped with a warning; a hero group
+    with nothing left is dropped."""
+    out, missing = [], []
+    for section in site_config.get("sections", []):
+        layout = section.get("layout") or "wide"
+        entry = {"id": section["id"], "title": section.get("title", ""), "layout": layout}
+        if layout == "hero":
+            groups = []
+            for g in section.get("groups", []) or []:
+                lf_id = g.get("long_form_id") or ""
+                lf = by_id.get(lf_id) if lf_id else None
+                if lf_id and lf is None:
+                    missing.append((section["id"], lf_id))
+                shorts = []
+                for sid in g.get("short_form_ids", []) or []:
+                    s = by_id.get(sid)
+                    if s is None:
+                        missing.append((section["id"], sid))
+                        continue
+                    shorts.append(project_obj(s.get("category", "short-form"), s))
+                if lf is None and not shorts:
+                    continue
+                groups.append({
+                    "label": g.get("label") or "",
+                    "longForm": project_obj(lf.get("category", "long-form"), lf) if lf else None,
+                    "shortForm": shorts,
+                })
+            entry["groups"] = groups
+        else:
+            items = []
+            for vid in section.get("video_ids", []) or []:
+                item = by_id.get(vid)
+                if item is None:
+                    missing.append((section["id"], vid))
+                    continue
+                items.append(project_obj(item.get("category") or "", item))
+            entry["items"] = items
+        out.append(entry)
+    return out, missing
+
+
+def count_visible(sections_resolved):
+    n = 0
+    for s in sections_resolved:
+        if s["layout"] == "hero":
+            n += sum((1 if g["longForm"] else 0) + len(g["shortForm"]) for g in s["groups"])
+        else:
+            n += len(s["items"])
+    return n
+
+
+def generate_projects_js(library, site_config, totals):
+    """Build js/projects.js: the `sections` global (every section resolved to
+    full video objects, in page order) plus a flat legacy `projects` array of
+    the grid items, filtered to whatever data/site-config.json marks as visible.
     """
     by_id = {item["id"]: item for item in library}
-    ordered = []
-    missing = []
-    for section in site_config.get("sections", []):
-        category = section["id"]
-        for vid in section.get("video_ids", []):
-            item = by_id.get(vid)
-            if item is None:
-                missing.append((category, vid))
-                continue
-            ordered.append((category, item))
+    sections_resolved, missing = resolve_sections(by_id, site_config)
     if missing:
-        for category, vid in missing:
-            print(f"  WARNING: site-config id {vid} ({category}) not found in library")
-
-    featured = resolve_featured(by_id, site_config)
+        for sec_id, vid in missing:
+            print(f"  WARNING: site-config id {vid} (section {sec_id}) not found in library")
+    ordered = []
+    for s in sections_resolved:
+        if s["layout"] != "hero":
+            for obj in s["items"]:
+                ordered.append(obj)
 
     lines = [
         "/**",
@@ -466,10 +514,10 @@ def generate_projects_js(library, site_config, totals):
         # same edit count once per platform on purpose.
         f"const totalVideos = {len(library)};",
         "",
+        "// Flat list of the grid items (legacy shape; the page draws `sections` below).",
         "const projects = [",
     ]
-    for category, item in ordered:
-        obj = project_obj(category, item)
+    for obj in ordered:
         entry = [
             "    {",
             f'        title: "{escape_js(obj["title"])}",',
@@ -499,9 +547,9 @@ def generate_projects_js(library, site_config, totals):
         lines += entry
     lines += ["];", ""]
     lines += [
-        "// Curated hero groups: one big long-form video + companion shorts each.",
-        "// Resolved from data/site-config.json at sync time.",
-        "const featured = " + json.dumps(featured, ensure_ascii=False, indent=2) + ";",
+        "// Sections in page order, resolved from data/site-config.json at sync time.",
+        "// layout hero: groups of {label, longForm|null, shortForm[]}; wide / tall: items[].",
+        "const sections = " + json.dumps(sections_resolved, ensure_ascii=False, indent=2) + ";",
         "",
     ]
     return "\n".join(lines)
@@ -518,8 +566,11 @@ def compute_youtube_totals(library):
 def load_site_config():
     if not SITE_CONFIG_FILE.exists():
         print(f"  site-config.json not found at {SITE_CONFIG_FILE}; projects.js will be empty")
-        return {"version": 1, "featured": [], "sections": []}
-    return json.loads(SITE_CONFIG_FILE.read_text(encoding="utf-8"))
+        return {"version": 2, "sections": []}
+    cfg = json.loads(SITE_CONFIG_FILE.read_text(encoding="utf-8"))
+    if cfg.get("version") != 2:
+        print("  site-config.json is version 1; using it as version 2 in memory (the editor rewrites it on save)")
+    return migrate_site_config(cfg)
 
 
 # ============================================
@@ -561,7 +612,7 @@ def main():
 
     site_config = load_site_config()
     js_content = generate_projects_js(library, site_config, totals)
-    visible_count = sum(len(s.get("video_ids", [])) for s in site_config.get("sections", []))
+    visible_count = count_visible(resolve_sections({item["id"]: item for item in library}, site_config)[0])
     if args.dry_run:
         print(f"[DRY RUN] Would write {visible_count} entries to {PROJECTS_FILE}")
     else:

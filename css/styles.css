@@ -1040,10 +1040,22 @@ button {
 }
 
 /* ========================================
-   Vertical Video Grid Items (Instagram/TikTok)
+   Tall grid (9:16 tiles): the "tall" section layout
    ======================================== */
-#short-form-grid .grid-item-thumb {
+.grid.grid-tall .grid-item-thumb {
     aspect-ratio: 9 / 16;
+}
+
+/* Hero group with no long-form: a full-width row of shorts under its own
+   label (a series of shorts). Six tiles across so they keep the size they have
+   beside a long-form, where the shorts column is about half the width. */
+.featured-group.shorts-only .featured-shorts {
+    border-left: none;
+    padding-left: 0;
+}
+
+.featured-group.shorts-only .featured-shorts-row .grid-item {
+    flex: 0 0 calc((100% - var(--shorts-gap) * 5) / 6);
 }
 
 /* ========================================
@@ -1309,9 +1321,22 @@ button {
         padding: 0;
     }
 
+    .mobile-tabs {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .mobile-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Any number of sections: tabs share the width, and once they would get
+       narrower than a quarter of the screen the strip scrolls sideways. */
     .mobile-tab {
-        flex: 1;
-        padding: 12px 4px;
+        flex: 1 0 auto;
+        min-width: 25%;
+        white-space: nowrap;
+        padding: 12px 10px;
         font-family: inherit;
         font-size: 11px;
         font-weight: 400;
@@ -1429,13 +1454,13 @@ button {
         overflow: hidden;
     }
 
-    /* Short-form: YouTube Shorts style — 2 cols, cropped, overlaid text */
-    #short-form-grid .grid-item-thumb {
+    /* Tall grid: YouTube Shorts style — 2 cols, cropped, overlaid text */
+    .grid.grid-tall .grid-item-thumb {
         aspect-ratio: 4 / 5;
         border-radius: 8px;
     }
 
-    #short-form-grid .grid-item-overlay {
+    .grid.grid-tall .grid-item-overlay {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -1445,12 +1470,17 @@ button {
         border-radius: 0 0 8px 8px;
     }
 
-    #short-form-grid .grid-item-title {
+    .grid.grid-tall .grid-item-title {
         color: #ffffff;
     }
 
-    #short-form-grid .grid-item {
+    .grid.grid-tall .grid-item {
         position: relative;
+    }
+
+    /* Shorts-only hero rows scroll on the phone like any other shorts row. */
+    .featured-group.shorts-only .featured-shorts-row .grid-item {
+        flex-basis: 44%;
     }
 
     .grid-item-overlay {

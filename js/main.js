@@ -12,8 +12,6 @@
     // ============================================
     // DOM Elements
     // ============================================
-    const longFormGrid = document.getElementById('long-form-grid');
-    const shortFormGrid = document.getElementById('short-form-grid');
     const lightbox = document.getElementById('lightbox');
     const lightboxClose = document.getElementById('lightbox-close');
     const videoContainer = document.getElementById('video-container');
@@ -405,78 +403,103 @@
     }
 
     /**
-     * Render projects to a specific grid element
+     * Render every section from the `sections` global in projects.js, in
+     * order. Layouts: "hero" (rows of one optional long-form plus its shorts),
+     * "wide" (16:9 grid), "tall" (9:16 grid). Titles are free text chosen in
+     * the editor. How a video plays is decided per item (platform, category,
+     * localSource), never by the section it sits in, so sections can be
+     * renamed or re-laid-out freely. Empty sections stay off the page.
      */
-    function renderGrid(grid, projectsToShow) {
-        if (!grid) return;
+    function renderSections() {
+        const root = document.getElementById('sections-root');
+        if (!root) return;
+        root.innerHTML = '';
+        const list = (typeof sections !== 'undefined' && Array.isArray(sections)) ? sections : [];
+        list.forEach(section => {
+            const count = section.layout === 'hero'
+                ? (section.groups || []).reduce((n, g) => n + (g.longForm ? 1 : 0) + (g.shortForm || []).length, 0)
+                : (section.items || []).length;
+            if (!count) return;
 
-        grid.innerHTML = '';
+            const el = document.createElement('section');
+            el.className = 'section' + (section.layout === 'hero' ? ' featured-section' : '');
+            el.id = 'section-' + section.id;
+            el.dataset.layout = section.layout;
 
-        projectsToShow.forEach(project => {
-            const item = createGridItem(project);
-            grid.appendChild(item);
+            const title = document.createElement('h2');
+            title.className = 'section-title';
+            title.textContent = section.title || '';
+            el.appendChild(title);
+
+            if (section.layout === 'hero') {
+                const container = document.createElement('div');
+                container.className = 'featured-container';
+                renderHero(section, container);
+                el.appendChild(container);
+            } else {
+                const grid = document.createElement('div');
+                grid.className = 'grid ' + (section.layout === 'tall' ? 'grid-tall' : 'grid-wide');
+                grid.id = section.id + '-grid';
+                (section.items || []).forEach(p => grid.appendChild(createGridItem(p)));
+                el.appendChild(grid);
+            }
+            root.appendChild(el);
         });
     }
 
     /**
-     * Render the curated "Featured" section: one big long-form tile with a
-     * small row of companion shorts beside it, groups stacked vertically.
-     * Data comes from the `featured` global in projects.js (auto-generated);
-     * if it's missing or empty the section stays hidden.
+     * A hero section: each group is one big long-form tile with a row of
+     * companion shorts beside it, or, with no long-form, a full-width row of
+     * shorts under its own label (a series of shorts, for instance). The row
+     * label is the group's label, else the long-form's channel, else the
+     * section title.
      */
-    function renderFeatured() {
-        const section = document.getElementById('section-featured');
-        const container = document.getElementById('featured-container');
-        if (!section || !container) return;
-        if (typeof featured === 'undefined' || !Array.isArray(featured) || featured.length === 0) {
-            return; // section keeps its `hidden` attribute
-        }
-
-        container.innerHTML = '';
-        featured.forEach(group => {
-            if (!group || !group.longForm) return;
+    function renderHero(section, container) {
+        (section.groups || []).forEach(group => {
+            if (!group) return;
+            const shorts = Array.isArray(group.shortForm) ? group.shortForm : [];
+            if (!group.longForm && !shorts.length) return;
 
             const groupEl = document.createElement('div');
-            groupEl.className = 'featured-group';
+            groupEl.className = 'featured-group' + (group.longForm ? '' : ' shorts-only');
+            const label = group.label || (group.longForm && group.longForm.channelName) || section.title || '';
 
-            const mainEl = document.createElement('div');
-            mainEl.className = 'featured-main';
+            if (group.longForm) {
+                const mainEl = document.createElement('div');
+                mainEl.className = 'featured-main';
 
-            const eyebrow = document.createElement('span');
-            eyebrow.className = 'featured-eyebrow';
-            eyebrow.textContent = group.longForm.channelName || 'Featured project';
-            mainEl.appendChild(eyebrow);
+                const eyebrow = document.createElement('span');
+                eyebrow.className = 'featured-eyebrow';
+                eyebrow.textContent = label || 'Featured project';
+                mainEl.appendChild(eyebrow);
 
-            mainEl.appendChild(createGridItem(group.longForm, { noIframePreview: true }));
-            groupEl.appendChild(mainEl);
+                mainEl.appendChild(createGridItem(group.longForm, { noIframePreview: true }));
+                groupEl.appendChild(mainEl);
+            }
 
-            const shorts = Array.isArray(group.shortForm) ? group.shortForm : [];
             if (shorts.length) {
                 const shortsEl = document.createElement('div');
                 shortsEl.className = 'featured-shorts';
 
-                const label = document.createElement('span');
-                label.className = 'featured-shorts-label';
-                label.textContent = 'Related shorts';
-                shortsEl.appendChild(label);
+                const shortsLabel = document.createElement('span');
+                shortsLabel.className = 'featured-shorts-label';
+                shortsLabel.textContent = group.longForm ? (group.shortsLabel || 'Related shorts') : label;
+                shortsEl.appendChild(shortsLabel);
 
                 const viewport = document.createElement('div');
                 viewport.className = 'featured-shorts-viewport';
 
                 const row = document.createElement('div');
                 row.className = 'featured-shorts-row';
-                // noIframePreview: same reason as the featured-main hero tile —
-                // YouTube's iframe preview shows player chrome (Powered by X
-                // overlay, prev/pause/next, YouTube logo) which looks terrible
-                // on a curated showcase tile. Local clip if available, else
-                // just the static thumbnail on hover.
+                // noIframePreview: YouTube's iframe preview shows player chrome
+                // (Powered by X overlay, prev/pause/next, YouTube logo) which
+                // looks terrible on a curated showcase tile. Local clip if
+                // available, else just the static thumbnail on hover.
                 shorts.forEach(s => row.appendChild(createGridItem(s, { noIframePreview: true })));
                 viewport.appendChild(row);
 
-                // Nav arrows are mounted lazily: once we've measured that the row
-                // actually overflows (more shorts than fit in view), we attach
-                // prev/next buttons and a scroll listener. ≤3 shorts -> nothing
-                // mounted -> behavior identical to the pre-scroller version.
+                // Nav arrows are mounted lazily once the row is measured to
+                // overflow (more shorts than fit in view).
                 setupShortsNav(viewport, row);
 
                 shortsEl.appendChild(viewport);
@@ -485,8 +508,6 @@
 
             container.appendChild(groupEl);
         });
-
-        section.hidden = false;
     }
 
     /**
@@ -837,59 +858,40 @@
         const tabsContainer = document.getElementById('mobile-tabs');
         if (!tabsContainer) return;
 
-        const featuredSection = document.getElementById('section-featured');
-        const longFormSection = document.getElementById('section-long-form');
-        const shortFormSection = document.getElementById('section-short-form');
-
-        // The Featured section is `hidden` until renderFeatured() finds data.
-        // If there's nothing to show, drop the Featured tab so it can't be selected.
-        const featuredTab = tabsContainer.querySelector('.mobile-tab[data-tab="featured"]');
-        if (featuredTab && (!featuredSection || featuredSection.hidden)) {
-            featuredTab.remove();
-        }
-
-        const tabs = tabsContainer.querySelectorAll('.mobile-tab');
-        const defaultTab = tabsContainer.querySelector('.mobile-tab').dataset.tab;
+        // One tab per rendered section, labelled with the section title.
+        const sectionEls = Array.from(document.querySelectorAll('#sections-root > .section'));
+        tabsContainer.innerHTML = '';
+        sectionEls.forEach(sec => {
+            const btn = document.createElement('button');
+            btn.className = 'mobile-tab';
+            btn.type = 'button';
+            btn.dataset.tab = sec.id.replace(/^section-/, '');
+            const t = sec.querySelector('.section-title');
+            btn.textContent = (t && t.textContent) || btn.dataset.tab;
+            tabsContainer.appendChild(btn);
+        });
+        const tabs = Array.from(tabsContainer.querySelectorAll('.mobile-tab'));
+        if (!tabs.length) return;
+        const defaultTab = tabs[0].dataset.tab;
 
         function switchTab(tabName) {
-            tabs.forEach(function(t) {
-                t.classList.toggle('active', t.dataset.tab === tabName);
-            });
-
-            if (featuredSection && !featuredSection.hidden) {
-                featuredSection.classList.toggle('mobile-hidden', tabName !== 'featured');
-            }
-            if (longFormSection) {
-                longFormSection.classList.toggle('mobile-hidden', tabName !== 'long-form');
-            }
-            if (shortFormSection) {
-                shortFormSection.classList.toggle('mobile-hidden', tabName !== 'short-form');
-            }
+            tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+            sectionEls.forEach(sec => sec.classList.toggle('mobile-hidden', sec.id !== 'section-' + tabName));
         }
 
-        tabs.forEach(function(tab) {
-            tab.addEventListener('click', function() {
-                switchTab(tab.dataset.tab);
-            });
-        });
+        tabs.forEach(tab => tab.addEventListener('click', () => switchTab(tab.dataset.tab)));
 
         // Set initial state on mobile: show the first tab's section
-        var isMobile = window.matchMedia('(max-width: 768px)').matches;
-        if (isMobile) {
-            switchTab(defaultTab);
-        }
+        const mq = window.matchMedia('(max-width: 768px)');
+        if (mq.matches) switchTab(defaultTab);
 
         // Listen for resize to show/hide sections appropriately
-        window.matchMedia('(max-width: 768px)').addEventListener('change', function(e) {
+        mq.addEventListener('change', e => {
             if (e.matches) {
-                // Switched to mobile — apply active tab
-                var activeTab = tabsContainer.querySelector('.mobile-tab.active');
+                const activeTab = tabsContainer.querySelector('.mobile-tab.active');
                 switchTab(activeTab ? activeTab.dataset.tab : defaultTab);
             } else {
-                // Switched to desktop — show all sections
-                if (featuredSection) featuredSection.classList.remove('mobile-hidden');
-                if (longFormSection) longFormSection.classList.remove('mobile-hidden');
-                if (shortFormSection) shortFormSection.classList.remove('mobile-hidden');
+                sectionEls.forEach(sec => sec.classList.remove('mobile-hidden'));
             }
         });
     }
@@ -953,17 +955,12 @@
     }
 
     function init() {
-        if (typeof projects === 'undefined' || !Array.isArray(projects)) {
-            console.error('Projects data not found. Make sure projects.js is loaded before main.js');
+        if (typeof sections === 'undefined' || !Array.isArray(sections)) {
+            console.error('Section data not found. Make sure projects.js is loaded before main.js');
             return;
         }
 
-        const longFormProjects = projects.filter(p => p.category === 'long-form');
-        const shortFormProjects = projects.filter(p => p.category === 'short-form');
-
-        renderFeatured();
-        renderGrid(longFormGrid, longFormProjects);
-        renderGrid(shortFormGrid, shortFormProjects);
+        renderSections();
         initLightbox();
         initVideoListDropdown();
         initCopyEmail();

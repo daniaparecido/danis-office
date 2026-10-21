@@ -2,61 +2,71 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://daniaparecido.github.io/danis-office/data/site-config.schema.json",
   "title": "Dani's Office site config",
-  "description": "Curation layer driving the live portfolio. Every videoId here must exist in data/library.json. Edited via the visual editor (editor.html), consumed by the front-end and by scripts/sync_from_sheet.py.",
+  "description": "Curation layer driving the live portfolio: one ordered list of named sections, each with a layout. Every video id must exist in data/library.json. Edited via the visual editor (editor.html), consumed by scripts/sync_from_sheet.py which resolves it into js/projects.js for the front end. Version 1 (separate `featured` + `sections`) is migrated automatically.",
   "type": "object",
-  "required": ["version", "featured", "sections"],
+  "required": ["version", "sections"],
   "additionalProperties": false,
   "properties": {
+    "$schema": {"type": "string"},
     "version": {
       "type": "integer",
-      "const": 1,
-      "description": "Schema version. Bump when introducing breaking changes."
+      "const": 2,
+      "description": "Schema version. 2 = sections with layouts (2026-10-21)."
     },
     "generated_at": {
       "type": "string",
       "description": "ISO timestamp of the last edit. Set by the editor; cosmetic."
     },
-    "featured": {
-      "type": "array",
-      "description": "Hero carousel groups, in display order. Each group is one long-form video paired with the short-form videos derived from it. Recommended length 2-3 to avoid overwhelming the viewer.",
-      "items": {
-        "type": "object",
-        "required": ["long_form_id", "short_form_ids"],
-        "additionalProperties": false,
-        "properties": {
-          "long_form_id": {
-            "type": "string",
-            "description": "videoId of the long-form anchor for this featured group."
-          },
-          "short_form_ids": {
-            "type": "array",
-            "description": "videoIds of the short-form pieces derived from the long-form, in display order.",
-            "items": {"type": "string"}
-          }
-        }
-      }
-    },
     "sections": {
       "type": "array",
-      "description": "Ordered list of category sections rendered below the featured carousel. Each section gets an anchor in the top nav for smooth-scroll.",
+      "description": "Sections in page order. Each also becomes a tab on the phone. Empty sections are kept but not rendered.",
       "items": {
         "type": "object",
-        "required": ["id", "title", "video_ids"],
+        "required": ["id", "title", "layout"],
         "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
-            "description": "Slug used for the URL anchor (e.g. #long-form) and CSS hooks.",
+            "description": "Slug used for the DOM id and the phone tab. Stable; the title is what people see.",
             "pattern": "^[a-z0-9-]+$"
           },
           "title": {
             "type": "string",
-            "description": "Display name shown in the nav and the section header."
+            "description": "Header text on the site and tab label on the phone. Free text."
+          },
+          "layout": {
+            "type": "string",
+            "enum": ["hero", "wide", "tall"],
+            "description": "hero: rows of one optional long-form with a row of shorts beside it (or a full-width row of shorts with no long-form). wide: 16:9 grid of long-forms. tall: 9:16 grid of shorts."
           },
           "video_ids": {
             "type": "array",
-            "description": "videoIds in display order. Must exist in library.json.",
+            "description": "wide / tall layouts: video ids in display order.",
             "items": {"type": "string"}
+          },
+          "groups": {
+            "type": "array",
+            "description": "hero layout: rows in display order.",
+            "items": {
+              "type": "object",
+              "required": ["short_form_ids"],
+              "additionalProperties": false,
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Eyebrow / row label. Empty = the long-form's channel name, or the section title when there is no long-form."
+                },
+                "long_form_id": {
+                  "type": "string",
+                  "description": "Video id of the big tile, or empty for a shorts-only row."
+                },
+                "short_form_ids": {
+                  "type": "array",
+                  "description": "Video ids of the shorts in the row, in display order.",
+                  "items": {"type": "string"}
+                }
+              }
+            }
           }
         }
       }
