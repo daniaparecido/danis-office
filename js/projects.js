@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-21 09:51
+ * Last updated: 2026-10-21 10:20
  */
 
 const totalYouTubeViews = 438689008;
@@ -283,6 +283,17 @@ const projects = [
         thumbnail: "images/thumbnails/C-6GOVvv96_.jpg",
         url: "https://www.instagram.com/p/C-6GOVvv96_/",
         previewVideo: "videos/previews/C-6GOVvv96_.mp4"
+    },
+    {
+        title: "Você sabia que agora o cartão Visa é aceito em todas as catracas das linhas 1-Azul, 2-Verde, 3-Vermelha e 15-Prata do Metrô SP!? Vai de metrô? Vai de Visa! #publi",
+        category: "short-form",
+        videoId: "Ddj4ZsuBkte",
+        platform: "instagram",
+        channelName: "LIQUID miw | Martha",
+        viewCount: "788 likes",
+        thumbnail: "images/thumbnails/Ddj4ZsuBkte.jpg",
+        url: "https://www.instagram.com/miwvlr/reel/Ddj4ZsuBkte/",
+        previewVideo: "videos/previews/Ddj4ZsuBkte.mp4"
     },
 ];
 
