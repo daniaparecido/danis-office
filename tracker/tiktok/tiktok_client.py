@@ -50,6 +50,17 @@ class TikTokClient:
         self._delay_max = float(os.environ.get("TRACKER_REQUEST_DELAY_MAX", _DEFAULT_DELAY_MAX))
         self._first_request = True
 
+    def can_impersonate(self) -> bool:
+        """True when yt-dlp has a browser-impersonation backend (curl_cffi).
+        TikTok's extractor needs one; without it every fetch fails with
+        "Unexpected response from webpage request". If this private yt-dlp
+        helper ever disappears, assume True rather than block the run."""
+        try:
+            with yt_dlp.YoutubeDL({'quiet': True}) as ydl:
+                return bool(ydl._get_available_impersonate_targets())
+        except AttributeError:
+            return True
+
     def _throttle(self):
         """Sleep a randomized interval before the next yt-dlp call. No-op before
         the first call, and when the max delay is set to 0."""

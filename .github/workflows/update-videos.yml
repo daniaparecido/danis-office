@@ -1,17 +1,26 @@
 name: Update Video Stats
 
 on:
-  # Run daily at 9:00 AM UTC
-  schedule:
-    - cron: '0 9 * * *'
+  # Mirror the sheets right after the tracker has written fresh numbers into them.
+  # Fires whatever the tracker's conclusion, so one failing platform does not hold
+  # back the others' fresh stats.
+  workflow_run:
+    workflows: ["Update Tracker Stats"]
+    types: [completed]
   # Allow manual trigger
   workflow_dispatch:
+
+# Never let two mirrors push at once (a manual run overlapping a chained one).
+concurrency:
+  group: update-video-stats
+  cancel-in-progress: false
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # git push
+      actions: write   # dispatch deploy.yml
 
     steps:
       - name: Checkout repository
@@ -47,3 +56,12 @@ jobs:
           git add data/library.json js/projects.js
           git commit -m "Update video stats [automated]"
           git push
+
+      # A push made with GITHUB_TOKEN never triggers deploy.yml's `on: push`, so
+      # without this the new stats sit in the repo and the live site never changes.
+      # workflow_dispatch is the one event GITHUB_TOKEN is allowed to fire.
+      - name: Deploy to GitHub Pages
+        if: steps.git-check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

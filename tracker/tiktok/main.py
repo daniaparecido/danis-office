@@ -193,6 +193,14 @@ def main():
 
     client = TikTokClient(cookies_from_browser=args.browser, cookies_file=args.cookies)
 
+    # Fail fast instead of burning a run on N doomed fetches whose error points at cookies.
+    if not client.can_impersonate():
+        msg = ("TikTok: yt-dlp has no impersonation backend, so TikTok rejects every request. "
+               "Install it with: pip install -U \"yt-dlp[curl-cffi]\"")
+        logger.error(msg)
+        print(f"::error::{msg}")
+        sys.exit(1)
+
     sheets = SheetsClient(
         sheet_id=config["google_sheet_id"],
         worksheet_name=WORKSHEET_NAME,

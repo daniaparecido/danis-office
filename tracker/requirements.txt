@@ -2,4 +2,6 @@ google-api-python-client>=2.100.0
 google-auth>=2.23.0
 gspread>=5.12.0
 python-dotenv>=1.0.0
-yt-dlp>=2024.1.0
+# curl-cffi extra: yt-dlp's TikTok extractor fetches with impersonate=True and
+# TikTok rejects every plain request without it ("Unexpected response from webpage request").
+yt-dlp[curl-cffi]>=2024.1.0

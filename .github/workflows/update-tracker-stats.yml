@@ -4,6 +4,7 @@ on:
   schedule:
     # Run daily at 9:00 AM UTC. A scheduled run does both passes:
     # populate brand-new rows, then refresh stats older than 7 days.
+    # Completing this workflow triggers update-videos.yml (mirror + deploy).
     - cron: '0 9 * * *'
   workflow_dispatch:
     inputs:
