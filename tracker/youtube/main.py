@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dotenv import load_dotenv
 from youtube_client import YouTubeClient
-from sheets_client import SheetsClient, WORKSHEETS, find_duplicate_rows
+from sheets_client import SheetsClient, WORKSHEETS, find_duplicate_rows, filter_rows_to_ids, parse_only
 
 logging.basicConfig(
     level=logging.INFO,
@@ -113,8 +113,9 @@ def populate_new_videos(youtube: YouTubeClient, sheets: SheetsClient):
     logger.info(f"Populated {len(updates)} new videos")
 
 
-def refresh_stats(youtube: YouTubeClient, sheets: SheetsClient):
-    """Refresh only Views, Likes, Comments for existing videos."""
+def refresh_stats(youtube: YouTubeClient, sheets: SheetsClient, only=None):
+    """Refresh only Views, Likes, Comments for existing videos. `only` restricts
+    the pass to those video ids (the editor's "refresh the videos on the site")."""
     logger.info("Mode: REFRESH STATS")
     logger.info("-" * 50)
 
@@ -123,6 +124,9 @@ def refresh_stats(youtube: YouTubeClient, sheets: SheetsClient):
 
     # Filter to only existing rows (have Video ID)
     existing_rows = [r for r in rows if r["has_data"]]
+    if only:
+        existing_rows = filter_rows_to_ids(existing_rows, only, youtube.extract_video_id)
+        logger.info(f"--only: {len(existing_rows)} of the requested ids are in this tab")
     logger.info(f"Found {len(existing_rows)} existing videos to refresh")
 
     if not existing_rows:
@@ -167,7 +171,10 @@ def main():
     parser = argparse.ArgumentParser(description="YouTube Video Tracker")
     parser.add_argument("--refresh-stats", action="store_true",
                         help="Only refresh Views, Likes, Comments for existing videos")
+    parser.add_argument("--only", default="",
+                        help="With --refresh-stats: comma-separated video ids to refresh (default: every row)")
     args = parser.parse_args()
+    only = parse_only(args.only)
 
     logger.info("=" * 50)
     logger.info("YouTube Video Tracker")
@@ -193,7 +200,7 @@ def main():
         sheets.ensure_headers()
 
         if args.refresh_stats:
-            refresh_stats(youtube, sheets)
+            refresh_stats(youtube, sheets, only=only)
         else:
             populate_new_videos(youtube, sheets)
 

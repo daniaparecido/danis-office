@@ -127,6 +127,26 @@ def find_duplicate_rows(rows: list[dict], extract_id=extract_video_id_generic) -
     return dups
 
 
+def filter_rows_to_ids(rows: list[dict], ids, extract_id) -> list[dict]:
+    """Keep only the rows whose canonical id is in `ids` (the --only flag: the
+    editor refreshes just the videos that are on the site). Matches on the id
+    extracted from the URL, falling back to the Video ID cell."""
+    wanted = {str(i).strip() for i in ids if str(i).strip()}
+    if not wanted:
+        return rows
+    out = []
+    for r in rows:
+        vid = extract_id(r["url"]) or (r.get("video_id") or "").lstrip("'")
+        if vid in wanted:
+            out.append(r)
+    return out
+
+
+def parse_only(value: str) -> list[str]:
+    """'id1,id2, id3' -> ['id1', 'id2', 'id3']; '' -> []."""
+    return [s.strip() for s in (value or "").split(",") if s.strip()]
+
+
 class SheetsClient:
     """Client for interacting with Google Sheets."""
 
@@ -219,6 +239,16 @@ class SheetsClient:
             })
 
         return rows
+
+    def existing_urls(self) -> list[str]:
+        """Column A below the header (cheap duplicate check before appending)."""
+        return [u.strip() for u in self.worksheet.col_values(1)[1:] if u and u.strip()]
+
+    def append_url(self, url: str) -> int:
+        """Append a bare URL in column A so the next populate pass fills the row
+        (what the editor's "Add video by URL" does). Returns the new row number."""
+        self.worksheet.append_row([url], value_input_option="USER_ENTERED", table_range="A1")
+        return len(self.worksheet.col_values(1))
 
     def update_row(self, row_num: int, url: str, video_data: dict):
         """Update a single row with video data."""

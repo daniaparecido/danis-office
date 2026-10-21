@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dotenv import load_dotenv
 from instagram_client import InstagramClient
-from sheets_client import SheetsClient, HEADERS_INSTAGRAM, is_stale, find_duplicate_rows
+from sheets_client import SheetsClient, HEADERS_INSTAGRAM, is_stale, find_duplicate_rows, filter_rows_to_ids, parse_only
 
 logging.basicConfig(
     level=logging.INFO,
@@ -113,11 +113,12 @@ def populate_new_videos(client: InstagramClient, sheets: SheetsClient):
     logger.info(f"Populated {len(updates)} new videos")
 
 
-def refresh_stats(client: InstagramClient, sheets: SheetsClient, max_age_days: int = 0):
+def refresh_stats(client: InstagramClient, sheets: SheetsClient, max_age_days: int = 0, only=None):
     """Refresh only Views, Likes, Comments for existing videos.
 
     max_age_days > 0 skips rows whose "Last Updated" stamp is newer than N days,
     so a refresh doesn't have to hit every row at once (anti rate-limiting).
+    `only` restricts the pass to those post ids (the editor's targeted refresh).
     """
     logger.info("Mode: REFRESH STATS")
     logger.info("-" * 50)
@@ -127,9 +128,12 @@ def refresh_stats(client: InstagramClient, sheets: SheetsClient, max_age_days: i
 
     # Filter to only existing rows (have Video ID)
     existing_rows = [r for r in rows if r["has_data"]]
+    if only:
+        existing_rows = filter_rows_to_ids(existing_rows, only, client.extract_post_id)
+        logger.info(f"--only: {len(existing_rows)} of the requested ids are in this tab")
     logger.info(f"Found {len(existing_rows)} existing videos")
 
-    if max_age_days > 0:
+    if max_age_days > 0 and not only:
         before = len(existing_rows)
         existing_rows = [r for r in existing_rows if is_stale(r.get("last_updated", ""), max_age_days)]
         logger.info(f"Staleness filter (>{max_age_days}d): refreshing {len(existing_rows)}, "
@@ -185,6 +189,8 @@ def main():
                         help="Browser to get cookies from (firefox recommended)")
     parser.add_argument("--cookies", type=str, default=None,
                         help="Path to cookies.txt file (Netscape format)")
+    parser.add_argument("--only", default="",
+                        help="With --refresh-stats: comma-separated post ids to refresh (default: every row)")
     args = parser.parse_args()
 
     logger.info("=" * 50)
@@ -206,7 +212,7 @@ def main():
     sheets.ensure_headers()
 
     if args.refresh_stats:
-        refresh_stats(client, sheets, max_age_days=args.max_age_days)
+        refresh_stats(client, sheets, max_age_days=args.max_age_days, only=parse_only(args.only))
     else:
         populate_new_videos(client, sheets)
 
