@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-21T15:26:25-03:00",
+  "generated_at": "2026-10-21T16:11:37-03:00",
   "sections": [
     {
       "id": "featured",
@@ -41,7 +41,8 @@
       "layout": "wide",
       "video_ids": [
         "TZfM1yfkFn4",
-        "6DMvk5aNV64"
+        "6DMvk5aNV64",
+        "WOGQI0PAjEU"
       ]
     },
     {
@@ -65,22 +66,6 @@
         "iuYQuxHScRg",
         "3AtLY01qlYk",
         "XuQ1DiWxblg"
-      ]
-    },
-    {
-      "id": "long-form",
-      "title": "Long-form",
-      "layout": "wide",
-      "video_ids": [
-        "KZYFvgajyPE",
-        "WOGQI0PAjEU",
-        "gVQEYRTtm68",
-        "ATH4PvNxWNA",
-        "mnO5bES3eQY",
-        "JgEullP4AVo",
-        "EcOX5FeP2w4",
-        "vP1rwg-rzcI",
-        "C1ivkljLWAw"
       ]
     },
     {
