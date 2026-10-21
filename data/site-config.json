@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-21T16:11:37-03:00",
+  "generated_at": "2026-10-21T20:24:23-03:00",
   "sections": [
     {
       "id": "featured",
@@ -10,24 +10,27 @@
       "groups": [
         {
           "label": "",
-          "long_form_id": "DW3F1OHfZeo",
-          "short_form_ids": [
+          "shorts_label": "",
+          "video_ids": [
+            "DW3F1OHfZeo",
             "1m9rl_lxits",
             "scK-D1Eg7PY"
           ]
         },
         {
           "label": "",
-          "long_form_id": "D0tZ5NaRobM",
-          "short_form_ids": [
+          "shorts_label": "",
+          "video_ids": [
+            "D0tZ5NaRobM",
             "de-cT8ZLQzs",
             "IFmOMTKXhbA"
           ]
         },
         {
           "label": "",
-          "long_form_id": "DaEP-ij-1KA",
-          "short_form_ids": [
+          "shorts_label": "",
+          "video_ids": [
+            "DaEP-ij-1KA",
             "AT9g-2yrS5s",
             "UkEXXO-o8b8",
             "i9px6iapZd4"

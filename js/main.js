@@ -417,7 +417,7 @@
         const list = (typeof sections !== 'undefined' && Array.isArray(sections)) ? sections : [];
         list.forEach(section => {
             const count = section.layout === 'hero'
-                ? (section.groups || []).reduce((n, g) => n + (g.longForm ? 1 : 0) + (g.shortForm || []).length, 0)
+                ? (section.groups || []).reduce((n, g) => n + (g.items || []).length, 0)
                 : (section.items || []).length;
             if (!count) return;
 
@@ -448,43 +448,66 @@
     }
 
     /**
-     * A hero section: each group is one big long-form tile with a row of
-     * companion shorts beside it, or, with no long-form, a full-width row of
-     * shorts under its own label (a series of shorts, for instance). The row
-     * label is the group's label, else the long-form's channel, else the
-     * section title.
+     * A hero section: each group (row) is one ordered list of videos of both
+     * shapes, and the row lays itself out by counting its long-forms:
+     *   none      -> a full-width row of shorts under the row header (a series);
+     *   one       -> the big tile with the shorts beside it (the classic row);
+     *   two plus  -> the long-forms side by side on top, the shorts beneath.
+     * The row header is the group's label, else the first long-form's channel,
+     * else the section title; the shorts label is the group's shortsLabel, else
+     * "Related shorts". Every header string comes from the config.
      */
     function renderHero(section, container) {
         (section.groups || []).forEach(group => {
             if (!group) return;
-            const shorts = Array.isArray(group.shortForm) ? group.shortForm : [];
-            if (!group.longForm && !shorts.length) return;
+            const items = Array.isArray(group.items) ? group.items : [];
+            if (!items.length) return;
+            const longs = items.filter(p => p.category === 'long-form');
+            const shorts = items.filter(p => p.category !== 'long-form');
+            const mode = longs.length === 0 ? 'shorts-only' : longs.length === 1 ? 'lead' : 'tiers';
 
             const groupEl = document.createElement('div');
-            groupEl.className = 'featured-group' + (group.longForm ? '' : ' shorts-only');
-            const label = group.label || (group.longForm && group.longForm.channelName) || section.title || '';
+            groupEl.className = 'featured-group ' + mode;
+            const label = group.label || (longs[0] && longs[0].channelName) || section.title || '';
 
-            if (group.longForm) {
+            const eyebrow = document.createElement('span');
+            eyebrow.className = 'featured-eyebrow';
+            eyebrow.textContent = label;
+
+            if (mode === 'lead') {
+                // The header sits above the big tile and the shorts label above
+                // the shorts, on one line, so the tiles line up.
                 const mainEl = document.createElement('div');
                 mainEl.className = 'featured-main';
-
-                const eyebrow = document.createElement('span');
-                eyebrow.className = 'featured-eyebrow';
-                eyebrow.textContent = label || 'Featured project';
                 mainEl.appendChild(eyebrow);
-
-                mainEl.appendChild(createGridItem(group.longForm, { noIframePreview: true }));
+                mainEl.appendChild(createGridItem(longs[0], { noIframePreview: true }));
                 groupEl.appendChild(mainEl);
+            } else {
+                // No single big tile to sit above: the header spans the row.
+                groupEl.appendChild(eyebrow);
+                if (mode === 'tiers') {
+                    const longRow = document.createElement('div');
+                    longRow.className = 'featured-long-row';
+                    longs.forEach(p => {
+                        const cell = document.createElement('div');
+                        cell.className = 'featured-main';
+                        cell.appendChild(createGridItem(p, { noIframePreview: true }));
+                        longRow.appendChild(cell);
+                    });
+                    groupEl.appendChild(longRow);
+                }
             }
 
             if (shorts.length) {
                 const shortsEl = document.createElement('div');
                 shortsEl.className = 'featured-shorts';
 
-                const shortsLabel = document.createElement('span');
-                shortsLabel.className = 'featured-shorts-label';
-                shortsLabel.textContent = group.longForm ? (group.shortsLabel || 'Related shorts') : label;
-                shortsEl.appendChild(shortsLabel);
+                if (mode !== 'shorts-only') {
+                    const shortsLabel = document.createElement('span');
+                    shortsLabel.className = 'featured-shorts-label';
+                    shortsLabel.textContent = group.shortsLabel || 'Related shorts';
+                    shortsEl.appendChild(shortsLabel);
+                }
 
                 const viewport = document.createElement('div');
                 viewport.className = 'featured-shorts-viewport';

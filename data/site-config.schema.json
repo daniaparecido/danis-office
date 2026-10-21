@@ -46,23 +46,23 @@
           },
           "groups": {
             "type": "array",
-            "description": "hero layout: rows in display order.",
+            "description": "hero layout: rows in display order. A row lays itself out by counting its long-forms: none = a row of shorts, one = the big tile with the shorts beside it, two or more = the long-forms on top with the shorts beneath.",
             "items": {
               "type": "object",
-              "required": ["short_form_ids"],
+              "required": ["video_ids"],
               "additionalProperties": false,
               "properties": {
                 "label": {
                   "type": "string",
-                  "description": "Eyebrow / row label. Empty = the long-form's channel name, or the section title when there is no long-form."
+                  "description": "Row header. Empty = the first long-form's channel name, or the section title when the row has no long-form."
                 },
-                "long_form_id": {
+                "shorts_label": {
                   "type": "string",
-                  "description": "Video id of the big tile, or empty for a shorts-only row."
+                  "description": "Label above the shorts of a row that also has long-forms. Empty = \"Related shorts\"."
                 },
-                "short_form_ids": {
+                "video_ids": {
                   "type": "array",
-                  "description": "Video ids of the shorts in the row, in display order.",
+                  "description": "Video ids in the row, both shapes, in display order.",
                   "items": {"type": "string"}
                 }
               }

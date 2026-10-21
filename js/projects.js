@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-29 13:04
+ * Last updated: 2026-10-29 19:57
  */
 
 const totalYouTubeViews = 439018018;
@@ -292,7 +292,8 @@ const projects = [
 ];
 
 // Sections in page order, resolved from data/site-config.json at sync time.
-// layout hero: groups of {label, longForm|null, shortForm[]}; wide / tall: items[].
+// layout hero: groups of {label, shortsLabel, items[]} (both shapes, in order; the page
+// lays a row out by counting its long-forms); wide / tall: items[].
 const sections = [
   {
     "id": "featured",
@@ -301,19 +302,20 @@ const sections = [
     "groups": [
       {
         "label": "",
-        "longForm": {
-          "title": "Beat Me, Get $1000",
-          "category": "long-form",
-          "videoId": "DW3F1OHfZeo",
-          "platform": "youtube",
-          "channelName": "Team Liquid League of Legends",
-          "viewCount": "878K views",
-          "thumbnail": "",
-          "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
-          "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
-          "localSource": false
-        },
-        "shortForm": [
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "Beat Me, Get $1000",
+            "category": "long-form",
+            "videoId": "DW3F1OHfZeo",
+            "platform": "youtube",
+            "channelName": "Team Liquid League of Legends",
+            "viewCount": "878K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
+            "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
+            "localSource": false
+          },
           {
             "title": "Beat me, win $500 #leagueoflegends",
             "category": "short-form",
@@ -342,19 +344,20 @@ const sections = [
       },
       {
         "label": "",
-        "longForm": {
-          "title": "11 Gamers vs League of Legends Quiz",
-          "category": "long-form",
-          "videoId": "D0tZ5NaRobM",
-          "platform": "youtube",
-          "channelName": "Team Liquid League of Legends",
-          "viewCount": "211K views",
-          "thumbnail": "",
-          "url": "https://www.youtube.com/watch?v=D0tZ5NaRobM",
-          "previewVideo": "videos/previews/D0tZ5NaRobM.mp4",
-          "localSource": false
-        },
-        "shortForm": [
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "11 Gamers vs League of Legends Quiz",
+            "category": "long-form",
+            "videoId": "D0tZ5NaRobM",
+            "platform": "youtube",
+            "channelName": "Team Liquid League of Legends",
+            "viewCount": "211K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=D0tZ5NaRobM",
+            "previewVideo": "videos/previews/D0tZ5NaRobM.mp4",
+            "localSource": false
+          },
           {
             "title": "Who knows League the best? #leagueoflegends",
             "category": "short-form",
@@ -383,19 +386,20 @@ const sections = [
       },
       {
         "label": "",
-        "longForm": {
-          "title": "5 CS Pros. 7 Maps. Only One Survives!",
-          "category": "long-form",
-          "videoId": "DaEP-ij-1KA",
-          "platform": "youtube",
-          "channelName": "Team Liquid CS2 | Counter Strike",
-          "viewCount": "4K views",
-          "thumbnail": "",
-          "url": "https://www.youtube.com/watch?v=DaEP-ij-1KA",
-          "previewVideo": "videos/previews/DaEP-ij-1KA.mp4",
-          "localSource": false
-        },
-        "shortForm": [
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "5 CS Pros. 7 Maps. Only One Survives!",
+            "category": "long-form",
+            "videoId": "DaEP-ij-1KA",
+            "platform": "youtube",
+            "channelName": "Team Liquid CS2 | Counter Strike",
+            "viewCount": "4K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=DaEP-ij-1KA",
+            "previewVideo": "videos/previews/DaEP-ij-1KA.mp4",
+            "localSource": false
+          },
           {
             "title": "Who will be the Last Pro Standing? Head over to our newest video to find out! #duelbits #cs2",
             "category": "short-form",

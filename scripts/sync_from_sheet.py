@@ -398,12 +398,29 @@ def project_obj(category, item):
 SECTION_LAYOUTS = ("hero", "wide", "tall")
 
 
+def normalize_hero_group(g):
+    """One hero row -> {label, shorts_label, video_ids}. Also reads the earlier v2
+    row shape (long_form_id + short_form_ids, 2026-10-21 morning) and folds it
+    into the single ordered list; the page lays the row out by counting the
+    long-forms in that list."""
+    if "video_ids" in g:
+        ids = [v for v in (g.get("video_ids") or []) if isinstance(v, str) and v]
+    else:
+        ids = ([g["long_form_id"]] if g.get("long_form_id") else []) + \
+              [v for v in (g.get("short_form_ids") or []) if isinstance(v, str) and v]
+    return {"label": g.get("label") or "", "shorts_label": g.get("shorts_label") or "", "video_ids": ids}
+
+
 def migrate_site_config(cfg):
     """Config v1 (a `featured` list plus category `sections`) -> v2 (one ordered
     list of sections, each with a layout). v1's featured becomes a hero section
     titled "Featured"; the old short-form section becomes a tall grid, every
-    other section a wide grid. Idempotent on v2 input."""
+    other section a wide grid. On v2 input it only normalizes hero rows to the
+    {label, shorts_label, video_ids} shape. Idempotent."""
     if cfg.get("version") == 2:
+        for s in cfg.get("sections") or []:
+            if s.get("layout") == "hero":
+                s["groups"] = [normalize_hero_group(g) for g in (s.get("groups") or []) if isinstance(g, dict)]
         return cfg
     out = {"$schema": "./site-config.schema.json", "version": 2,
            "generated_at": cfg.get("generated_at", ""), "sections": []}
@@ -411,8 +428,7 @@ def migrate_site_config(cfg):
     if featured:
         out["sections"].append({
             "id": "featured", "title": "Featured", "layout": "hero",
-            "groups": [{"label": "", "long_form_id": g.get("long_form_id", "") or "",
-                        "short_form_ids": list(g.get("short_form_ids", []) or [])} for g in featured],
+            "groups": [normalize_hero_group(g) for g in featured if isinstance(g, dict)],
         })
     for s in cfg.get("sections") or []:
         out["sections"].append({
@@ -426,11 +442,12 @@ def migrate_site_config(cfg):
 def resolve_sections(by_id, site_config):
     """Turn site-config sections into the `sections` global the front end draws.
 
-    hero: {id, title, layout, groups: [{label, longForm|null, shortForm: [...]}]}
+    hero: {id, title, layout, groups: [{label, shortsLabel, items: [...]}]}
     wide / tall: {id, title, layout, items: [...]}
     Each video becomes a full project object (project_obj) so the page never
-    needs library.json. Unknown ids are skipped with a warning; a hero group
-    with nothing left is dropped."""
+    needs library.json. A hero row keeps both shapes in one ordered list; the
+    page lays it out by counting the long-forms. Unknown ids are skipped with
+    a warning; a hero group with nothing left is dropped."""
     out, missing = [], []
     for section in site_config.get("sections", []):
         layout = section.get("layout") or "wide"
@@ -438,24 +455,17 @@ def resolve_sections(by_id, site_config):
         if layout == "hero":
             groups = []
             for g in section.get("groups", []) or []:
-                lf_id = g.get("long_form_id") or ""
-                lf = by_id.get(lf_id) if lf_id else None
-                if lf_id and lf is None:
-                    missing.append((section["id"], lf_id))
-                shorts = []
-                for sid in g.get("short_form_ids", []) or []:
-                    s = by_id.get(sid)
-                    if s is None:
-                        missing.append((section["id"], sid))
+                g = normalize_hero_group(g)
+                items = []
+                for vid in g["video_ids"]:
+                    item = by_id.get(vid)
+                    if item is None:
+                        missing.append((section["id"], vid))
                         continue
-                    shorts.append(project_obj(s.get("category", "short-form"), s))
-                if lf is None and not shorts:
+                    items.append(project_obj(item.get("category") or "", item))
+                if not items:
                     continue
-                groups.append({
-                    "label": g.get("label") or "",
-                    "longForm": project_obj(lf.get("category", "long-form"), lf) if lf else None,
-                    "shortForm": shorts,
-                })
+                groups.append({"label": g["label"], "shortsLabel": g["shorts_label"], "items": items})
             entry["groups"] = groups
         else:
             items = []
@@ -474,7 +484,7 @@ def count_visible(sections_resolved):
     n = 0
     for s in sections_resolved:
         if s["layout"] == "hero":
-            n += sum((1 if g["longForm"] else 0) + len(g["shortForm"]) for g in s["groups"])
+            n += sum(len(g["items"]) for g in s["groups"])
         else:
             n += len(s["items"])
     return n
@@ -548,7 +558,8 @@ def generate_projects_js(library, site_config, totals):
     lines += ["];", ""]
     lines += [
         "// Sections in page order, resolved from data/site-config.json at sync time.",
-        "// layout hero: groups of {label, longForm|null, shortForm[]}; wide / tall: items[].",
+        "// layout hero: groups of {label, shortsLabel, items[]} (both shapes, in order; the page",
+        "// lays a row out by counting its long-forms); wide / tall: items[].",
         "const sections = " + json.dumps(sections_resolved, ensure_ascii=False, indent=2) + ";",
         "",
     ]

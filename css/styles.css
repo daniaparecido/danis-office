@@ -474,13 +474,24 @@ button {
     margin-bottom: 0;
 }
 
+/* Three header levels (2026-10-21): the section title is the big one, white and
+   sentence case with a hairline under it; the row header (.featured-eyebrow)
+   is the medium one, white uppercase with a bar; the shorts label is the small
+   grey one. */
 .section-title {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #888888;
-    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin-top: 12px;
+    background: #333333;
 }
 
 /* ========================================
@@ -644,7 +655,7 @@ button {
 .featured-container {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 40px;
 }
 
 .featured-group {
@@ -660,13 +671,24 @@ button {
 /* Prominent uppercase channel eyebrow above the big tile, so each featured
    group reads as a labelled block. Mirrors the "RELATED SHORTS" label style. */
 .featured-eyebrow {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.16em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #888888;
+    color: #ffffff;
     margin-bottom: 10px;
+}
+
+/* The bar before the row name marks each row as a labelled unit. */
+.featured-eyebrow::before {
+    content: '';
+    flex: 0 0 2px;
+    width: 2px;
+    height: 14px;
+    background: #ffffff;
 }
 
 .featured-main .grid-item-thumb {
@@ -715,9 +737,9 @@ button {
 .featured-shorts-label {
     font-size: 11px;
     font-weight: 400;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #666666;
+    color: #888888;
 }
 
 /* Width-driven row: each tile is exactly 1/3 of the row width (minus 2 gaps),
@@ -831,7 +853,7 @@ button {
    distinct block rather than blending into the next one. */
 .featured-group + .featured-group {
     border-top: 1px solid #222222;
-    padding-top: 32px;
+    padding-top: 40px;
 }
 
 /* ========================================
@@ -1046,16 +1068,39 @@ button {
     aspect-ratio: 9 / 16;
 }
 
-/* Hero group with no long-form: a full-width row of shorts under its own
-   label (a series of shorts). Six tiles across so they keep the size they have
-   beside a long-form, where the shorts column is about half the width. */
-.featured-group.shorts-only .featured-shorts {
+/* Hero rows without a single big tile (no long-form, or two or more): the row
+   header spans the row, the long-forms (if any) share a row of their own, and
+   the shorts run full width beneath at six across, the size they have beside
+   a long-form where the shorts column is about half the width. */
+.featured-group.shorts-only,
+.featured-group.tiers {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featured-group.shorts-only .featured-eyebrow,
+.featured-group.tiers .featured-eyebrow {
+    margin-bottom: 0;
+}
+
+.featured-group.shorts-only .featured-shorts,
+.featured-group.tiers .featured-shorts {
     border-left: none;
     padding-left: 0;
 }
 
-.featured-group.shorts-only .featured-shorts-row .grid-item {
+.featured-group.shorts-only .featured-shorts-row .grid-item,
+.featured-group.tiers .featured-shorts-row .grid-item {
     flex: 0 0 calc((100% - var(--shorts-gap) * 5) / 6);
+}
+
+.featured-long-row {
+    display: flex;
+    gap: 8px;
+}
+
+.featured-long-row .featured-main {
+    flex: 1 1 0;
 }
 
 /* ========================================
@@ -1342,7 +1387,7 @@ button {
         font-weight: 400;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: #666666;
+        color: #888888;
         background: none;
         border: none;
         border-bottom: 2px solid transparent;
@@ -1414,9 +1459,20 @@ button {
     }
 
     .featured-eyebrow {
-        font-size: 10px;
-        letter-spacing: 0.14em;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        gap: 8px;
         margin-bottom: 6px;
+    }
+
+    .featured-eyebrow::before {
+        height: 12px;
+    }
+
+    /* Two or more long-forms in a row stack full width on the phone. */
+    .featured-long-row {
+        flex-direction: column;
+        gap: 8px;
     }
 
     .featured-main .grid-item-overlay {
@@ -1478,8 +1534,10 @@ button {
         position: relative;
     }
 
-    /* Shorts-only hero rows scroll on the phone like any other shorts row. */
-    .featured-group.shorts-only .featured-shorts-row .grid-item {
+    /* Shorts under a row header scroll on the phone like any other shorts row:
+       2.5 tiles in view, the third one cut off as the hint to swipe. */
+    .featured-group.shorts-only .featured-shorts-row .grid-item,
+    .featured-group.tiers .featured-shorts-row .grid-item {
         flex-basis: 44%;
     }
 
