@@ -278,8 +278,23 @@ def write_library_json(library, dry_run=False):
         print(f"[DRY RUN] Would write {len(library)} items to {LIBRARY_FILE}")
         return
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    LIBRARY_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    atomic_write_text(LIBRARY_FILE, json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"Wrote {len(library)} items to {LIBRARY_FILE}")
+
+
+def atomic_write_text(path, text):
+    """Temp file in the same directory, then rename: a reader (the editor, a
+    browser tab) never sees a half-written library.json or projects.js."""
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def load_library_json():
+    """The items of the existing data/library.json (for --offline)."""
+    if not LIBRARY_FILE.exists():
+        raise SystemExit(f"ERROR: {LIBRARY_FILE} missing; run without --offline first")
+    return json.loads(LIBRARY_FILE.read_text(encoding="utf-8")).get("items", [])
 
 
 def format_count_display(count, label="views"):
@@ -521,19 +536,25 @@ def main():
     parser.add_argument("--download", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("--fetch-thumbnails", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("--dry-run", action="store_true", help="Print what would change, write nothing")
+    parser.add_argument("--offline", action="store_true",
+                        help="Skip the sheets: regenerate js/projects.js from the existing data/library.json "
+                             "(the editor uses this after fetching assets, so previewVideo/localSource/subtitles update without a sheet read)")
     args = parser.parse_args()
 
     print("=" * 50)
-    print("SYNC LIBRARY (mirror mode)")
+    print("SYNC LIBRARY (offline: regenerate from data/library.json)" if args.offline else "SYNC LIBRARY (mirror mode)")
     print("=" * 50)
 
-    client = authorize()
-    print("\nReading source sheets:")
-    library = build_library(client)
-    library.sort(key=lambda it: (it["category"], it["platform"], -(it.get("views") or 0)))
-
-    print(f"\nLibrary total: {len(library)} items")
-    write_library_json(library, dry_run=args.dry_run)
+    if args.offline:
+        library = load_library_json()
+        print(f"\nLibrary total: {len(library)} items (from disk)")
+    else:
+        client = authorize()
+        print("\nReading source sheets:")
+        library = build_library(client)
+        library.sort(key=lambda it: (it["category"], it["platform"], -(it.get("views") or 0)))
+        print(f"\nLibrary total: {len(library)} items")
+        write_library_json(library, dry_run=args.dry_run)
 
     totals = compute_youtube_totals(library)
     print(f"YouTube totals: {totals['videos']} videos, {totals['views']:,} views")
@@ -544,7 +565,7 @@ def main():
     if args.dry_run:
         print(f"[DRY RUN] Would write {visible_count} entries to {PROJECTS_FILE}")
     else:
-        PROJECTS_FILE.write_text(js_content, encoding="utf-8")
+        atomic_write_text(PROJECTS_FILE, js_content)
         print(f"Wrote {visible_count} entries to {PROJECTS_FILE}")
 
 
