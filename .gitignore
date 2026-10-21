@@ -85,3 +85,13 @@ Event Detection Cheat Sheet.html
 # so anything tracked here is served at a guessable URL on daniaparecido.com)
 Daniel Aparecido - Video Editor CV.pdf
 dani logo.png
+
+# micro1 screener workflow skill: local only, confidential client workflow, never commit
+.claude/skills/micro1-*/
+.agents/skills/micro1-*/
+
+# micro1 review tooling (SAM 2 curves script + model checkpoints): local only, never commit
+micro1-tools/
+
+# Local-only Claude instructions (gitignored, NDA-safe layer)
+CLAUDE.local.md

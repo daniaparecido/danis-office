@@ -5,25 +5,88 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-21 11:31
+ * Last updated: 2026-10-21 15:26
  */
 
-const totalYouTubeViews = 438689008;
+const totalYouTubeViews = 438691008;
 const totalYouTubeVideos = 586;
 const totalVideos = 733;
 
 // Flat list of the grid items (legacy shape; the page draws `sections` below).
 const projects = [
     {
-        title: "Guess the Secret CS2 Player (actual pro)",
+        title: "Adeus Windows! Bem-vindo Linux!",
         category: "long-form",
-        videoId: "KZYFvgajyPE",
+        videoId: "TZfM1yfkFn4",
         platform: "youtube",
-        channelName: "Team Liquid CS2 | Counter Strike",
-        viewCount: "93K views",
+        channelName: "Coisa de Nerd",
+        viewCount: "1.1M views",
         thumbnail: "",
-        url: "https://www.youtube.com/watch?v=KZYFvgajyPE",
-        previewVideo: "videos/previews/KZYFvgajyPE.mp4"
+        url: "https://www.youtube.com/watch?v=TZfM1yfkFn4",
+        previewVideo: "videos/previews/TZfM1yfkFn4.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+        subtitles: "videos/subs/TZfM1yfkFn4.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
+    },
+    {
+        title: "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
+        category: "long-form",
+        videoId: "6DMvk5aNV64",
+        platform: "youtube",
+        channelName: "República Coisa de Nerd",
+        viewCount: "255K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=6DMvk5aNV64",
+        previewVideo: "videos/previews/6DMvk5aNV64.mp4"
+    },
+    {
+        title: "DOUBLELIFT GUESS THE RANK (Pt.1)",
+        category: "short-form",
+        videoId: "kuEb5qEpdPs",
+        platform: "youtube",
+        channelName: "Team Liquid League of Legends",
+        viewCount: "413K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/shorts/kuEb5qEpdPs",
+        previewVideo: "videos/previews/kuEb5qEpdPs.mp4",
+        localSource: true
+    },
+    {
+        title: "DOUBLELIFT GUESS THE RANK (Pt.2)",
+        category: "short-form",
+        videoId: "ZeVeXsq87XI",
+        platform: "youtube",
+        channelName: "Team Liquid League of Legends",
+        viewCount: "117K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/shorts/ZeVeXsq87XI",
+        previewVideo: "videos/previews/ZeVeXsq87XI.mp4",
+        localSource: true
+    },
+    {
+        title: "DOUBLELIFT GUESS THE RANK (Part 3.)",
+        category: "short-form",
+        videoId: "vBhxZrwazB8",
+        platform: "youtube",
+        channelName: "Team Liquid League of Legends",
+        viewCount: "75K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/shorts/vBhxZrwazB8",
+        previewVideo: "videos/previews/vBhxZrwazB8.mp4",
+        localSource: true
+    },
+    {
+        title: "DOUBLELIFT GUESS THE RANK (Part 4)",
+        category: "short-form",
+        videoId: "G8ZF6WpwmUI",
+        platform: "youtube",
+        channelName: "Team Liquid League of Legends",
+        viewCount: "121K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/shorts/G8ZF6WpwmUI",
+        previewVideo: "videos/previews/G8ZF6WpwmUI.mp4",
+        localSource: true
     },
     {
         title: "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
@@ -35,6 +98,61 @@ const projects = [
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=_lZYR2VkZTg",
         previewVideo: "videos/previews/_lZYR2VkZTg.mp4"
+    },
+    {
+        title: "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        category: "long-form",
+        videoId: "WZLSVMVS5o4",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "3K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=WZLSVMVS5o4",
+        previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
+    },
+    {
+        title: "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        category: "long-form",
+        videoId: "iuYQuxHScRg",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "2K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
+    },
+    {
+        title: "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
+        category: "long-form",
+        videoId: "3AtLY01qlYk",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "8K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=3AtLY01qlYk",
+        previewVideo: "videos/previews/3AtLY01qlYk.mp4"
+    },
+    {
+        title: "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        category: "long-form",
+        videoId: "XuQ1DiWxblg",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "23K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
+        previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
+    },
+    {
+        title: "Guess the Secret CS2 Player (actual pro)",
+        category: "long-form",
+        videoId: "KZYFvgajyPE",
+        platform: "youtube",
+        channelName: "Team Liquid CS2 | Counter Strike",
+        viewCount: "93K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=KZYFvgajyPE",
+        previewVideo: "videos/previews/KZYFvgajyPE.mp4"
     },
     {
         title: "NÃO É SEMPRE QUE SE GANHA...",
@@ -81,17 +199,6 @@ const projects = [
         previewVideo: "videos/previews/mnO5bES3eQY.mp4"
     },
     {
-        title: "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        category: "long-form",
-        videoId: "WZLSVMVS5o4",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "3K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=WZLSVMVS5o4",
-        previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
-    },
-    {
         title: "MÃES DE PROS JOGAM VALORANT PELA 1ª VEZ!",
         category: "long-form",
         videoId: "JgEullP4AVo",
@@ -123,21 +230,6 @@ const projects = [
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=vP1rwg-rzcI",
         previewVideo: "videos/previews/vP1rwg-rzcI.mp4"
-    },
-    {
-        title: "Adeus Windows! Bem-vindo Linux!",
-        category: "long-form",
-        videoId: "TZfM1yfkFn4",
-        platform: "youtube",
-        channelName: "Coisa de Nerd",
-        viewCount: "1.1M views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-        previewVideo: "videos/previews/TZfM1yfkFn4.mp4",
-        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-        subtitles: "videos/subs/TZfM1yfkFn4.en.vtt",
-        subtitlesLang: "en",
-        subtitlesLabel: "English"
     },
     {
         title: "Visitei uma PLANTAÇÃO de MAC0NHA na ARGENTINA! umdois Viagem",
@@ -292,7 +384,7 @@ const projects = [
 const sections = [
   {
     "id": "featured",
-    "title": "Featured",
+    "title": "The Best from Team Liquid",
     "layout": "hero",
     "groups": [
       {
@@ -303,7 +395,7 @@ const sections = [
           "videoId": "DW3F1OHfZeo",
           "platform": "youtube",
           "channelName": "Team Liquid League of Legends",
-          "viewCount": "836K views",
+          "viewCount": "837K views",
           "thumbnail": "",
           "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
           "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -361,6 +453,18 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/shorts/de-cT8ZLQzs",
             "previewVideo": "videos/previews/de-cT8ZLQzs.mp4",
+            "localSource": true
+          },
+          {
+            "title": "Answer The League Question, Win $500",
+            "category": "short-form",
+            "videoId": "IFmOMTKXhbA",
+            "platform": "youtube",
+            "channelName": "Team Liquid League of Legends",
+            "viewCount": "63K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/shorts/IFmOMTKXhbA",
+            "previewVideo": "videos/previews/IFmOMTKXhbA.mp4",
             "localSource": true
           }
         ]
@@ -421,6 +525,163 @@ const sections = [
     ]
   },
   {
+    "id": "the-best-from-coisa-de-nerd",
+    "title": "The Best from Coisa de Nerd",
+    "layout": "wide",
+    "items": [
+      {
+        "title": "Adeus Windows! Bem-vindo Linux!",
+        "category": "long-form",
+        "videoId": "TZfM1yfkFn4",
+        "platform": "youtube",
+        "channelName": "Coisa de Nerd",
+        "viewCount": "1.1M views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
+        "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+        "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
+      },
+      {
+        "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
+        "category": "long-form",
+        "videoId": "6DMvk5aNV64",
+        "platform": "youtube",
+        "channelName": "República Coisa de Nerd",
+        "viewCount": "255K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
+        "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
+        "localSource": false
+      }
+    ]
+  },
+  {
+    "id": "doublelift-guesses-the-rank",
+    "title": "DOUBLELIFT GUESSES THE RANK",
+    "layout": "tall",
+    "items": [
+      {
+        "title": "DOUBLELIFT GUESS THE RANK (Pt.1)",
+        "category": "short-form",
+        "videoId": "kuEb5qEpdPs",
+        "platform": "youtube",
+        "channelName": "Team Liquid League of Legends",
+        "viewCount": "413K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/shorts/kuEb5qEpdPs",
+        "previewVideo": "videos/previews/kuEb5qEpdPs.mp4",
+        "localSource": true
+      },
+      {
+        "title": "DOUBLELIFT GUESS THE RANK (Pt.2)",
+        "category": "short-form",
+        "videoId": "ZeVeXsq87XI",
+        "platform": "youtube",
+        "channelName": "Team Liquid League of Legends",
+        "viewCount": "117K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/shorts/ZeVeXsq87XI",
+        "previewVideo": "videos/previews/ZeVeXsq87XI.mp4",
+        "localSource": true
+      },
+      {
+        "title": "DOUBLELIFT GUESS THE RANK (Part 3.)",
+        "category": "short-form",
+        "videoId": "vBhxZrwazB8",
+        "platform": "youtube",
+        "channelName": "Team Liquid League of Legends",
+        "viewCount": "75K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/shorts/vBhxZrwazB8",
+        "previewVideo": "videos/previews/vBhxZrwazB8.mp4",
+        "localSource": true
+      },
+      {
+        "title": "DOUBLELIFT GUESS THE RANK (Part 4)",
+        "category": "short-form",
+        "videoId": "G8ZF6WpwmUI",
+        "platform": "youtube",
+        "channelName": "Team Liquid League of Legends",
+        "viewCount": "121K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/shorts/G8ZF6WpwmUI",
+        "previewVideo": "videos/previews/G8ZF6WpwmUI.mp4",
+        "localSource": true
+      }
+    ]
+  },
+  {
+    "id": "motion-design",
+    "title": "Motion Design",
+    "layout": "wide",
+    "items": [
+      {
+        "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
+        "category": "long-form",
+        "videoId": "_lZYR2VkZTg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "1K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=_lZYR2VkZTg",
+        "previewVideo": "videos/previews/_lZYR2VkZTg.mp4",
+        "localSource": false
+      },
+      {
+        "title": "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        "category": "long-form",
+        "videoId": "WZLSVMVS5o4",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "3K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=WZLSVMVS5o4",
+        "previewVideo": "videos/previews/WZLSVMVS5o4.mp4",
+        "localSource": false
+      },
+      {
+        "title": "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        "category": "long-form",
+        "videoId": "iuYQuxHScRg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "2K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
+        "localSource": false
+      },
+      {
+        "title": "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
+        "category": "long-form",
+        "videoId": "3AtLY01qlYk",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "8K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=3AtLY01qlYk",
+        "previewVideo": "videos/previews/3AtLY01qlYk.mp4",
+        "localSource": false
+      },
+      {
+        "title": "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        "category": "long-form",
+        "videoId": "XuQ1DiWxblg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "23K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
+        "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
+        "localSource": false
+      }
+    ]
+  },
+  {
     "id": "long-form",
     "title": "Long-form",
     "layout": "wide",
@@ -435,18 +696,6 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=KZYFvgajyPE",
         "previewVideo": "videos/previews/KZYFvgajyPE.mp4",
-        "localSource": false
-      },
-      {
-        "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
-        "category": "long-form",
-        "videoId": "_lZYR2VkZTg",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "1K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=_lZYR2VkZTg",
-        "previewVideo": "videos/previews/_lZYR2VkZTg.mp4",
         "localSource": false
       },
       {
@@ -498,18 +747,6 @@ const sections = [
         "localSource": false
       },
       {
-        "title": "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        "category": "long-form",
-        "videoId": "WZLSVMVS5o4",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "3K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=WZLSVMVS5o4",
-        "previewVideo": "videos/previews/WZLSVMVS5o4.mp4",
-        "localSource": false
-      },
-      {
         "title": "MÃES DE PROS JOGAM VALORANT PELA 1ª VEZ!",
         "category": "long-form",
         "videoId": "JgEullP4AVo",
@@ -544,22 +781,6 @@ const sections = [
         "url": "https://www.youtube.com/watch?v=vP1rwg-rzcI",
         "previewVideo": "videos/previews/vP1rwg-rzcI.mp4",
         "localSource": false
-      },
-      {
-        "title": "Adeus Windows! Bem-vindo Linux!",
-        "category": "long-form",
-        "videoId": "TZfM1yfkFn4",
-        "platform": "youtube",
-        "channelName": "Coisa de Nerd",
-        "viewCount": "1.1M views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-        "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
-        "localSource": false,
-        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-        "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
-        "subtitlesLang": "en",
-        "subtitlesLabel": "English"
       },
       {
         "title": "Visitei uma PLANTAÇÃO de MAC0NHA na ARGENTINA! umdois Viagem",
@@ -725,11 +946,5 @@ const sections = [
         "localSource": false
       }
     ]
-  },
-  {
-    "id": "motion-design",
-    "title": "Motion Design",
-    "layout": "wide",
-    "items": []
   }
 ];

@@ -1,11 +1,11 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-21T10:21:02-03:00",
+  "generated_at": "2026-10-21T15:26:25-03:00",
   "sections": [
     {
       "id": "featured",
-      "title": "Featured",
+      "title": "The Best from Team Liquid",
       "layout": "hero",
       "groups": [
         {
@@ -20,7 +20,8 @@
           "label": "",
           "long_form_id": "D0tZ5NaRobM",
           "short_form_ids": [
-            "de-cT8ZLQzs"
+            "de-cT8ZLQzs",
+            "IFmOMTKXhbA"
           ]
         },
         {
@@ -35,21 +36,50 @@
       ]
     },
     {
+      "id": "the-best-from-coisa-de-nerd",
+      "title": "The Best from Coisa de Nerd",
+      "layout": "wide",
+      "video_ids": [
+        "TZfM1yfkFn4",
+        "6DMvk5aNV64"
+      ]
+    },
+    {
+      "id": "doublelift-guesses-the-rank",
+      "title": "DOUBLELIFT GUESSES THE RANK",
+      "layout": "tall",
+      "video_ids": [
+        "kuEb5qEpdPs",
+        "ZeVeXsq87XI",
+        "vBhxZrwazB8",
+        "G8ZF6WpwmUI"
+      ]
+    },
+    {
+      "id": "motion-design",
+      "title": "Motion Design",
+      "layout": "wide",
+      "video_ids": [
+        "_lZYR2VkZTg",
+        "WZLSVMVS5o4",
+        "iuYQuxHScRg",
+        "3AtLY01qlYk",
+        "XuQ1DiWxblg"
+      ]
+    },
+    {
       "id": "long-form",
       "title": "Long-form",
       "layout": "wide",
       "video_ids": [
         "KZYFvgajyPE",
-        "_lZYR2VkZTg",
         "WOGQI0PAjEU",
         "gVQEYRTtm68",
         "ATH4PvNxWNA",
         "mnO5bES3eQY",
-        "WZLSVMVS5o4",
         "JgEullP4AVo",
         "EcOX5FeP2w4",
         "vP1rwg-rzcI",
-        "TZfM1yfkFn4",
         "C1ivkljLWAw"
       ]
     },
@@ -71,12 +101,6 @@
         "C1_1fTOOtRS",
         "C-6GOVvv96_"
       ]
-    },
-    {
-      "id": "motion-design",
-      "title": "Motion Design",
-      "layout": "wide",
-      "video_ids": []
     }
   ]
 }
