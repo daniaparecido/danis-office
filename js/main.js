@@ -251,6 +251,27 @@
         return !!project.previewVideo;
     }
 
+    /**
+     * Escape a value for use inside a double-quoted HTML attribute.
+     */
+    function escapeAttr(value) {
+        return String(value == null ? '' : value)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;');
+    }
+
+    /**
+     * <track> markup for a project's subtitle file (project.subtitles), or ''.
+     * Same-origin .vtt, so no crossorigin attribute is needed on the <video>.
+     */
+    function trackHTML(project) {
+        if (!project || !project.subtitles) return '';
+        const lang = project.subtitlesLang || 'en';
+        const label = project.subtitlesLabel || 'Subtitles';
+        return `<track kind="subtitles" src="${escapeAttr(project.subtitles)}" srclang="${escapeAttr(lang)}" label="${escapeAttr(label)}" default>`;
+    }
+
     // ============================================
     // Grid Generation
     // ============================================
@@ -279,6 +300,10 @@
 
         const thumbnailUrl = getThumbnailUrl(project);
         const fallbackUrl = getFallbackThumbnail(project);
+        // "EN subtitles" pill on the thumb when the lightbox will carry a subtitle track.
+        const subsBadge = project.subtitles
+            ? `<span class="subs-badge" aria-label="${escapeAttr(project.subtitlesLabel || 'Subtitles')} subtitles">${escapeAttr(project.subtitlesLang || 'cc')} subtitles</span>`
+            : '';
 
         item.innerHTML = `
             <div class="grid-item-thumb">
@@ -290,23 +315,28 @@
                 <h3 class="grid-item-title">${project.title}</h3>
                 <span class="grid-item-meta">${project.channelName || ''} ${project.channelName && project.viewCount ? '·' : ''} ${project.viewCount || ''}</span>
             </div>
+            ${subsBadge}
         `;
 
         // Click handler - Open appropriate lightbox based on platform.
-        // A YouTube short with a local mp4 (project.localSource) goes through the
-        // local-video lightbox so the 9:16 video fills a tall vertical container
-        // instead of getting pillarboxed inside YouTube's 16:9 embed chrome.
+        // A self-hosted copy (project.videoSrc) always wins: it exists because the
+        // video needs our own player (subtitle track). A YouTube short with a local
+        // mp4 (project.localSource) goes through the local-video lightbox so the
+        // 9:16 video fills a tall vertical container instead of getting
+        // pillarboxed inside YouTube's 16:9 embed chrome.
         item.addEventListener('click', () => {
-            if (platform === 'youtube') {
+            if (project.videoSrc) {
+                openHostedLightbox(project);
+            } else if (platform === 'youtube') {
                 if (project.localSource && project.category === 'short-form') {
-                    openVideoLightbox(videoId, 'youtube', project.url);
+                    openVideoLightbox(videoId, 'youtube', project.url, project);
                 } else {
                     openYouTubeLightbox(videoId, project.url);
                 }
             } else if (platform === 'instagram') {
-                openVideoLightbox(videoId, 'instagram', project.url);
+                openVideoLightbox(videoId, 'instagram', project.url, project);
             } else if (platform === 'tiktok') {
-                openVideoLightbox(videoId, 'tiktok', project.url);
+                openVideoLightbox(videoId, 'tiktok', project.url, project);
             }
         });
 
@@ -588,6 +618,33 @@
         }
     }
 
+    // Capitalise 'instagram' / 'tiktok' / 'youtube'; YouTube needs the
+    // mid-word capital that a naive uppercase-first wouldn't produce.
+    const PLATFORM_LABELS = { youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok' };
+
+    function platformLabel(platform) {
+        return PLATFORM_LABELS[platform] || (platform.charAt(0).toUpperCase() + platform.slice(1));
+    }
+
+    /**
+     * Place the "Watch on <Platform>" pill right below the video container,
+     * replacing any pill left over from a previous open.
+     */
+    function insertWatchPill(platform, url) {
+        const existingBtn = videoContainer.parentElement.querySelector('.watch-on-platform');
+        if (existingBtn) existingBtn.remove();
+        videoContainer.insertAdjacentHTML('afterend', `
+            <a href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer" class="watch-on-platform">
+                Watch on ${platformLabel(platform)}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+            </a>
+        `);
+    }
+
     /**
      * Open the lightbox with a YouTube video
      */
@@ -605,37 +662,73 @@
             </iframe>
         `;
 
-        // Add button below video container
-        let existingBtn = videoContainer.parentElement.querySelector('.watch-on-platform');
-        if (existingBtn) existingBtn.remove();
-        videoContainer.insertAdjacentHTML('afterend', `
-            <a href="${url}" target="_blank" rel="noopener noreferrer" class="watch-on-platform">
-                Watch on YouTube
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-            </a>
-        `);
-
+        insertWatchPill('youtube', url);
         activateLightbox();
     }
 
     /**
-     * Open the lightbox with a local video file (Instagram/TikTok)
+     * Open the lightbox with a self-hosted copy of a video (project.videoSrc),
+     * usually a Portuguese long-form carrying an English subtitle track
+     * (project.subtitles). The YouTube iframe cannot take our own track, and a
+     * subtitle layer drawn over it would vanish in fullscreen on iPhone, whereas
+     * a native <track> on our own <video> survives every fullscreen mode. The
+     * file lives on the GitHub "media" release, not in the repo (Pages 1 GB cap).
+     * If the hosted copy fails to load, fall back to the plain YouTube embed so
+     * the viewer still gets the video.
      */
-    function openVideoLightbox(videoId, platform, url) {
+    function openHostedLightbox(project) {
+        if (!lightbox || !videoContainer) return;
+        const videoId = project.videoId || project.youtubeId;
+        const platform = project.platform || 'youtube';
+
+        videoContainer.classList.add('hosted-video');
+        videoContainer.innerHTML = `
+            <video class="hosted-player" controls autoplay playsinline preload="metadata">
+                <source src="${escapeAttr(project.videoSrc)}" type="video/mp4">
+                ${trackHTML(project)}
+                Your browser does not support the video tag.
+            </video>
+        `;
+
+        const video = videoContainer.querySelector('video');
+        // Browsers normally honour `default`, but Safari defers to the user's
+        // caption preference; force the track on so the subtitles show at once.
+        video.addEventListener('loadedmetadata', () => {
+            for (const track of video.textTracks) {
+                if (track.kind === 'subtitles') track.mode = 'showing';
+            }
+        }, { once: true });
+
+        let fellBack = false;
+        const fallbackToEmbed = () => {
+            if (fellBack || platform !== 'youtube') return;
+            fellBack = true;
+            console.warn(`Hosted copy of ${videoId} failed to load; falling back to the YouTube embed`);
+            const returnFocus = lightboxReturnFocus;
+            videoContainer.classList.remove('hosted-video');
+            openYouTubeLightbox(videoId, project.url);
+            lightboxReturnFocus = returnFocus;
+        };
+        video.addEventListener('error', fallbackToEmbed);
+        const source = video.querySelector('source');
+        if (source) source.addEventListener('error', fallbackToEmbed);
+
+        insertWatchPill(platform, project.url);
+        activateLightbox();
+    }
+
+    /**
+     * Open the lightbox with a local video file (Instagram/TikTok, or a YouTube
+     * short whose full mp4 is in videos/source/). `project` is optional and only
+     * read for a subtitle track.
+     */
+    function openVideoLightbox(videoId, platform, url, project) {
         if (!lightbox || !videoContainer) return;
 
         // Mark container as vertical video
         videoContainer.classList.add('vertical-video');
 
         const videoPath = `videos/source/${videoId}.mp4`;
-        // Capitalise 'instagram' / 'tiktok' / 'youtube'; YouTube needs the
-        // mid-word capital that a naive uppercase-first wouldn't produce.
-        const platformLabels = { youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok' };
-        const platformName = platformLabels[platform] || (platform.charAt(0).toUpperCase() + platform.slice(1));
 
         videoContainer.innerHTML = `
             <div class="vertical-video-wrapper">
@@ -645,25 +738,13 @@
                     controls
                     autoplay
                     playsinline>
+                    ${trackHTML(project)}
                     Your browser does not support the video tag.
                 </video>
             </div>
         `;
 
-        // Add button below video container
-        let existingBtn = videoContainer.parentElement.querySelector('.watch-on-platform');
-        if (existingBtn) existingBtn.remove();
-        videoContainer.insertAdjacentHTML('afterend', `
-            <a href="${url}" target="_blank" rel="noopener noreferrer" class="watch-on-platform">
-                Watch on ${platformName}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-            </a>
-        `);
-
+        insertWatchPill(platform, url);
         activateLightbox();
     }
 
@@ -673,16 +754,20 @@
     function closeLightbox() {
         if (!lightbox || !videoContainer) return;
 
-        // Pause any playing videos before closing
+        // Pause any playing videos before closing and release the media resources
+        // (both the src attribute and any <source> children, so the hosted copy
+        // stops downloading too).
         const video = videoContainer.querySelector('video');
         if (video) {
             video.pause();
-            video.src = ''; // Release video resources
+            video.removeAttribute('src');
+            video.querySelectorAll('source').forEach(s => s.remove());
+            video.load();
         }
 
         lightbox.classList.remove('active');
         videoContainer.innerHTML = '';
-        videoContainer.classList.remove('vertical-video'); // Remove vertical class
+        videoContainer.classList.remove('vertical-video', 'hosted-video');
         // Remove button placed outside video container
         const btn = videoContainer.parentElement.querySelector('.watch-on-platform');
         if (btn) btn.remove();

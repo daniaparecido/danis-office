@@ -52,6 +52,8 @@ PROJECTS_FILE = ROOT_DIR / "js" / "projects.js"
 THUMBS_DIR = ROOT_DIR / "images" / "thumbnails"
 PREVIEWS_DIR = ROOT_DIR / "videos" / "previews"
 SOURCE_DIR = ROOT_DIR / "videos" / "source"
+# Self-hosted copies + subtitle tracks (see load_media_manifest).
+MEDIA_FILE = DATA_DIR / "media.json"
 
 YOUTUBE_LIBRARY_ID = "157LkGyuY_jMWwTWKu2w4Sh9lw0qHCURXKUufFfgOgqg"
 IGTT_LIBRARY_ID = "1jVd2XMhOI1MVqV9YtaBMVtXWU7IzkdZNuLYdkI5ZKdQ"
@@ -294,6 +296,52 @@ def escape_js(s):
     return (s or "").replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
 
 
+_MEDIA_ITEMS = None
+
+
+def load_media_manifest():
+    """data/media.json: videos that play from a self-hosted copy instead of the
+    YouTube embed, usually because they carry a subtitle track the embed cannot
+    show. {id: {"src": <absolute mp4 URL>, "subtitles": <repo-relative .vtt>,
+    "subtitlesLang": "en", "subtitlesLabel": "English"}}. The mp4s live on the
+    GitHub release tagged `media` (the repo is near the 1 GB Pages limit); the
+    .vtt files are tracked in videos/subs/. Missing file means no hosted media."""
+    global _MEDIA_ITEMS
+    if _MEDIA_ITEMS is None:
+        if MEDIA_FILE.exists():
+            _MEDIA_ITEMS = json.loads(MEDIA_FILE.read_text(encoding="utf-8")).get("items", {})
+        else:
+            _MEDIA_ITEMS = {}
+    return _MEDIA_ITEMS
+
+
+def hosted_media(item, local_source):
+    """Fields a hosted copy / subtitle track adds to a project object, or {}.
+    Only emits what the front end can actually use: a .vtt that is not on disk is
+    dropped, and a track without any player of our own (no hosted copy, no local
+    source) is dropped too, since the YouTube iframe cannot carry it."""
+    media = load_media_manifest().get(item["id"])
+    if not media:
+        return {}
+    out = {}
+    src = media.get("src") or ""
+    if src:
+        out["videoSrc"] = src
+    subs = media.get("subtitles") or ""
+    if subs and not (ROOT_DIR / subs).exists():
+        print(f"  WARNING: media.json subtitles for {item['id']} not on disk ({subs}); dropping track")
+        subs = ""
+    if subs and not (src or local_source):
+        print(f"  WARNING: media.json subtitles for {item['id']} need a hosted copy or a local source; "
+              f"the YouTube embed cannot show them; dropping track")
+        subs = ""
+    if subs:
+        out["subtitles"] = subs
+        out["subtitlesLang"] = media.get("subtitlesLang") or "en"
+        out["subtitlesLabel"] = media.get("subtitlesLabel") or "English"
+    return out
+
+
 def project_obj(category, item):
     """Legacy-shaped project dict for one library item (used by both the flat
     `projects` array and the resolved `featured` groups)."""
@@ -314,7 +362,7 @@ def project_obj(category, item):
         and category == "short-form"
         and (SOURCE_DIR / f"{item['id']}.mp4").exists()
     )
-    return {
+    obj = {
         "title": item.get("title", ""),
         "category": category,
         "videoId": item["id"],
@@ -326,6 +374,10 @@ def project_obj(category, item):
         "previewVideo": preview_rel if has_preview else "",
         "localSource": local_source,
     }
+    # videoSrc / subtitles / subtitlesLang / subtitlesLabel, only when present,
+    # so items without hosted media serialise exactly as before.
+    obj.update(hosted_media(item, local_source))
+    return obj
 
 
 def resolve_featured(by_id, site_config):
@@ -415,9 +467,19 @@ def generate_projects_js(library, site_config, totals):
             f'        url: "{obj["url"]}",',
             f'        previewVideo: "{obj["previewVideo"]}"',
         ]
+        # Optional fields, emitted only when set (keeps diffs small).
+        extras = []
         if obj.get("localSource"):
+            extras.append('        localSource: true')
+        if obj.get("videoSrc"):
+            extras.append(f'        videoSrc: "{escape_js(obj["videoSrc"])}"')
+        if obj.get("subtitles"):
+            extras.append(f'        subtitles: "{escape_js(obj["subtitles"])}"')
+            extras.append(f'        subtitlesLang: "{escape_js(obj["subtitlesLang"])}"')
+            extras.append(f'        subtitlesLabel: "{escape_js(obj["subtitlesLabel"])}"')
+        if extras:
             entry[-1] += ","
-            entry.append('        localSource: true')
+            entry.append(",\n".join(extras))
         entry.append("    },")
         lines += entry
     lines += ["];", ""]

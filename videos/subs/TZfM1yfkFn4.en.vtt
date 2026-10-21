@@ -1,0 +1,646 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.170
+Here's the thing, guys: the handheld gaming PC market is booming,
+
+00:00:04.220 --> 00:00:07.190
+and the Steam Deck is the main driver of that growth.
+
+00:00:07.240 --> 00:00:11.490
+Not that these PCs didn't exist before, but when everyone saw the Steam Deck they said:
+
+00:00:11.540 --> 00:00:14.590
+"I want one. I don't know why, but I want one."
+
+00:00:14.640 --> 00:00:18.810
+After Valve, several companies followed the same path and built devices like it,
+
+00:00:18.860 --> 00:00:21.310
+and the most successful one was Asus.
+
+00:00:21.360 --> 00:00:26.310
+This device here is theirs: the ROG Ally X, or "Rog" Ally X, however you want to say it.
+
+00:00:26.360 --> 00:00:31.410
+Please don't correct me in the comments. Someone will anyway.
+
+00:00:31.460 --> 00:00:32.970
+Still, it's basically a Steam Deck Pro.
+
+00:00:33.020 --> 00:00:37.230
+Its processor is a Ryzen Z1 Extreme, more powerful than the Steam Deck's, and it has more RAM,
+
+00:00:37.280 --> 00:00:41.150
+and a screen that isn't OLED like the Steam Deck OLED,
+
+00:00:41.200 --> 00:00:46.750
+but it's a Full HD LCD at 120 Hz with variable refresh rate support.
+
+00:00:46.800 --> 00:00:50.410
+On top of all that, the Ally has an 80 Wh battery,
+
+00:00:50.460 --> 00:00:53.930
+versus 50 on the Steam Deck OLED and 40 on the Steam Deck LCD.
+
+00:00:53.980 --> 00:00:56.510
+That's laptop-sized. Way bigger.
+
+00:00:56.560 --> 00:00:59.490
+The engineering to fit that in here is impressive.
+
+00:00:59.540 --> 00:01:05.930
+It's practically perfect, except for one thing.
+
+00:01:05.980 --> 00:01:08.290
+It has Windows. It ships with Windows.
+
+00:01:08.340 --> 00:01:10.910
+Let me explain something for those who aren't up to date on this.
+
+00:01:10.960 --> 00:01:13.790
+The Steam Deck runs an operating system called SteamOS, which is Linux-based,
+
+00:01:13.840 --> 00:01:16.790
+but it runs Windows games.
+
+00:01:16.840 --> 00:01:20.170
+How does it run Windows games if Linux is a different system?
+
+00:01:20.220 --> 00:01:22.670
+It uses a compatibility layer called Proton,
+
+00:01:22.720 --> 00:01:25.930
+which translates a Windows game's instructions for Linux.
+
+00:01:25.980 --> 00:01:29.070
+Do all games run perfectly? No. But most of them do.
+
+00:01:29.120 --> 00:01:34.590
+"So wait, if not every game runs properly on it,
+
+00:01:34.640 --> 00:01:37.270
+wouldn't it be better to use Windows,
+
+00:01:37.320 --> 00:01:41.830
+since on Windows every Windows game runs with no problem?
+
+00:01:41.880 --> 00:01:47.710
+Better to have all the games than almost all the games, right? Right?"
+
+00:01:47.760 --> 00:01:49.150
+No. Wrong.
+
+00:01:49.200 --> 00:01:52.330
+That's what we thought when the Steam Deck came out.
+
+00:01:52.380 --> 00:01:57.090
+But then we used Windows 11 on these tiny-screen devices,
+
+00:01:57.140 --> 00:02:03.750
+touchscreen only, no keyboard and mouse, and the experience is infuriating.
+
+00:02:03.800 --> 00:02:07.270
+So much so that I have several devices more powerful than the Steam Deck,
+
+00:02:07.320 --> 00:02:09.690
+but I always end up going back to the Steam Deck, because I don't want to deal with Windows.
+
+00:02:09.740 --> 00:02:14.910
+"But not every game works on the Steam Deck, you're going to..."
+
+00:02:14.960 --> 00:02:19.110
+Doesn't matter. Doesn't matter. Let me explain,
+
+00:02:19.160 --> 00:02:25.850
+starting with the classic Windows problems that show up the first time you boot the device.
+
+00:02:25.900 --> 00:02:27.810
+It will try to push a Microsoft Office install on you,
+
+00:02:27.860 --> 00:02:32.430
+on every major Windows update, to sell you a subscription later.
+
+00:02:32.480 --> 00:02:37.100
+Why? Because Microsoft Office is Microsoft's second biggest source of revenue.
+
+00:02:37.150 --> 00:02:39.910
+If you get distracted and click the wrong button once, it installs Microsoft Office.
+
+00:02:39.960 --> 00:02:44.550
+Is it a bad suite of apps? No, it's actually very good.
+
+00:02:44.600 --> 00:02:51.830
+Do I need it on a small handheld built to play video games? Absolutely not.
+
+00:02:51.880 --> 00:02:55.610
+And the bigger incompetence: Microsoft could be promoting Game Pass
+
+00:02:55.660 --> 00:02:57.590
+with the same effort they put behind Microsoft Office,
+
+00:02:57.640 --> 00:03:00.990
+which is also a Microsoft subscription service, for games,
+
+00:03:01.040 --> 00:03:04.750
+and would make much more sense on a device like this.
+
+00:03:04.800 --> 00:03:10.050
+But Microsoft is in no hurry, right? The company's other divisions make billions.
+
+00:03:10.100 --> 00:03:12.070
+They're swimming in money, let's be serious.
+
+00:03:12.120 --> 00:03:16.070
+But so far I've only talked about setup and operating system updates,
+
+00:03:16.120 --> 00:03:20.270
+because updating a handheld like this is a problem in itself.
+
+00:03:20.320 --> 00:03:26.670
+Say you're playing a Steam game on it. You already have to keep the game updated through the Steam app.
+
+00:03:26.720 --> 00:03:28.970
+Count with me: that's number one.
+
+00:03:29.020 --> 00:03:34.150
+But you also need to open Windows Update in the settings to keep Windows updated.
+
+00:03:34.200 --> 00:03:35.450
+That's number two.
+
+00:03:35.500 --> 00:03:40.250
+Then you have to open Armoury Crate to update some drivers
+
+00:03:40.300 --> 00:03:45.310
+and the gaming interface Asus runs on top of Windows to make the experience less painful.
+
+00:03:45.360 --> 00:03:48.150
+Thanks, Asus. But that's three.
+
+00:03:48.200 --> 00:03:53.690
+You still have to update things through the MyAsus app, standard on every Asus PC,
+
+00:03:53.740 --> 00:03:56.670
+to download drivers like Bluetooth and audio. That's four.
+
+00:03:56.720 --> 00:04:01.370
+One of those two Asus apps also handles the AMD GPU update,
+
+00:04:01.420 --> 00:04:07.230
+but you'll want the AMD app too, Adrenalin, to control some GPU functions.
+
+00:04:07.280 --> 00:04:13.770
+So that's one more place to update one more thing on your device. Five. Five.
+
+00:04:13.820 --> 00:04:17.110
+Meanwhile, how does it work on the Steam Deck?
+
+00:04:17.160 --> 00:04:24.630
+You have your game update, as usual, and one update in the settings menu for everything else.
+
+00:04:24.680 --> 00:04:27.930
+All of it in a single app.
+
+00:04:27.980 --> 00:04:32.430
+Poor Asus puts a lot, a lot of effort into improving the Windows experience.
+
+00:04:32.480 --> 00:04:37.930
+That's why it ships with Armoury Crate and Command Center to manage so many aspects of the device.
+
+00:04:37.980 --> 00:04:42.290
+But nothing can fix Windows' problems. Microsoft has to do that.
+
+00:04:42.340 --> 00:04:47.330
+Like, on the Steam Deck those extra functions for controlling power draw and frame rate
+
+00:04:47.380 --> 00:04:49.230
+are all mapped to a controller. On Windows? No.
+
+00:04:49.280 --> 00:04:56.670
+On the Steam Deck you can suspend the game and come back later, sure it will still be running.
+
+00:04:56.720 --> 00:04:57.830
+On Windows? No.
+
+00:04:57.880 --> 00:05:02.310
+And there's a lot more. We could be here all day talking about this, but you get it.
+
+00:05:02.360 --> 00:05:08.030
+Not just you: Microsoft too. So much so that Microsoft's VP of Next Generation
+
+00:05:08.080 --> 00:05:12.830
+recently said they're working on a version of Windows specifically for these handhelds.
+
+00:05:12.880 --> 00:05:17.010
+They're working on it, which is good. Is it available? No.
+
+00:05:17.060 --> 00:05:22.930
+So what we can do is install SteamOS on the ROG Ally.
+
+00:05:22.980 --> 00:05:26.650
+Then we get the best of both worlds: the battery, the 120 Hz screen with variable refresh rate,
+
+00:05:26.700 --> 00:05:34.250
+the more powerful processor, and no Windows. No Windows.
+
+00:05:34.300 --> 00:05:40.110
+But here's the catch. Valve, who makes the Steam Deck,
+
+00:05:40.160 --> 00:05:45.470
+promised to make SteamOS available for anyone to download and install wherever they want.
+
+00:05:45.520 --> 00:05:48.410
+Promised? Yes. Delivered? Not yet.
+
+00:05:48.460 --> 00:05:52.570
+But there's a big "but" here, because SteamOS is Linux.
+
+00:05:52.620 --> 00:05:55.090
+Linux is free and open source.
+
+00:05:55.140 --> 00:06:00.130
+If Valve won't give you SteamOS, you can go and make it yourself. Anyone can.
+
+00:06:00.180 --> 00:06:07.570
+You just need a lot of programming knowledge, a lot of Linux knowledge, and a lot of free time.
+
+00:06:07.620 --> 00:06:13.950
+Luckily for us, someone did it. More specifically, a very dedicated group of people.
+
+00:06:14.000 --> 00:06:16.190
+They maintain a project called Bazzite, a Linux distribution
+
+00:06:16.240 --> 00:06:23.470
+where they replicated how SteamOS works, bit by bit,
+
+00:06:23.520 --> 00:06:27.570
+except where it wasn't possible, because different devices have different hardware.
+
+00:06:27.620 --> 00:06:29.590
+But it's basically the same thing.
+
+00:06:29.640 --> 00:06:36.710
+So you can install SteamOS wherever you want. They make it available to download for free.
+
+00:06:36.760 --> 00:06:40.550
+For free. You can turn your device into a Steam Deck.
+
+00:06:40.600 --> 00:06:44.650
+So, ladies and gentlemen, now we're going to install Bazzite, basically SteamOS,
+
+00:06:44.700 --> 00:06:49.790
+on the ROG Ally X and see the results. Let's go.
+
+00:06:49.840 --> 00:06:52.850
+First I had to download Bazzite from their site:
+
+00:06:52.900 --> 00:06:59.730
+click Download, choose the device, ROG Ally X, and the KDE desktop environment to match SteamOS.
+
+00:06:59.780 --> 00:07:03.350
+Then I downloaded an app, Balena Etcher, to make an install USB stick
+
+00:07:03.400 --> 00:07:05.450
+with the Bazzite ISO I had just downloaded.
+
+00:07:05.500 --> 00:07:08.690
+In Balena Etcher I selected the ISO and the USB stick, hit Flash, and done:
+
+00:07:08.740 --> 00:07:11.150
+I had a Bazzite install stick.
+
+00:07:11.200 --> 00:07:16.450
+Then on the ROG Ally X I went into the security settings and decrypted its SSD.
+
+00:07:16.500 --> 00:07:21.730
+Next I downloaded a program called Paragon Partition Manager to split my SSD in two,
+
+00:07:21.780 --> 00:07:25.770
+and gave 512 GB to the partition where I'd install Bazzite.
+
+00:07:25.820 --> 00:07:30.170
+Then I plugged a USB hub with keyboard, mouse and my Bazzite stick into the Ally X,
+
+00:07:30.220 --> 00:07:34.070
+and restarted it holding volume down to get into the BIOS.
+
+00:07:34.120 --> 00:07:38.230
+In the BIOS I went to boot priority and dragged the USB stick to the top,
+
+00:07:38.280 --> 00:07:40.910
+then clicked the top-left button and saved.
+
+00:07:40.960 --> 00:07:44.470
+When it booted from the Bazzite stick, I told it to install,
+
+00:07:44.520 --> 00:07:47.630
+selected the language, then the install location.
+
+00:07:47.680 --> 00:07:50.670
+Since the SSD was already partitioned, it was just a matter of clicking Done,
+
+00:07:50.720 --> 00:07:54.430
+then I set a username and password and continued the installation.
+
+00:07:54.480 --> 00:07:57.250
+After installing, it reboots into the Secure Boot menu.
+
+00:07:57.300 --> 00:08:04.470
+I clicked Enroll, OK, Continue, Yes, and typed the password "universalblue", from the Bazzite folks.
+
+00:08:04.520 --> 00:08:10.650
+Then it rebooted and opened straight into the Steam login screen. It's installed.
+
+00:08:10.700 --> 00:08:13.610
+But seriously, guys, when I started working on this video I thought:
+
+00:08:13.660 --> 00:08:17.170
+this will be a fun experiment, a cool thing to test and see how it works.
+
+00:08:17.220 --> 00:08:22.670
+But let me tell you something. This is sensational. Sensational.
+
+00:08:22.720 --> 00:08:25.750
+The ROG Ally X with Bazzite is basically a Steam Deck Pro.
+
+00:08:25.800 --> 00:08:27.630
+It's everything we asked for. It works wonderfully.
+
+00:08:27.680 --> 00:08:32.410
+You get the 120 Hz screen with variable refresh rate, the bigger battery,
+
+00:08:32.460 --> 00:08:35.670
+and the much more powerful processor.
+
+00:08:35.720 --> 00:08:41.530
+It has all the Steam Deck functions. I can click here and open that menu to control performance,
+
+00:08:41.580 --> 00:08:47.970
+I can control the screen refresh rate, turn on variable refresh rate,
+
+00:08:48.020 --> 00:08:50.690
+control the screen scaling,
+
+00:08:50.740 --> 00:08:58.650
+and even the performance overlay. I'll turn it on and set it to the biggest, most detailed level.
+
+00:08:58.700 --> 00:09:02.690
+There are the numbers to track the game's performance, the same way I have on the Steam Deck.
+
+00:09:02.740 --> 00:09:05.490
+The only thing actually missing is the power control.
+
+00:09:05.540 --> 00:09:11.050
+But what you can do is double-click on it, and it gives you this control here,
+
+00:09:11.100 --> 00:09:14.570
+where you can change how much power the device draws.
+
+00:09:14.620 --> 00:09:19.970
+And if your game freezes you can use this menu to close it too. Confirm. Done.
+
+00:09:20.020 --> 00:09:28.810
+And everything really works. You have access to your library, all there, just like on the Steam Deck.
+
+00:09:28.860 --> 00:09:32.730
+And if you need to update your system or change anything,
+
+00:09:32.780 --> 00:09:37.300
+you go to Settings, here under System, and check for updates.
+
+00:09:41.480 --> 00:09:43.110
+No update. All good.
+
+00:09:43.160 --> 00:09:48.410
+And just like on the Steam Deck, you can use an external controller to pull up these menus.
+
+00:09:48.460 --> 00:09:50.850
+The button mapping is even the same.
+
+00:09:50.900 --> 00:09:53.750
+And you can play tons of games on it. I tested several,
+
+00:09:53.800 --> 00:09:58.570
+even games without official support, that aren't "Deck Verified", so to speak.
+
+00:09:58.620 --> 00:10:03.790
+On top of that, you can play lots of older, lighter games at 120 Hz,
+
+00:10:03.840 --> 00:10:06.270
+because that's the screen's maximum refresh rate.
+
+00:10:06.320 --> 00:10:10.010
+Obviously there are unsupported games, not Deck Verified, that will give you trouble,
+
+00:10:10.060 --> 00:10:13.770
+but they give you trouble on the Steam Deck too.
+
+00:10:13.820 --> 00:10:18.210
+But the best part, ladies and gentlemen: for games that don't work on Steam Deck or Bazzite,
+
+00:10:18.260 --> 00:10:21.480
+you can do this.
+
+00:10:21.530 --> 00:10:32.270
+Power, restart, confirm, and hold volume up while it reboots.
+
+00:10:32.320 --> 00:10:37.610
+That takes you to the dual boot screen, and you can pick Windows,
+
+00:10:37.660 --> 00:10:41.690
+because I kept Windows on the machine. I have both operating systems.
+
+00:10:41.740 --> 00:10:47.210
+Here we have, ladies and gentlemen, Windows 11 running. All functions intact.
+
+00:10:47.260 --> 00:10:53.600
+You can use this for unsupported games, but also for Game Pass games.
+
+00:10:56.520 --> 00:10:59.080
+Asus likes its little noises, you know.
+
+00:10:59.130 --> 00:11:07.100
+But I'll confess something: I gave Bazzite 512 GB and the rest of the SSD to Windows.
+
+00:11:07.150 --> 00:11:09.480
+If I had to do it again, I'd leave much less space for Windows,
+
+00:11:09.530 --> 00:11:12.520
+because I don't see myself going back to Windows for anything.
+
+00:11:12.570 --> 00:11:19.440
+At most I'd leave room for one game that happens not to work on Bazzite.
+
+00:11:19.490 --> 00:11:24.820
+But at least one thing saves you here: the SD card.
+
+00:11:24.870 --> 00:11:29.080
+The Steam games you install on it are available to both Windows and Bazzite.
+
+00:11:29.130 --> 00:11:36.400
+So with one install you can open the game on both. You can even use that to compare performance, if you want.
+
+00:11:36.450 --> 00:11:40.780
+Now back to Bazzite, because I have two last things to show you.
+
+00:11:40.830 --> 00:11:44.800
+First, SteamOS screen recording works.
+
+00:11:44.850 --> 00:11:48.280
+If I look here under Media, I've already recorded some files.
+
+00:11:48.330 --> 00:11:53.120
+You can record internally, straight from the overlay menu over the game,
+
+00:11:53.170 --> 00:11:57.000
+and you get your gameplay recorded at up to 1080p.
+
+00:11:57.050 --> 00:12:03.620
+And finally, the sensational thing, the complete game changer for this kind of device: this.
+
+00:12:03.670 --> 00:12:08.680
+You put it in standby. It goes to standby.
+
+00:12:08.730 --> 00:12:14.800
+You come back, no cuts, and it resumes exactly where you were.
+
+00:12:14.850 --> 00:12:20.560
+What's so hard, Windows? Why can't a billion-dollar company like Microsoft,
+
+00:12:20.610 --> 00:12:23.360
+trillion-dollar, I guess, they must be past a trillion,
+
+00:12:23.410 --> 00:12:27.000
+make this work reliably?
+
+00:12:27.050 --> 00:12:30.180
+Seriously, let me show you something. This is Tembo, if I'm not mistaken.
+
+00:12:30.230 --> 00:12:33.520
+It's not Deck Verified, no "official support".
+
+00:12:33.570 --> 00:12:40.080
+I'm playing the game. I pause, click to suspend, it suspends.
+
+00:12:40.130 --> 00:12:44.390
+Then I come back here, when I want to play, and click again.
+
+00:12:47.140 --> 00:12:53.230
+It's exactly where I was. I can unpause and keep playing. Magic, isn't it?
+
+00:12:53.280 --> 00:12:57.210
+But now, guys, the negative part.
+
+00:12:57.260 --> 00:13:00.850
+In my whole experience with Bazzite on the ROG Ally X I had two more-or-less serious problems.
+
+00:13:00.900 --> 00:13:06.110
+First, pairing Bluetooth controllers took more work than I'd like.
+
+00:13:06.160 --> 00:13:12.230
+I don't know what happens: it lists a bunch of devices, I select the controller, and it doesn't always connect.
+
+00:13:12.280 --> 00:13:16.710
+But once I managed to pair a controller, it worked with no problem.
+
+00:13:16.760 --> 00:13:21.130
+And one thing I couldn't do is use the shortcut for the on-screen keyboard,
+
+00:13:21.180 --> 00:13:25.130
+which is pressing the Steam button and X together.
+
+00:13:25.180 --> 00:13:29.270
+It works on an external controller, but not on the ROG Ally itself.
+
+00:13:29.320 --> 00:13:35.130
+From what I read online, there's a hardware limitation on that ROG Ally button
+
+00:13:35.180 --> 00:13:40.170
+when combined with another button on the device, so you can't trigger both together.
+
+00:13:40.220 --> 00:13:45.690
+And I know it's a ROG Ally limitation, not a Bazzite one, because it works with an external controller.
+
+00:13:45.740 --> 00:13:51.030
+Apparently there's a way around it. Someone already made a hack you can download to make it work.
+
+00:13:51.080 --> 00:13:57.290
+But the point of this video was to see how easy it is to install Bazzite on the ROG Ally X
+
+00:13:57.340 --> 00:14:04.390
+and use it without configuring much, that plug-and-play experience. So I didn't do it.
+
+00:14:04.440 --> 00:14:08.890
+If you're looking to do something like this, keep that limitation in mind.
+
+00:14:08.940 --> 00:14:14.470
+Some games ask for a keyboard, I don't know why, but you need one to get through a menu.
+
+00:14:14.520 --> 00:14:19.130
+And the only Deck Verified game that gave me trouble was Spider-Man 2.
+
+00:14:19.180 --> 00:14:24.910
+It froze completely while I was playing and I had to restart the device.
+
+00:14:24.960 --> 00:14:30.710
+But I think that's the game's problem, not the system's, because it has a reputation for terrible optimization.
+
+00:14:30.760 --> 00:14:36.850
+Sony is releasing patches, but the PC launch of that game was definitely not smooth.
+
+00:14:36.900 --> 00:14:44.610
+But given everything I've seen so far, this was the best experience I've had with these handheld gaming PCs.
+
+00:14:44.660 --> 00:14:46.910
+Seriously, guys, I don't think I can overstate it.
+
+00:14:46.960 --> 00:14:52.730
+I see no reason to go back to the Steam Deck or use any experience that isn't this, or very close to it.
+
+00:14:52.780 --> 00:14:58.450
+And Valve knows it. Recently there were leaks that they're already preparing
+
+00:14:58.500 --> 00:15:04.010
+the generic version of SteamOS for you to install on your device.
+
+00:15:04.060 --> 00:15:06.090
+You won't even need to go through Bazzite.
+
+00:15:06.140 --> 00:15:12.490
+But Bazzite itself is already extremely impressive, because this is community work.
+
+00:15:12.540 --> 00:15:16.650
+It's people volunteering their time to build this kind of system for you to install on your device.
+
+00:15:16.700 --> 00:15:20.590
+And here you don't have the problems you have on Windows 11,
+
+00:15:20.640 --> 00:15:24.910
+an operating system from a multi-billion-dollar company. I don't get it.
+
+00:15:24.960 --> 00:15:31.270
+And a device like the ROG Ally or Ally X is great for this kind of install,
+
+00:15:31.320 --> 00:15:34.890
+because it's so popular you'll most likely find support for everything on it.
+
+00:15:34.940 --> 00:15:42.690
+The Bazzite folks even make a specific build for it that works out of the box, nothing to install on top.
+
+00:15:42.740 --> 00:15:46.810
+An advantage you wouldn't have trying to install Bazzite on more niche devices,
+
+00:15:46.860 --> 00:15:50.570
+like the AYANEO I reviewed here on the channel before.
+
+00:15:50.620 --> 00:15:54.910
+To get it working on a device like that you'd probably have a lot more work and a lot more to install on top.
+
+00:15:54.960 --> 00:15:58.910
+Anyway, if you have a device like this and you're thinking of trying Bazzite,
+
+00:15:58.960 --> 00:16:03.110
+I'll put links to some guides in the description.
+
+00:16:03.160 --> 00:16:08.800
+And don't forget to leave a like and subscribe. I think I'll see you in the next one. Bye!

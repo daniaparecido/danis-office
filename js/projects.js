@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-21 09:19
+ * Last updated: 2026-10-21 09:51
  */
 
 const totalYouTubeViews = 438689008;
@@ -132,7 +132,11 @@ const projects = [
         viewCount: "1.1M views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-        previewVideo: "videos/previews/TZfM1yfkFn4.mp4"
+        previewVideo: "videos/previews/TZfM1yfkFn4.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+        subtitles: "videos/subs/TZfM1yfkFn4.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
     {
         title: "Visitei uma PLANTAÇÃO de MAC0NHA na ARGENTINA! umdois Viagem",

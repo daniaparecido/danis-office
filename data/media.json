@@ -1,0 +1,16 @@
+{
+  "$comment": "Self-hosted video copies and subtitle tracks for the lightbox. Read by scripts/sync_from_sheet.py, which emits videoSrc/subtitles into js/projects.js. The mp4 files live on the GitHub release tagged 'media', not in the repo (GitHub Pages has a 1 GB site limit). Subtitle .vtt files live in videos/subs/ and are tracked.",
+  "version": 1,
+  "items": {
+    "TZfM1yfkFn4": {
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+      "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "width": 1920,
+      "height": 1080,
+      "source": "youtube 1080p H.264 (yt-dlp -S res:1080,vcodec:h264,acodec:aac)",
+      "addedAt": "2026-10-21"
+    }
+  }
+}
