@@ -5,12 +5,12 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-22 11:39
+ * Last updated: 2026-10-23 11:10
  */
 
-const totalYouTubeViews = 438711009;
-const totalYouTubeVideos = 586;
-const totalVideos = 733;
+const totalYouTubeViews = 438760015;
+const totalYouTubeVideos = 587;
+const totalVideos = 734;
 
 // Flat list of the grid items (legacy shape; the page draws `sections` below).
 const projects = [
@@ -57,7 +57,7 @@ const projects = [
         videoId: "kuEb5qEpdPs",
         platform: "youtube",
         channelName: "Team Liquid League of Legends",
-        viewCount: "413K views",
+        viewCount: "414K views",
         thumbnail: "",
         url: "https://www.youtube.com/shorts/kuEb5qEpdPs",
         previewVideo: "videos/previews/kuEb5qEpdPs.mp4",
@@ -69,7 +69,7 @@ const projects = [
         videoId: "ZeVeXsq87XI",
         platform: "youtube",
         channelName: "Team Liquid League of Legends",
-        viewCount: "117K views",
+        viewCount: "118K views",
         thumbnail: "",
         url: "https://www.youtube.com/shorts/ZeVeXsq87XI",
         previewVideo: "videos/previews/ZeVeXsq87XI.mp4",
@@ -307,7 +307,7 @@ const sections = [
           "videoId": "DW3F1OHfZeo",
           "platform": "youtube",
           "channelName": "Team Liquid League of Legends",
-          "viewCount": "841K views",
+          "viewCount": "846K views",
           "thumbnail": "",
           "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
           "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -494,7 +494,7 @@ const sections = [
         "videoId": "kuEb5qEpdPs",
         "platform": "youtube",
         "channelName": "Team Liquid League of Legends",
-        "viewCount": "413K views",
+        "viewCount": "414K views",
         "thumbnail": "",
         "url": "https://www.youtube.com/shorts/kuEb5qEpdPs",
         "previewVideo": "videos/previews/kuEb5qEpdPs.mp4",
@@ -506,7 +506,7 @@ const sections = [
         "videoId": "ZeVeXsq87XI",
         "platform": "youtube",
         "channelName": "Team Liquid League of Legends",
-        "viewCount": "117K views",
+        "viewCount": "118K views",
         "thumbnail": "",
         "url": "https://www.youtube.com/shorts/ZeVeXsq87XI",
         "previewVideo": "videos/previews/ZeVeXsq87XI.mp4",
