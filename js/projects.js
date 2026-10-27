@@ -5,10 +5,10 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-26 13:01
+ * Last updated: 2026-10-27 12:15
  */
 
-const totalYouTubeViews = 438936017;
+const totalYouTubeViews = 438963017;
 const totalYouTubeVideos = 587;
 const totalVideos = 734;
 
@@ -35,7 +35,7 @@ const projects = [
         videoId: "6DMvk5aNV64",
         platform: "youtube",
         channelName: "República Coisa de Nerd",
-        viewCount: "255K views",
+        viewCount: "256K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=6DMvk5aNV64",
         previewVideo: "videos/previews/6DMvk5aNV64.mp4"
@@ -57,7 +57,7 @@ const projects = [
         videoId: "kuEb5qEpdPs",
         platform: "youtube",
         channelName: "Team Liquid League of Legends",
-        viewCount: "415K views",
+        viewCount: "416K views",
         thumbnail: "",
         url: "https://www.youtube.com/shorts/kuEb5qEpdPs",
         previewVideo: "videos/previews/kuEb5qEpdPs.mp4",
@@ -307,7 +307,7 @@ const sections = [
           "videoId": "DW3F1OHfZeo",
           "platform": "youtube",
           "channelName": "Team Liquid League of Legends",
-          "viewCount": "861K views",
+          "viewCount": "866K views",
           "thumbnail": "",
           "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
           "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -463,7 +463,7 @@ const sections = [
         "videoId": "6DMvk5aNV64",
         "platform": "youtube",
         "channelName": "República Coisa de Nerd",
-        "viewCount": "255K views",
+        "viewCount": "256K views",
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
         "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
@@ -494,7 +494,7 @@ const sections = [
         "videoId": "kuEb5qEpdPs",
         "platform": "youtube",
         "channelName": "Team Liquid League of Legends",
-        "viewCount": "415K views",
+        "viewCount": "416K views",
         "thumbnail": "",
         "url": "https://www.youtube.com/shorts/kuEb5qEpdPs",
         "previewVideo": "videos/previews/kuEb5qEpdPs.mp4",
