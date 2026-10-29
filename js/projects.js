@@ -5,155 +5,15 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-29 19:57
+ * Last updated: 2026-10-29 20:00
  */
 
-const totalYouTubeViews = 439018018;
+const totalYouTubeViews = 439022018;
 const totalYouTubeVideos = 588;
 const totalVideos = 735;
 
 // Flat list of the grid items (legacy shape; the page draws `sections` below).
 const projects = [
-    {
-        title: "Adeus Windows! Bem-vindo Linux!",
-        category: "long-form",
-        videoId: "TZfM1yfkFn4",
-        platform: "youtube",
-        channelName: "Coisa de Nerd",
-        viewCount: "1.1M views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-        previewVideo: "videos/previews/TZfM1yfkFn4.mp4",
-        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-        subtitles: "videos/subs/TZfM1yfkFn4.en.vtt",
-        subtitlesLang: "en",
-        subtitlesLabel: "English"
-    },
-    {
-        title: "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
-        category: "long-form",
-        videoId: "6DMvk5aNV64",
-        platform: "youtube",
-        channelName: "República Coisa de Nerd",
-        viewCount: "256K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=6DMvk5aNV64",
-        previewVideo: "videos/previews/6DMvk5aNV64.mp4"
-    },
-    {
-        title: "NÃO É SEMPRE QUE SE GANHA...",
-        category: "long-form",
-        videoId: "WOGQI0PAjEU",
-        platform: "youtube",
-        channelName: "República Coisa de Nerd",
-        viewCount: "262K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=WOGQI0PAjEU",
-        previewVideo: "videos/previews/WOGQI0PAjEU.mp4"
-    },
-    {
-        title: "DOUBLELIFT GUESS THE RANK (Pt.1)",
-        category: "short-form",
-        videoId: "kuEb5qEpdPs",
-        platform: "youtube",
-        channelName: "Team Liquid League of Legends",
-        viewCount: "418K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/shorts/kuEb5qEpdPs",
-        previewVideo: "videos/previews/kuEb5qEpdPs.mp4",
-        localSource: true
-    },
-    {
-        title: "DOUBLELIFT GUESS THE RANK (Pt.2)",
-        category: "short-form",
-        videoId: "ZeVeXsq87XI",
-        platform: "youtube",
-        channelName: "Team Liquid League of Legends",
-        viewCount: "119K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/shorts/ZeVeXsq87XI",
-        previewVideo: "videos/previews/ZeVeXsq87XI.mp4",
-        localSource: true
-    },
-    {
-        title: "DOUBLELIFT GUESS THE RANK (Part 3.)",
-        category: "short-form",
-        videoId: "vBhxZrwazB8",
-        platform: "youtube",
-        channelName: "Team Liquid League of Legends",
-        viewCount: "76K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/shorts/vBhxZrwazB8",
-        previewVideo: "videos/previews/vBhxZrwazB8.mp4",
-        localSource: true
-    },
-    {
-        title: "DOUBLELIFT GUESS THE RANK (Part 4)",
-        category: "short-form",
-        videoId: "G8ZF6WpwmUI",
-        platform: "youtube",
-        channelName: "Team Liquid League of Legends",
-        viewCount: "123K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/shorts/G8ZF6WpwmUI",
-        previewVideo: "videos/previews/G8ZF6WpwmUI.mp4",
-        localSource: true
-    },
-    {
-        title: "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
-        category: "long-form",
-        videoId: "_lZYR2VkZTg",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "1K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=_lZYR2VkZTg",
-        previewVideo: "videos/previews/_lZYR2VkZTg.mp4"
-    },
-    {
-        title: "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        category: "long-form",
-        videoId: "WZLSVMVS5o4",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "3K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=WZLSVMVS5o4",
-        previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
-    },
-    {
-        title: "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
-        category: "long-form",
-        videoId: "iuYQuxHScRg",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "2K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
-        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
-    },
-    {
-        title: "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
-        category: "long-form",
-        videoId: "3AtLY01qlYk",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "8K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=3AtLY01qlYk",
-        previewVideo: "videos/previews/3AtLY01qlYk.mp4"
-    },
-    {
-        title: "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        category: "long-form",
-        videoId: "XuQ1DiWxblg",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "23K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
-        previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
-    },
     {
         title: "We built the biggest gaming laptop in the WORLD! 💻🌎 #pc #gaming #setup #worldrecord",
         category: "short-form",
@@ -182,7 +42,7 @@ const projects = [
         videoId: "DODyPfskkr6",
         platform: "instagram",
         channelName: "Team Liquid",
-        viewCount: "154 likes",
+        viewCount: "167 likes",
         thumbnail: "images/thumbnails/DODyPfskkr6.jpg",
         url: "https://www.instagram.com/p/DODyPfskkr6/",
         previewVideo: "videos/previews/DODyPfskkr6.mp4"
@@ -205,7 +65,7 @@ const projects = [
         videoId: "DMqBVM4NTsc",
         platform: "instagram",
         channelName: "Team Liquid",
-        viewCount: "74K likes",
+        viewCount: "85K likes",
         thumbnail: "images/thumbnails/DMqBVM4NTsc.jpg",
         url: "https://www.instagram.com/p/DMqBVM4NTsc/",
         previewVideo: "videos/previews/DMqBVM4NTsc.mp4"
@@ -279,15 +139,71 @@ const projects = [
         previewVideo: "videos/previews/C1_1fTOOtRS.mp4"
     },
     {
-        title: "Q&A time 🩷 Go to the @teamliquid x Nihachu YT channel to see more!",
+        title: "She cannot pronounce THIS word 😂 part 1 #shorts #QnA #interview",
         category: "short-form",
-        videoId: "C-6GOVvv96_",
-        platform: "instagram",
-        channelName: "Niki",
-        viewCount: "130K likes",
-        thumbnail: "images/thumbnails/C-6GOVvv96_.jpg",
-        url: "https://www.instagram.com/p/C-6GOVvv96_/",
-        previewVideo: "videos/previews/C-6GOVvv96_.mp4"
+        videoId: "r0h4c9QCUuU",
+        platform: "youtube",
+        channelName: "Team Liquid x Nihachu",
+        viewCount: "117K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=r0h4c9QCUuU",
+        previewVideo: "videos/previews/r0h4c9QCUuU.mp4",
+        localSource: true
+    },
+    {
+        title: "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
+        category: "long-form",
+        videoId: "_lZYR2VkZTg",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "1K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=_lZYR2VkZTg",
+        previewVideo: "videos/previews/_lZYR2VkZTg.mp4"
+    },
+    {
+        title: "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        category: "long-form",
+        videoId: "WZLSVMVS5o4",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "3K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=WZLSVMVS5o4",
+        previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
+    },
+    {
+        title: "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        category: "long-form",
+        videoId: "iuYQuxHScRg",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "2K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
+    },
+    {
+        title: "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
+        category: "long-form",
+        videoId: "3AtLY01qlYk",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "8K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=3AtLY01qlYk",
+        previewVideo: "videos/previews/3AtLY01qlYk.mp4"
+    },
+    {
+        title: "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        category: "long-form",
+        videoId: "XuQ1DiWxblg",
+        platform: "youtube",
+        channelName: "TNT Brasil",
+        viewCount: "23K views",
+        thumbnail: "",
+        url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
+        previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
     },
 ];
 
@@ -310,7 +226,7 @@ const sections = [
             "videoId": "DW3F1OHfZeo",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "878K views",
+            "viewCount": "881K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
             "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -441,175 +357,6 @@ const sections = [
     ]
   },
   {
-    "id": "the-best-from-coisa-de-nerd",
-    "title": "The Best from Coisa de Nerd",
-    "layout": "wide",
-    "items": [
-      {
-        "title": "Adeus Windows! Bem-vindo Linux!",
-        "category": "long-form",
-        "videoId": "TZfM1yfkFn4",
-        "platform": "youtube",
-        "channelName": "Coisa de Nerd",
-        "viewCount": "1.1M views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-        "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
-        "localSource": false,
-        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-        "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
-        "subtitlesLang": "en",
-        "subtitlesLabel": "English"
-      },
-      {
-        "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
-        "category": "long-form",
-        "videoId": "6DMvk5aNV64",
-        "platform": "youtube",
-        "channelName": "República Coisa de Nerd",
-        "viewCount": "256K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
-        "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
-        "localSource": false
-      },
-      {
-        "title": "NÃO É SEMPRE QUE SE GANHA...",
-        "category": "long-form",
-        "videoId": "WOGQI0PAjEU",
-        "platform": "youtube",
-        "channelName": "República Coisa de Nerd",
-        "viewCount": "262K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=WOGQI0PAjEU",
-        "previewVideo": "videos/previews/WOGQI0PAjEU.mp4",
-        "localSource": false
-      }
-    ]
-  },
-  {
-    "id": "doublelift-guesses-the-rank",
-    "title": "DOUBLELIFT GUESSES THE RANK",
-    "layout": "tall",
-    "items": [
-      {
-        "title": "DOUBLELIFT GUESS THE RANK (Pt.1)",
-        "category": "short-form",
-        "videoId": "kuEb5qEpdPs",
-        "platform": "youtube",
-        "channelName": "Team Liquid League of Legends",
-        "viewCount": "418K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/shorts/kuEb5qEpdPs",
-        "previewVideo": "videos/previews/kuEb5qEpdPs.mp4",
-        "localSource": true
-      },
-      {
-        "title": "DOUBLELIFT GUESS THE RANK (Pt.2)",
-        "category": "short-form",
-        "videoId": "ZeVeXsq87XI",
-        "platform": "youtube",
-        "channelName": "Team Liquid League of Legends",
-        "viewCount": "119K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/shorts/ZeVeXsq87XI",
-        "previewVideo": "videos/previews/ZeVeXsq87XI.mp4",
-        "localSource": true
-      },
-      {
-        "title": "DOUBLELIFT GUESS THE RANK (Part 3.)",
-        "category": "short-form",
-        "videoId": "vBhxZrwazB8",
-        "platform": "youtube",
-        "channelName": "Team Liquid League of Legends",
-        "viewCount": "76K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/shorts/vBhxZrwazB8",
-        "previewVideo": "videos/previews/vBhxZrwazB8.mp4",
-        "localSource": true
-      },
-      {
-        "title": "DOUBLELIFT GUESS THE RANK (Part 4)",
-        "category": "short-form",
-        "videoId": "G8ZF6WpwmUI",
-        "platform": "youtube",
-        "channelName": "Team Liquid League of Legends",
-        "viewCount": "123K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/shorts/G8ZF6WpwmUI",
-        "previewVideo": "videos/previews/G8ZF6WpwmUI.mp4",
-        "localSource": true
-      }
-    ]
-  },
-  {
-    "id": "motion-design",
-    "title": "Motion Design",
-    "layout": "wide",
-    "items": [
-      {
-        "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
-        "category": "long-form",
-        "videoId": "_lZYR2VkZTg",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "1K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=_lZYR2VkZTg",
-        "previewVideo": "videos/previews/_lZYR2VkZTg.mp4",
-        "localSource": false
-      },
-      {
-        "title": "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        "category": "long-form",
-        "videoId": "WZLSVMVS5o4",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "3K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=WZLSVMVS5o4",
-        "previewVideo": "videos/previews/WZLSVMVS5o4.mp4",
-        "localSource": false
-      },
-      {
-        "title": "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
-        "category": "long-form",
-        "videoId": "iuYQuxHScRg",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "2K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
-        "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
-        "localSource": false
-      },
-      {
-        "title": "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
-        "category": "long-form",
-        "videoId": "3AtLY01qlYk",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "8K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=3AtLY01qlYk",
-        "previewVideo": "videos/previews/3AtLY01qlYk.mp4",
-        "localSource": false
-      },
-      {
-        "title": "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
-        "category": "long-form",
-        "videoId": "XuQ1DiWxblg",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "23K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
-        "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
-        "localSource": false
-      }
-    ]
-  },
-  {
     "id": "short-form",
     "title": "Short-form",
     "layout": "tall",
@@ -644,7 +391,7 @@ const sections = [
         "videoId": "DODyPfskkr6",
         "platform": "instagram",
         "channelName": "Team Liquid",
-        "viewCount": "154 likes",
+        "viewCount": "167 likes",
         "thumbnail": "images/thumbnails/DODyPfskkr6.jpg",
         "url": "https://www.instagram.com/p/DODyPfskkr6/",
         "previewVideo": "videos/previews/DODyPfskkr6.mp4",
@@ -668,7 +415,7 @@ const sections = [
         "videoId": "DMqBVM4NTsc",
         "platform": "instagram",
         "channelName": "Team Liquid",
-        "viewCount": "74K likes",
+        "viewCount": "85K likes",
         "thumbnail": "images/thumbnails/DMqBVM4NTsc.jpg",
         "url": "https://www.instagram.com/p/DMqBVM4NTsc/",
         "previewVideo": "videos/previews/DMqBVM4NTsc.mp4",
@@ -747,15 +494,82 @@ const sections = [
         "localSource": false
       },
       {
-        "title": "Q&A time 🩷 Go to the @teamliquid x Nihachu YT channel to see more!",
+        "title": "She cannot pronounce THIS word 😂 part 1 #shorts #QnA #interview",
         "category": "short-form",
-        "videoId": "C-6GOVvv96_",
-        "platform": "instagram",
-        "channelName": "Niki",
-        "viewCount": "130K likes",
-        "thumbnail": "images/thumbnails/C-6GOVvv96_.jpg",
-        "url": "https://www.instagram.com/p/C-6GOVvv96_/",
-        "previewVideo": "videos/previews/C-6GOVvv96_.mp4",
+        "videoId": "r0h4c9QCUuU",
+        "platform": "youtube",
+        "channelName": "Team Liquid x Nihachu",
+        "viewCount": "117K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=r0h4c9QCUuU",
+        "previewVideo": "videos/previews/r0h4c9QCUuU.mp4",
+        "localSource": true
+      }
+    ]
+  },
+  {
+    "id": "motion-design",
+    "title": "Motion Design",
+    "layout": "wide",
+    "items": [
+      {
+        "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
+        "category": "long-form",
+        "videoId": "_lZYR2VkZTg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "1K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=_lZYR2VkZTg",
+        "previewVideo": "videos/previews/_lZYR2VkZTg.mp4",
+        "localSource": false
+      },
+      {
+        "title": "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        "category": "long-form",
+        "videoId": "WZLSVMVS5o4",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "3K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=WZLSVMVS5o4",
+        "previewVideo": "videos/previews/WZLSVMVS5o4.mp4",
+        "localSource": false
+      },
+      {
+        "title": "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        "category": "long-form",
+        "videoId": "iuYQuxHScRg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "2K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
+        "localSource": false
+      },
+      {
+        "title": "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
+        "category": "long-form",
+        "videoId": "3AtLY01qlYk",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "8K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=3AtLY01qlYk",
+        "previewVideo": "videos/previews/3AtLY01qlYk.mp4",
+        "localSource": false
+      },
+      {
+        "title": "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
+        "category": "long-form",
+        "videoId": "XuQ1DiWxblg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "23K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
+        "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
         "localSource": false
       }
     ]

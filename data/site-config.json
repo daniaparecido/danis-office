@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-21T20:24:23-03:00",
+  "generated_at": "2026-10-29T20:00:45-03:00",
   "sections": [
     {
       "id": "featured",
@@ -39,39 +39,6 @@
       ]
     },
     {
-      "id": "the-best-from-coisa-de-nerd",
-      "title": "The Best from Coisa de Nerd",
-      "layout": "wide",
-      "video_ids": [
-        "TZfM1yfkFn4",
-        "6DMvk5aNV64",
-        "WOGQI0PAjEU"
-      ]
-    },
-    {
-      "id": "doublelift-guesses-the-rank",
-      "title": "DOUBLELIFT GUESSES THE RANK",
-      "layout": "tall",
-      "video_ids": [
-        "kuEb5qEpdPs",
-        "ZeVeXsq87XI",
-        "vBhxZrwazB8",
-        "G8ZF6WpwmUI"
-      ]
-    },
-    {
-      "id": "motion-design",
-      "title": "Motion Design",
-      "layout": "wide",
-      "video_ids": [
-        "_lZYR2VkZTg",
-        "WZLSVMVS5o4",
-        "iuYQuxHScRg",
-        "3AtLY01qlYk",
-        "XuQ1DiWxblg"
-      ]
-    },
-    {
       "id": "short-form",
       "title": "Short-form",
       "layout": "tall",
@@ -87,7 +54,19 @@
         "gC4SC8j58pI",
         "DDprhgUyhfZ",
         "C1_1fTOOtRS",
-        "C-6GOVvv96_"
+        "r0h4c9QCUuU"
+      ]
+    },
+    {
+      "id": "motion-design",
+      "title": "Motion Design",
+      "layout": "wide",
+      "video_ids": [
+        "_lZYR2VkZTg",
+        "WZLSVMVS5o4",
+        "iuYQuxHScRg",
+        "3AtLY01qlYk",
+        "XuQ1DiWxblg"
       ]
     }
   ]
