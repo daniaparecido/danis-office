@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:58
+ * Last updated: 2026-10-30 14:08
  */
 
 const totalYouTubeViews = 439040130;
@@ -332,18 +332,6 @@ const sections = [
             "localSource": true
           },
           {
-            "title": "Can LCS pros name Brasil teams?",
-            "category": "short-form",
-            "videoId": "Z4YkUiEVufg",
-            "platform": "youtube",
-            "channelName": "Team Liquid League of Legends",
-            "viewCount": "1K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=Z4YkUiEVufg",
-            "previewVideo": "videos/previews/Z4YkUiEVufg.mp4",
-            "localSource": true
-          },
-          {
             "title": "Dawg how are you gonna get your own name wrong 😭 @pragg_chess The last two weeks of Chess at #EsportsWorldCup were extra special because of our superfans who came out in droves to support us 💙 #chess",
             "category": "short-form",
             "videoId": "DM5o9pKtHJi",
@@ -419,18 +407,6 @@ const sections = [
             "thumbnail": "images/thumbnails/DSIcD5KDRdk.jpg",
             "url": "https://www.instagram.com/p/DSIcD5KDRdk/",
             "previewVideo": "videos/previews/DSIcD5KDRdk.mp4",
-            "localSource": false
-          },
-          {
-            "title": "O VLOG DA FINAL DO GAME CHANGERS ESTÁ ENTRE NÓS! 💙 É hora de reviver toda a emoção dessa série tão disputada que garantiu nossa vaga no Game Changers Championship 2025. CORRE PRA ASSISTIR NO YOUTUBE!",
-            "category": "short-form",
-            "videoId": "DRNoFKnD2vU",
-            "platform": "instagram",
-            "channelName": "Team Liquid BR 🇧🇷",
-            "viewCount": "860 likes",
-            "thumbnail": "images/thumbnails/DRNoFKnD2vU.jpg",
-            "url": "https://www.instagram.com/p/DRNoFKnD2vU/",
-            "previewVideo": "videos/previews/DRNoFKnD2vU.mp4",
             "localSource": false
           },
           {
