@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-30T14:08:50-03:00",
+  "generated_at": "2026-10-30T16:04:34-03:00",
   "sections": [
     {
       "id": "featured",

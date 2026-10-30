@@ -9,8 +9,214 @@
       "subtitlesLabel": "English",
       "width": 1920,
       "height": 1080,
-      "source": "youtube 1080p H.264 (yt-dlp -S res:1080,vcodec:h264,acodec:aac)",
-      "addedAt": "2026-10-21"
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-21",
+      "bytes": 155417814,
+      "route": "github-release"
+    },
+    "DIOkD4iMlUJ": {
+      "subtitles": "videos/subs/DIOkD4iMlUJ.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "C71usvjJhMM": {
+      "subtitles": "videos/subs/C71usvjJhMM.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "KP81WfLdV8c": {
+      "subtitles": "videos/subs/KP81WfLdV8c.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "k7WFheQ6poI": {
+      "subtitles": "videos/subs/k7WFheQ6poI.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "C_s5zdKAAU2": {
+      "subtitles": "videos/subs/C_s5zdKAAU2.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "DDprhgUyhfZ": {
+      "subtitles": "videos/subs/DDprhgUyhfZ.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "DRNoFKnD2vU": {
+      "subtitles": "videos/subs/DRNoFKnD2vU.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "gC4SC8j58pI": {
+      "subtitles": "videos/subs/gC4SC8j58pI.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "nnKNURi__Pc": {
+      "subtitles": "videos/subs/nnKNURi__Pc.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "RXdWLha8dcM": {
+      "subtitles": "videos/subs/RXdWLha8dcM.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "AKzjoEh3DBE": {
+      "subtitles": "videos/subs/AKzjoEh3DBE.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "0V-QOBnBbUk": {
+      "subtitles": "videos/subs/0V-QOBnBbUk.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "route": "local-source",
+      "addedAt": "2026-10-30"
+    },
+    "neJeVvhZjc8": {
+      "subtitles": "videos/subs/neJeVvhZjc8.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/neJeVvhZjc8.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 363725073,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "BdxNYDvKhPc": {
+      "subtitles": "videos/subs/BdxNYDvKhPc.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/BdxNYDvKhPc.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 242832929,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "azk0YjF4BZE": {
+      "subtitles": "videos/subs/azk0YjF4BZE.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/azk0YjF4BZE.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 261998464,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "Iysb-8BMNt8": {
+      "subtitles": "videos/subs/Iysb-8BMNt8.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/Iysb-8BMNt8.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 468169855,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "6DMvk5aNV64": {
+      "subtitles": "videos/subs/6DMvk5aNV64.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/6DMvk5aNV64.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 281065976,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "iuYQuxHScRg": {
+      "subtitles": "videos/subs/iuYQuxHScRg.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/iuYQuxHScRg.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 60674757,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "_lZYR2VkZTg": {
+      "subtitles": "videos/subs/_lZYR2VkZTg.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/_lZYR2VkZTg.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 45740345,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "WZLSVMVS5o4": {
+      "subtitles": "videos/subs/WZLSVMVS5o4.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/WZLSVMVS5o4.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 58446239,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "3AtLY01qlYk": {
+      "subtitles": "videos/subs/3AtLY01qlYk.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/3AtLY01qlYk.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 25083036,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
+    },
+    "XuQ1DiWxblg": {
+      "subtitles": "videos/subs/XuQ1DiWxblg.en.vtt",
+      "subtitlesLang": "en",
+      "subtitlesLabel": "English",
+      "src": "https://github.com/daniaparecido/danis-office/releases/download/media/XuQ1DiWxblg.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 52497352,
+      "route": "github-release",
+      "source": "yt-dlp -S res:1080,vcodec:h264,acodec:aac",
+      "addedAt": "2026-10-30"
     }
   }
 }

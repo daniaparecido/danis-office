@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 14:08
+ * Last updated: 2026-10-30 16:04
  */
 
 const totalYouTubeViews = 439040130;
@@ -23,7 +23,11 @@ const projects = [
         viewCount: "2K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
-        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
+        previewVideo: "videos/previews/iuYQuxHScRg.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/iuYQuxHScRg.mp4",
+        subtitles: "videos/subs/iuYQuxHScRg.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
     {
         title: "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
@@ -34,7 +38,11 @@ const projects = [
         viewCount: "1K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=_lZYR2VkZTg",
-        previewVideo: "videos/previews/_lZYR2VkZTg.mp4"
+        previewVideo: "videos/previews/_lZYR2VkZTg.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/_lZYR2VkZTg.mp4",
+        subtitles: "videos/subs/_lZYR2VkZTg.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
     {
         title: "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
@@ -45,7 +53,11 @@ const projects = [
         viewCount: "3K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=WZLSVMVS5o4",
-        previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
+        previewVideo: "videos/previews/WZLSVMVS5o4.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/WZLSVMVS5o4.mp4",
+        subtitles: "videos/subs/WZLSVMVS5o4.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
     {
         title: "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
@@ -56,7 +68,11 @@ const projects = [
         viewCount: "8K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=3AtLY01qlYk",
-        previewVideo: "videos/previews/3AtLY01qlYk.mp4"
+        previewVideo: "videos/previews/3AtLY01qlYk.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/3AtLY01qlYk.mp4",
+        subtitles: "videos/subs/3AtLY01qlYk.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
     {
         title: "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
@@ -67,7 +83,11 @@ const projects = [
         viewCount: "23K views",
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
-        previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
+        previewVideo: "videos/previews/XuQ1DiWxblg.mp4",
+        videoSrc: "https://github.com/daniaparecido/danis-office/releases/download/media/XuQ1DiWxblg.mp4",
+        subtitles: "videos/subs/XuQ1DiWxblg.en.vtt",
+        subtitlesLang: "en",
+        subtitlesLabel: "English"
     },
 ];
 
@@ -383,7 +403,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=k7WFheQ6poI",
             "previewVideo": "videos/previews/k7WFheQ6poI.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/k7WFheQ6poI.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "\"Vocês não acharam que eu ia trazer gringos pro Brasil e deixar eles irerm embora sem provar o melhor da nossa culinária, né?! P.S.: Tô suspeitando que o Pengu é brasileiro 🤨",
@@ -460,7 +483,11 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
             "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
-            "localSource": false
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/6DMvk5aNV64.mp4",
+            "subtitles": "videos/subs/6DMvk5aNV64.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           }
         ]
       },
@@ -478,7 +505,11 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
             "previewVideo": "videos/previews/neJeVvhZjc8.mp4",
-            "localSource": false
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/neJeVvhZjc8.mp4",
+            "subtitles": "videos/subs/neJeVvhZjc8.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "LEON BATEU O RECORDE MUNDIAL (DE VERDADE!!!)",
@@ -490,7 +521,11 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=BdxNYDvKhPc",
             "previewVideo": "videos/previews/BdxNYDvKhPc.mp4",
-            "localSource": false
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/BdxNYDvKhPc.mp4",
+            "subtitles": "videos/subs/BdxNYDvKhPc.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "PENSA RÁPIDO! - Quem Sabe Menos #24",
@@ -502,7 +537,11 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=azk0YjF4BZE",
             "previewVideo": "videos/previews/azk0YjF4BZE.mp4",
-            "localSource": false
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/azk0YjF4BZE.mp4",
+            "subtitles": "videos/subs/azk0YjF4BZE.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "MILAGRE!!! UM JOGO QUE O LEON JOGA BEM",
@@ -514,7 +553,11 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=Iysb-8BMNt8",
             "previewVideo": "videos/previews/Iysb-8BMNt8.mp4",
-            "localSource": false
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/Iysb-8BMNt8.mp4",
+            "subtitles": "videos/subs/Iysb-8BMNt8.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "LEON REAGE AO SEU MEME MAIS PESADO",
@@ -526,7 +569,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
             "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/gC4SC8j58pI.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "GAMBIARRA INÚTIL OU GENIAL? #curioso",
@@ -538,7 +584,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=nnKNURi__Pc",
             "previewVideo": "videos/previews/nnKNURi__Pc.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/nnKNURi__Pc.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "LEON E NILCE = GÊNIOS #desafio",
@@ -550,7 +599,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
             "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/RXdWLha8dcM.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "ROUBANDO PARA O LEON! - Qual o Filme?",
@@ -562,7 +614,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=AKzjoEh3DBE",
             "previewVideo": "videos/previews/AKzjoEh3DBE.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/AKzjoEh3DBE.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           },
           {
             "title": "COMO PERDER MUITO DINHEIRO",
@@ -574,7 +629,10 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=0V-QOBnBbUk",
             "previewVideo": "videos/previews/0V-QOBnBbUk.mp4",
-            "localSource": true
+            "localSource": true,
+            "subtitles": "videos/subs/0V-QOBnBbUk.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
           }
         ]
       }
@@ -595,7 +653,11 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
         "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
-        "localSource": false
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/iuYQuxHScRg.mp4",
+        "subtitles": "videos/subs/iuYQuxHScRg.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
       },
       {
         "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
@@ -607,7 +669,11 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=_lZYR2VkZTg",
         "previewVideo": "videos/previews/_lZYR2VkZTg.mp4",
-        "localSource": false
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/_lZYR2VkZTg.mp4",
+        "subtitles": "videos/subs/_lZYR2VkZTg.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
       },
       {
         "title": "OS CASAIS DO TOPO DAS PARADAS! 🎙️ BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
@@ -619,7 +685,11 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=WZLSVMVS5o4",
         "previewVideo": "videos/previews/WZLSVMVS5o4.mp4",
-        "localSource": false
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/WZLSVMVS5o4.mp4",
+        "subtitles": "videos/subs/WZLSVMVS5o4.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
       },
       {
         "title": "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
@@ -631,7 +701,11 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=3AtLY01qlYk",
         "previewVideo": "videos/previews/3AtLY01qlYk.mp4",
-        "localSource": false
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/3AtLY01qlYk.mp4",
+        "subtitles": "videos/subs/3AtLY01qlYk.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
       },
       {
         "title": "TAYLOR SWIFT E OLIVIA RODRIGO: INSPIRAÇÃO OU PLÁGIO? BILLBOARD MUSIC AWARDS®️ 2022 | #BillboardTNT",
@@ -643,7 +717,11 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
         "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
-        "localSource": false
+        "localSource": false,
+        "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/XuQ1DiWxblg.mp4",
+        "subtitles": "videos/subs/XuQ1DiWxblg.en.vtt",
+        "subtitlesLang": "en",
+        "subtitlesLabel": "English"
       }
     ]
   }
