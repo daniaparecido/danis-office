@@ -1,11 +1,11 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-29T20:00:45-03:00",
+  "generated_at": "2026-10-30T13:31:06-03:00",
   "sections": [
     {
       "id": "featured",
-      "title": "The Best from Team Liquid",
+      "title": "Team Liquid",
       "layout": "hero",
       "groups": [
         {
@@ -39,34 +39,86 @@
       ]
     },
     {
+      "id": "coisa-de-nerd",
+      "title": "Coisa de Nerd",
+      "layout": "hero",
+      "groups": [
+        {
+          "label": "República Coisa de Nerd",
+          "shorts_label": "",
+          "video_ids": [
+            "neJeVvhZjc8",
+            "BdxNYDvKhPc",
+            "azk0YjF4BZE",
+            "Iysb-8BMNt8",
+            "RXdWLha8dcM",
+            "gC4SC8j58pI",
+            "nnKNURi__Pc"
+          ]
+        },
+        {
+          "label": "Coisa de Nerd",
+          "shorts_label": "",
+          "video_ids": [
+            "TZfM1yfkFn4",
+            "6DMvk5aNV64"
+          ]
+        }
+      ]
+    },
+    {
       "id": "short-form",
       "title": "Short-form",
-      "layout": "tall",
-      "video_ids": [
-        "7452871620013903150",
-        "DIOkD4iMlUJ",
-        "DODyPfskkr6",
-        "Z4YkUiEVufg",
-        "DMqBVM4NTsc",
-        "RXdWLha8dcM",
-        "C71usvjJhMM",
-        "DNdanV2MM2i",
-        "gC4SC8j58pI",
-        "DDprhgUyhfZ",
-        "C1_1fTOOtRS",
-        "r0h4c9QCUuU"
+      "layout": "hero",
+      "groups": [
+        {
+          "label": "Team Liquid",
+          "shorts_label": "",
+          "video_ids": [
+            "7452871620013903150",
+            "DMqBVM4NTsc",
+            "DODyPfskkr6",
+            "DNdanV2MM2i",
+            "r0h4c9QCUuU",
+            "Z4YkUiEVufg",
+            "DM5o9pKtHJi"
+          ]
+        },
+        {
+          "label": "Team Liquid Brasil",
+          "shorts_label": "",
+          "video_ids": [
+            "DIOkD4iMlUJ",
+            "C71usvjJhMM",
+            "KP81WfLdV8c",
+            "k7WFheQ6poI",
+            "C_s5zdKAAU2",
+            "DDprhgUyhfZ",
+            "DRNoFKnD2vU"
+          ]
+        }
       ]
     },
     {
       "id": "motion-design",
-      "title": "Motion Design",
+      "title": "TNT Brasil",
       "layout": "wide",
       "video_ids": [
+        "iuYQuxHScRg",
         "_lZYR2VkZTg",
         "WZLSVMVS5o4",
-        "iuYQuxHScRg",
         "3AtLY01qlYk",
         "XuQ1DiWxblg"
+      ]
+    },
+    {
+      "id": "noar",
+      "title": "Noar",
+      "layout": "tall",
+      "video_ids": [
+        "Cz_Ot4XM5ne",
+        "Czt2L6kpCzW",
+        "C1_1fTOOtRS"
       ]
     }
   ]

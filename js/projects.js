@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 12:46
+ * Last updated: 2026-10-30 13:31
  */
 
 const totalYouTubeViews = 439040130;
@@ -15,140 +15,15 @@ const totalVideos = 736;
 // Flat list of the grid items (legacy shape; the page draws `sections` below).
 const projects = [
     {
-        title: "We built the biggest gaming laptop in the WORLD! 💻🌎 #pc #gaming #setup #worldrecord",
-        category: "short-form",
-        videoId: "7452871620013903150",
-        platform: "tiktok",
-        channelName: "liquid",
-        viewCount: "10K views",
-        thumbnail: "images/thumbnails/7452871620013903150.jpg",
-        url: "https://www.tiktok.com/@liquid/video/7452871620013903150",
-        previewVideo: "videos/previews/7452871620013903150.mp4"
-    },
-    {
-        title: "Impossível contar a história do Valorant sem contar a história da @bvstrdd! 😍 Obrigada @visa_br por fazer parte dessa história 🥰",
-        category: "short-form",
-        videoId: "DIOkD4iMlUJ",
-        platform: "instagram",
-        channelName: "Team Liquid BR 🇧🇷",
-        viewCount: "9K likes",
-        thumbnail: "images/thumbnails/DIOkD4iMlUJ.jpg",
-        url: "https://www.instagram.com/p/DIOkD4iMlUJ/",
-        previewVideo: "videos/previews/DIOkD4iMlUJ.mp4"
-    },
-    {
-        title: "Huge thanks to our superfans for making #EsportsWorldCup Week 7 unforgettable. Exploring Riyadh was incredible, but what stood out even more was connecting with our fans on a deeper level, hearing the",
-        category: "short-form",
-        videoId: "DODyPfskkr6",
-        platform: "instagram",
-        channelName: "Team Liquid",
-        viewCount: "154 likes",
-        thumbnail: "images/thumbnails/DODyPfskkr6.jpg",
-        url: "https://www.instagram.com/p/DODyPfskkr6/",
-        previewVideo: "videos/previews/DODyPfskkr6.mp4"
-    },
-    {
-        title: "Can LCS pros name Brasil teams?",
-        category: "short-form",
-        videoId: "Z4YkUiEVufg",
+        title: "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        category: "long-form",
+        videoId: "iuYQuxHScRg",
         platform: "youtube",
-        channelName: "Team Liquid League of Legends",
-        viewCount: "1K views",
+        channelName: "TNT Brasil",
+        viewCount: "2K views",
         thumbnail: "",
-        url: "https://www.youtube.com/watch?v=Z4YkUiEVufg",
-        previewVideo: "videos/previews/Z4YkUiEVufg.mp4",
-        localSource: true
-    },
-    {
-        title: "WILL HE EVER SMILE?????????? #chess #chessplayer #magnus #magnuscarlsen",
-        category: "short-form",
-        videoId: "DMqBVM4NTsc",
-        platform: "instagram",
-        channelName: "Team Liquid",
-        viewCount: "74K likes",
-        thumbnail: "images/thumbnails/DMqBVM4NTsc.jpg",
-        url: "https://www.instagram.com/p/DMqBVM4NTsc/",
-        previewVideo: "videos/previews/DMqBVM4NTsc.mp4"
-    },
-    {
-        title: "LEON E NILCE = GÊNIOS #desafio",
-        category: "short-form",
-        videoId: "RXdWLha8dcM",
-        platform: "youtube",
-        channelName: "República Coisa de Nerd",
-        viewCount: "1.3M views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=RXdWLha8dcM",
-        previewVideo: "videos/previews/RXdWLha8dcM.mp4",
-        localSource: true
-    },
-    {
-        title: "Se o @frtttfps fosse um peixe, qual ele seria? 🐟 #Viagem #Japão #FRTTT #Valorant #TeamLiquid",
-        category: "short-form",
-        videoId: "C71usvjJhMM",
-        platform: "instagram",
-        channelName: "Team Liquid BR 🇧🇷",
-        viewCount: "832 likes",
-        thumbnail: "images/thumbnails/C71usvjJhMM.jpg",
-        url: "https://www.instagram.com/p/C71usvjJhMM/",
-        previewVideo: "videos/previews/C71usvjJhMM.mp4"
-    },
-    {
-        title: "What an INSANE week for the Cavalry superfans! 🔥 There was fiery cheering, shouting at the top of our lungs, having unforgettable activities, and LOTS of support at #EWC2025! Those who lived it know..",
-        category: "short-form",
-        videoId: "DNdanV2MM2i",
-        platform: "instagram",
-        channelName: "Team Liquid",
-        viewCount: "172 likes",
-        thumbnail: "images/thumbnails/DNdanV2MM2i.jpg",
-        url: "https://www.instagram.com/reel/DNdanV2MM2i/",
-        previewVideo: "videos/previews/DNdanV2MM2i.mp4"
-    },
-    {
-        title: "LEON REAGE AO SEU MEME MAIS PESADO",
-        category: "short-form",
-        videoId: "gC4SC8j58pI",
-        platform: "youtube",
-        channelName: "República Coisa de Nerd",
-        viewCount: "5.5M views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=gC4SC8j58pI",
-        previewVideo: "videos/previews/gC4SC8j58pI.mp4",
-        localSource: true
-    },
-    {
-        title: "INTANKAVEL O FINAL KKKKKKKKKKKK",
-        category: "short-form",
-        videoId: "DDprhgUyhfZ",
-        platform: "instagram",
-        channelName: "Team Liquid BR 🇧🇷",
-        viewCount: "1K likes",
-        thumbnail: "images/thumbnails/DDprhgUyhfZ.jpg",
-        url: "https://www.instagram.com/p/DDprhgUyhfZ/",
-        previewVideo: "videos/previews/DDprhgUyhfZ.mp4"
-    },
-    {
-        title: "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
-        category: "short-form",
-        videoId: "C1_1fTOOtRS",
-        platform: "instagram",
-        channelName: "Noar",
-        viewCount: "3 likes",
-        thumbnail: "images/thumbnails/C1_1fTOOtRS.jpg",
-        url: "https://www.instagram.com/p/C1_1fTOOtRS/",
-        previewVideo: "videos/previews/C1_1fTOOtRS.mp4"
-    },
-    {
-        title: "She cannot pronounce THIS word 😂 part 1 #shorts #QnA #interview",
-        category: "short-form",
-        videoId: "r0h4c9QCUuU",
-        platform: "youtube",
-        channelName: "Team Liquid x Nihachu",
-        viewCount: "117K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=r0h4c9QCUuU",
-        previewVideo: "videos/previews/r0h4c9QCUuU.mp4",
-        localSource: true
+        url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
     },
     {
         title: "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
@@ -173,17 +48,6 @@ const projects = [
         previewVideo: "videos/previews/WZLSVMVS5o4.mp4"
     },
     {
-        title: "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
-        category: "long-form",
-        videoId: "iuYQuxHScRg",
-        platform: "youtube",
-        channelName: "TNT Brasil",
-        viewCount: "2K views",
-        thumbnail: "",
-        url: "https://www.youtube.com/watch?v=iuYQuxHScRg",
-        previewVideo: "videos/previews/iuYQuxHScRg.mp4"
-    },
-    {
         title: "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
         category: "long-form",
         videoId: "3AtLY01qlYk",
@@ -205,6 +69,39 @@ const projects = [
         url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
         previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
     },
+    {
+        title: "Bruxaria? Vídeo rodando no notebook? 👀 Nada disso! Aqui é Noar! 💜 E o @brunoplayhard colocou a prova em um notebookzinho “peso de papel”! 😎🤘🏻 Conta pra gente, qual o dispositivo que você utiliza a Noa",
+        category: "short-form",
+        videoId: "Cz_Ot4XM5ne",
+        platform: "instagram",
+        channelName: "Noar",
+        viewCount: "471 likes",
+        thumbnail: "images/thumbnails/Cz_Ot4XM5ne.jpg",
+        url: "https://www.instagram.com/p/Cz_Ot4XM5ne/",
+        previewVideo: "videos/previews/Cz_Ot4XM5ne.mp4"
+    },
+    {
+        title: "Dos gamers pro mundo 🌎 A @noarcloud vem pra solucionar a falta de acesso a computadores potentes a todos que precisam. Sejam gamers ou autónomos, arquitetos, videomakers e afins. Afinal quando temos u",
+        category: "short-form",
+        videoId: "Czt2L6kpCzW",
+        platform: "instagram",
+        channelName: "Carol Paiffer",
+        viewCount: "894 likes",
+        thumbnail: "images/thumbnails/Czt2L6kpCzW.jpg",
+        url: "https://www.instagram.com/p/Czt2L6kpCzW/",
+        previewVideo: "videos/previews/Czt2L6kpCzW.mp4"
+    },
+    {
+        title: "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
+        category: "short-form",
+        videoId: "C1_1fTOOtRS",
+        platform: "instagram",
+        channelName: "Noar",
+        viewCount: "3 likes",
+        thumbnail: "images/thumbnails/C1_1fTOOtRS.jpg",
+        url: "https://www.instagram.com/p/C1_1fTOOtRS/",
+        previewVideo: "videos/previews/C1_1fTOOtRS.mp4"
+    },
 ];
 
 // Sections in page order, resolved from data/site-config.json at sync time.
@@ -213,7 +110,7 @@ const projects = [
 const sections = [
   {
     "id": "featured",
-    "title": "The Best from Team Liquid",
+    "title": "Team Liquid",
     "layout": "hero",
     "groups": [
       {
@@ -357,161 +254,340 @@ const sections = [
     ]
   },
   {
+    "id": "coisa-de-nerd",
+    "title": "Coisa de Nerd",
+    "layout": "hero",
+    "groups": [
+      {
+        "label": "República Coisa de Nerd",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "O QUE OS GRINGOS ACHAM DO BRASIL?!",
+            "category": "long-form",
+            "videoId": "neJeVvhZjc8",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "802K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "LEON BATEU O RECORDE MUNDIAL (DE VERDADE!!!)",
+            "category": "long-form",
+            "videoId": "BdxNYDvKhPc",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "6.0M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=BdxNYDvKhPc",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "PENSA RÁPIDO! - Quem Sabe Menos #24",
+            "category": "long-form",
+            "videoId": "azk0YjF4BZE",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "891K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=azk0YjF4BZE",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "MILAGRE!!! UM JOGO QUE O LEON JOGA BEM",
+            "category": "long-form",
+            "videoId": "Iysb-8BMNt8",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "2.5M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=Iysb-8BMNt8",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "LEON E NILCE = GÊNIOS #desafio",
+            "category": "short-form",
+            "videoId": "RXdWLha8dcM",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "1.3M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
+            "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
+            "localSource": true
+          },
+          {
+            "title": "LEON REAGE AO SEU MEME MAIS PESADO",
+            "category": "short-form",
+            "videoId": "gC4SC8j58pI",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "5.5M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
+            "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
+            "localSource": true
+          },
+          {
+            "title": "GAMBIARRA INÚTIL OU GENIAL? #curioso",
+            "category": "short-form",
+            "videoId": "nnKNURi__Pc",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "615K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=nnKNURi__Pc",
+            "previewVideo": "videos/previews/nnKNURi__Pc.mp4",
+            "localSource": true
+          }
+        ]
+      },
+      {
+        "label": "Coisa de Nerd",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "Adeus Windows! Bem-vindo Linux!",
+            "category": "long-form",
+            "videoId": "TZfM1yfkFn4",
+            "platform": "youtube",
+            "channelName": "Coisa de Nerd",
+            "viewCount": "1.1M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
+            "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+            "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
+          },
+          {
+            "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
+            "category": "long-form",
+            "videoId": "6DMvk5aNV64",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "256K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
+            "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
+            "localSource": false
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "short-form",
     "title": "Short-form",
-    "layout": "tall",
-    "items": [
+    "layout": "hero",
+    "groups": [
       {
-        "title": "We built the biggest gaming laptop in the WORLD! 💻🌎 #pc #gaming #setup #worldrecord",
-        "category": "short-form",
-        "videoId": "7452871620013903150",
-        "platform": "tiktok",
-        "channelName": "liquid",
-        "viewCount": "10K views",
-        "thumbnail": "images/thumbnails/7452871620013903150.jpg",
-        "url": "https://www.tiktok.com/@liquid/video/7452871620013903150",
-        "previewVideo": "videos/previews/7452871620013903150.mp4",
-        "localSource": false
+        "label": "Team Liquid",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "We built the biggest gaming laptop in the WORLD! 💻🌎 #pc #gaming #setup #worldrecord",
+            "category": "short-form",
+            "videoId": "7452871620013903150",
+            "platform": "tiktok",
+            "channelName": "liquid",
+            "viewCount": "10K views",
+            "thumbnail": "images/thumbnails/7452871620013903150.jpg",
+            "url": "https://www.tiktok.com/@liquid/video/7452871620013903150",
+            "previewVideo": "videos/previews/7452871620013903150.mp4",
+            "localSource": false
+          },
+          {
+            "title": "WILL HE EVER SMILE?????????? #chess #chessplayer #magnus #magnuscarlsen",
+            "category": "short-form",
+            "videoId": "DMqBVM4NTsc",
+            "platform": "instagram",
+            "channelName": "Team Liquid",
+            "viewCount": "74K likes",
+            "thumbnail": "images/thumbnails/DMqBVM4NTsc.jpg",
+            "url": "https://www.instagram.com/p/DMqBVM4NTsc/",
+            "previewVideo": "videos/previews/DMqBVM4NTsc.mp4",
+            "localSource": false
+          },
+          {
+            "title": "Huge thanks to our superfans for making #EsportsWorldCup Week 7 unforgettable. Exploring Riyadh was incredible, but what stood out even more was connecting with our fans on a deeper level, hearing the",
+            "category": "short-form",
+            "videoId": "DODyPfskkr6",
+            "platform": "instagram",
+            "channelName": "Team Liquid",
+            "viewCount": "154 likes",
+            "thumbnail": "images/thumbnails/DODyPfskkr6.jpg",
+            "url": "https://www.instagram.com/p/DODyPfskkr6/",
+            "previewVideo": "videos/previews/DODyPfskkr6.mp4",
+            "localSource": false
+          },
+          {
+            "title": "What an INSANE week for the Cavalry superfans! 🔥 There was fiery cheering, shouting at the top of our lungs, having unforgettable activities, and LOTS of support at #EWC2025! Those who lived it know..",
+            "category": "short-form",
+            "videoId": "DNdanV2MM2i",
+            "platform": "instagram",
+            "channelName": "Team Liquid",
+            "viewCount": "172 likes",
+            "thumbnail": "images/thumbnails/DNdanV2MM2i.jpg",
+            "url": "https://www.instagram.com/reel/DNdanV2MM2i/",
+            "previewVideo": "videos/previews/DNdanV2MM2i.mp4",
+            "localSource": false
+          },
+          {
+            "title": "She cannot pronounce THIS word 😂 part 1 #shorts #QnA #interview",
+            "category": "short-form",
+            "videoId": "r0h4c9QCUuU",
+            "platform": "youtube",
+            "channelName": "Team Liquid x Nihachu",
+            "viewCount": "117K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=r0h4c9QCUuU",
+            "previewVideo": "videos/previews/r0h4c9QCUuU.mp4",
+            "localSource": true
+          },
+          {
+            "title": "Can LCS pros name Brasil teams?",
+            "category": "short-form",
+            "videoId": "Z4YkUiEVufg",
+            "platform": "youtube",
+            "channelName": "Team Liquid League of Legends",
+            "viewCount": "1K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=Z4YkUiEVufg",
+            "previewVideo": "videos/previews/Z4YkUiEVufg.mp4",
+            "localSource": true
+          },
+          {
+            "title": "Dawg how are you gonna get your own name wrong 😭 @pragg_chess The last two weeks of Chess at #EsportsWorldCup were extra special because of our superfans who came out in droves to support us 💙 #chess",
+            "category": "short-form",
+            "videoId": "DM5o9pKtHJi",
+            "platform": "instagram",
+            "channelName": "Team Liquid",
+            "viewCount": "24K likes",
+            "thumbnail": "images/thumbnails/DM5o9pKtHJi.jpg",
+            "url": "https://www.instagram.com/reel/DM5o9pKtHJi/?hl=pt-br",
+            "previewVideo": "videos/previews/DM5o9pKtHJi.mp4",
+            "localSource": false
+          }
+        ]
       },
       {
-        "title": "Impossível contar a história do Valorant sem contar a história da @bvstrdd! 😍 Obrigada @visa_br por fazer parte dessa história 🥰",
-        "category": "short-form",
-        "videoId": "DIOkD4iMlUJ",
-        "platform": "instagram",
-        "channelName": "Team Liquid BR 🇧🇷",
-        "viewCount": "9K likes",
-        "thumbnail": "images/thumbnails/DIOkD4iMlUJ.jpg",
-        "url": "https://www.instagram.com/p/DIOkD4iMlUJ/",
-        "previewVideo": "videos/previews/DIOkD4iMlUJ.mp4",
-        "localSource": false
-      },
-      {
-        "title": "Huge thanks to our superfans for making #EsportsWorldCup Week 7 unforgettable. Exploring Riyadh was incredible, but what stood out even more was connecting with our fans on a deeper level, hearing the",
-        "category": "short-form",
-        "videoId": "DODyPfskkr6",
-        "platform": "instagram",
-        "channelName": "Team Liquid",
-        "viewCount": "154 likes",
-        "thumbnail": "images/thumbnails/DODyPfskkr6.jpg",
-        "url": "https://www.instagram.com/p/DODyPfskkr6/",
-        "previewVideo": "videos/previews/DODyPfskkr6.mp4",
-        "localSource": false
-      },
-      {
-        "title": "Can LCS pros name Brasil teams?",
-        "category": "short-form",
-        "videoId": "Z4YkUiEVufg",
-        "platform": "youtube",
-        "channelName": "Team Liquid League of Legends",
-        "viewCount": "1K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=Z4YkUiEVufg",
-        "previewVideo": "videos/previews/Z4YkUiEVufg.mp4",
-        "localSource": true
-      },
-      {
-        "title": "WILL HE EVER SMILE?????????? #chess #chessplayer #magnus #magnuscarlsen",
-        "category": "short-form",
-        "videoId": "DMqBVM4NTsc",
-        "platform": "instagram",
-        "channelName": "Team Liquid",
-        "viewCount": "74K likes",
-        "thumbnail": "images/thumbnails/DMqBVM4NTsc.jpg",
-        "url": "https://www.instagram.com/p/DMqBVM4NTsc/",
-        "previewVideo": "videos/previews/DMqBVM4NTsc.mp4",
-        "localSource": false
-      },
-      {
-        "title": "LEON E NILCE = GÊNIOS #desafio",
-        "category": "short-form",
-        "videoId": "RXdWLha8dcM",
-        "platform": "youtube",
-        "channelName": "República Coisa de Nerd",
-        "viewCount": "1.3M views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
-        "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
-        "localSource": true
-      },
-      {
-        "title": "Se o @frtttfps fosse um peixe, qual ele seria? 🐟 #Viagem #Japão #FRTTT #Valorant #TeamLiquid",
-        "category": "short-form",
-        "videoId": "C71usvjJhMM",
-        "platform": "instagram",
-        "channelName": "Team Liquid BR 🇧🇷",
-        "viewCount": "832 likes",
-        "thumbnail": "images/thumbnails/C71usvjJhMM.jpg",
-        "url": "https://www.instagram.com/p/C71usvjJhMM/",
-        "previewVideo": "videos/previews/C71usvjJhMM.mp4",
-        "localSource": false
-      },
-      {
-        "title": "What an INSANE week for the Cavalry superfans! 🔥 There was fiery cheering, shouting at the top of our lungs, having unforgettable activities, and LOTS of support at #EWC2025! Those who lived it know..",
-        "category": "short-form",
-        "videoId": "DNdanV2MM2i",
-        "platform": "instagram",
-        "channelName": "Team Liquid",
-        "viewCount": "172 likes",
-        "thumbnail": "images/thumbnails/DNdanV2MM2i.jpg",
-        "url": "https://www.instagram.com/reel/DNdanV2MM2i/",
-        "previewVideo": "videos/previews/DNdanV2MM2i.mp4",
-        "localSource": false
-      },
-      {
-        "title": "LEON REAGE AO SEU MEME MAIS PESADO",
-        "category": "short-form",
-        "videoId": "gC4SC8j58pI",
-        "platform": "youtube",
-        "channelName": "República Coisa de Nerd",
-        "viewCount": "5.5M views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
-        "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
-        "localSource": true
-      },
-      {
-        "title": "INTANKAVEL O FINAL KKKKKKKKKKKK",
-        "category": "short-form",
-        "videoId": "DDprhgUyhfZ",
-        "platform": "instagram",
-        "channelName": "Team Liquid BR 🇧🇷",
-        "viewCount": "1K likes",
-        "thumbnail": "images/thumbnails/DDprhgUyhfZ.jpg",
-        "url": "https://www.instagram.com/p/DDprhgUyhfZ/",
-        "previewVideo": "videos/previews/DDprhgUyhfZ.mp4",
-        "localSource": false
-      },
-      {
-        "title": "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
-        "category": "short-form",
-        "videoId": "C1_1fTOOtRS",
-        "platform": "instagram",
-        "channelName": "Noar",
-        "viewCount": "3 likes",
-        "thumbnail": "images/thumbnails/C1_1fTOOtRS.jpg",
-        "url": "https://www.instagram.com/p/C1_1fTOOtRS/",
-        "previewVideo": "videos/previews/C1_1fTOOtRS.mp4",
-        "localSource": false
-      },
-      {
-        "title": "She cannot pronounce THIS word 😂 part 1 #shorts #QnA #interview",
-        "category": "short-form",
-        "videoId": "r0h4c9QCUuU",
-        "platform": "youtube",
-        "channelName": "Team Liquid x Nihachu",
-        "viewCount": "117K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=r0h4c9QCUuU",
-        "previewVideo": "videos/previews/r0h4c9QCUuU.mp4",
-        "localSource": true
+        "label": "Team Liquid Brasil",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "Impossível contar a história do Valorant sem contar a história da @bvstrdd! 😍 Obrigada @visa_br por fazer parte dessa história 🥰",
+            "category": "short-form",
+            "videoId": "DIOkD4iMlUJ",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "9K likes",
+            "thumbnail": "images/thumbnails/DIOkD4iMlUJ.jpg",
+            "url": "https://www.instagram.com/p/DIOkD4iMlUJ/",
+            "previewVideo": "videos/previews/DIOkD4iMlUJ.mp4",
+            "localSource": false
+          },
+          {
+            "title": "Se o @frtttfps fosse um peixe, qual ele seria? 🐟 #Viagem #Japão #FRTTT #Valorant #TeamLiquid",
+            "category": "short-form",
+            "videoId": "C71usvjJhMM",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "832 likes",
+            "thumbnail": "images/thumbnails/C71usvjJhMM.jpg",
+            "url": "https://www.instagram.com/p/C71usvjJhMM/",
+            "previewVideo": "videos/previews/C71usvjJhMM.mp4",
+            "localSource": false
+          },
+          {
+            "title": "FRTTT é PEGO CHEATANDO no VALORANT",
+            "category": "short-form",
+            "videoId": "KP81WfLdV8c",
+            "platform": "youtube",
+            "channelName": "Team Liquid Visa: Valorant BR",
+            "viewCount": "444K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=KP81WfLdV8c",
+            "previewVideo": "videos/previews/KP81WfLdV8c.mp4",
+            "localSource": true
+          },
+          {
+            "title": "BOLO OU FAKE VERSÃO VALORANT",
+            "category": "short-form",
+            "videoId": "k7WFheQ6poI",
+            "platform": "youtube",
+            "channelName": "Team Liquid Visa: Valorant BR",
+            "viewCount": "425K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=k7WFheQ6poI",
+            "previewVideo": "videos/previews/k7WFheQ6poI.mp4",
+            "localSource": true
+          },
+          {
+            "title": "\"Vocês não acharam que eu ia trazer gringos pro Brasil e deixar eles irerm embora sem provar o melhor da nossa culinária, né?! P.S.: Tô suspeitando que o Pengu é brasileiro 🤨",
+            "category": "short-form",
+            "videoId": "C_s5zdKAAU2",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "3K likes",
+            "thumbnail": "images/thumbnails/C_s5zdKAAU2.jpg",
+            "url": "https://www.instagram.com/p/C_s5zdKAAU2/",
+            "previewVideo": "videos/previews/C_s5zdKAAU2.mp4",
+            "localSource": false
+          },
+          {
+            "title": "INTANKAVEL O FINAL KKKKKKKKKKKK",
+            "category": "short-form",
+            "videoId": "DDprhgUyhfZ",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "1K likes",
+            "thumbnail": "images/thumbnails/DDprhgUyhfZ.jpg",
+            "url": "https://www.instagram.com/p/DDprhgUyhfZ/",
+            "previewVideo": "videos/previews/DDprhgUyhfZ.mp4",
+            "localSource": false
+          },
+          {
+            "title": "O VLOG DA FINAL DO GAME CHANGERS ESTÁ ENTRE NÓS! 💙 É hora de reviver toda a emoção dessa série tão disputada que garantiu nossa vaga no Game Changers Championship 2025. CORRE PRA ASSISTIR NO YOUTUBE!",
+            "category": "short-form",
+            "videoId": "DRNoFKnD2vU",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "860 likes",
+            "thumbnail": "images/thumbnails/DRNoFKnD2vU.jpg",
+            "url": "https://www.instagram.com/p/DRNoFKnD2vU/",
+            "previewVideo": "videos/previews/DRNoFKnD2vU.mp4",
+            "localSource": false
+          }
+        ]
       }
     ]
   },
   {
     "id": "motion-design",
-    "title": "Motion Design",
+    "title": "TNT Brasil",
     "layout": "wide",
     "items": [
+      {
+        "title": "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
+        "category": "long-form",
+        "videoId": "iuYQuxHScRg",
+        "platform": "youtube",
+        "channelName": "TNT Brasil",
+        "viewCount": "2K views",
+        "thumbnail": "",
+        "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
+        "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
+        "localSource": false
+      },
       {
         "title": "INVESTIGAÇÃO! CULPADA POR SER A MAIOR SÉRIE DE TRUE CRIME? | #EmmyTNT",
         "category": "long-form",
@@ -537,18 +613,6 @@ const sections = [
         "localSource": false
       },
       {
-        "title": "AMERICAN MUSIC AWARDS: TAYLOR SWIFT UMA DAS MAIORES VENCEDORAS DA PREMIAÇÃO",
-        "category": "long-form",
-        "videoId": "iuYQuxHScRg",
-        "platform": "youtube",
-        "channelName": "TNT Brasil",
-        "viewCount": "2K views",
-        "thumbnail": "",
-        "url": "https://www.youtube.com/watch?v=iuYQuxHScRg",
-        "previewVideo": "videos/previews/iuYQuxHScRg.mp4",
-        "localSource": false
-      },
-      {
         "title": "ARTISTA REVELAÇÃO GRAMMY AWARDS 2023: QUEM LEVA ESSA? | GRAMMYs TNT",
         "category": "long-form",
         "videoId": "3AtLY01qlYk",
@@ -570,6 +634,49 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
         "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
+        "localSource": false
+      }
+    ]
+  },
+  {
+    "id": "noar",
+    "title": "Noar",
+    "layout": "tall",
+    "items": [
+      {
+        "title": "Bruxaria? Vídeo rodando no notebook? 👀 Nada disso! Aqui é Noar! 💜 E o @brunoplayhard colocou a prova em um notebookzinho “peso de papel”! 😎🤘🏻 Conta pra gente, qual o dispositivo que você utiliza a Noa",
+        "category": "short-form",
+        "videoId": "Cz_Ot4XM5ne",
+        "platform": "instagram",
+        "channelName": "Noar",
+        "viewCount": "471 likes",
+        "thumbnail": "images/thumbnails/Cz_Ot4XM5ne.jpg",
+        "url": "https://www.instagram.com/p/Cz_Ot4XM5ne/",
+        "previewVideo": "videos/previews/Cz_Ot4XM5ne.mp4",
+        "localSource": false
+      },
+      {
+        "title": "Dos gamers pro mundo 🌎 A @noarcloud vem pra solucionar a falta de acesso a computadores potentes a todos que precisam. Sejam gamers ou autónomos, arquitetos, videomakers e afins. Afinal quando temos u",
+        "category": "short-form",
+        "videoId": "Czt2L6kpCzW",
+        "platform": "instagram",
+        "channelName": "Carol Paiffer",
+        "viewCount": "894 likes",
+        "thumbnail": "images/thumbnails/Czt2L6kpCzW.jpg",
+        "url": "https://www.instagram.com/p/Czt2L6kpCzW/",
+        "previewVideo": "videos/previews/Czt2L6kpCzW.mp4",
+        "localSource": false
+      },
+      {
+        "title": "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
+        "category": "short-form",
+        "videoId": "C1_1fTOOtRS",
+        "platform": "instagram",
+        "channelName": "Noar",
+        "viewCount": "3 likes",
+        "thumbnail": "images/thumbnails/C1_1fTOOtRS.jpg",
+        "url": "https://www.instagram.com/p/C1_1fTOOtRS/",
+        "previewVideo": "videos/previews/C1_1fTOOtRS.mp4",
         "localSource": false
       }
     ]
