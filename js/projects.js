@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:38
+ * Last updated: 2026-10-30 13:44
  */
 
 const totalYouTubeViews = 439040130;
@@ -465,18 +465,6 @@ const sections = [
             "localSource": false
           },
           {
-            "title": "LEON E NILCE = GÊNIOS #desafio",
-            "category": "short-form",
-            "videoId": "RXdWLha8dcM",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "1.3M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
-            "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
-            "localSource": true
-          },
-          {
             "title": "LEON REAGE AO SEU MEME MAIS PESADO",
             "category": "short-form",
             "videoId": "gC4SC8j58pI",
@@ -498,6 +486,42 @@ const sections = [
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=nnKNURi__Pc",
             "previewVideo": "videos/previews/nnKNURi__Pc.mp4",
+            "localSource": true
+          },
+          {
+            "title": "LEON E NILCE = GÊNIOS #desafio",
+            "category": "short-form",
+            "videoId": "RXdWLha8dcM",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "1.3M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
+            "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
+            "localSource": true
+          },
+          {
+            "title": "ROUBANDO PARA O LEON! - Qual o Filme?",
+            "category": "short-form",
+            "videoId": "AKzjoEh3DBE",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "519K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=AKzjoEh3DBE",
+            "previewVideo": "videos/previews/AKzjoEh3DBE.mp4",
+            "localSource": true
+          },
+          {
+            "title": "COMO PERDER MUITO DINHEIRO",
+            "category": "short-form",
+            "videoId": "0V-QOBnBbUk",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "54K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=0V-QOBnBbUk",
+            "previewVideo": "videos/previews/0V-QOBnBbUk.mp4",
             "localSource": true
           }
         ]
