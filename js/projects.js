@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:57
+ * Last updated: 2026-10-30 13:58
  */
 
 const totalYouTubeViews = 439040130;
@@ -455,6 +455,40 @@ const sections = [
     "layout": "hero",
     "groups": [
       {
+        "label": "Coisa de Nerd",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "Adeus Windows! Bem-vindo Linux!",
+            "category": "long-form",
+            "videoId": "TZfM1yfkFn4",
+            "platform": "youtube",
+            "channelName": "Coisa de Nerd",
+            "viewCount": "1.1M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
+            "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+            "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
+          },
+          {
+            "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
+            "category": "long-form",
+            "videoId": "6DMvk5aNV64",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "256K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
+            "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
+            "localSource": false
+          }
+        ]
+      },
+      {
         "label": "República Coisa de Nerd",
         "shortsLabel": "Short-form",
         "items": [
@@ -565,40 +599,6 @@ const sections = [
             "url": "https://www.youtube.com/watch?v=0V-QOBnBbUk",
             "previewVideo": "videos/previews/0V-QOBnBbUk.mp4",
             "localSource": true
-          }
-        ]
-      },
-      {
-        "label": "Coisa de Nerd",
-        "shortsLabel": "",
-        "items": [
-          {
-            "title": "Adeus Windows! Bem-vindo Linux!",
-            "category": "long-form",
-            "videoId": "TZfM1yfkFn4",
-            "platform": "youtube",
-            "channelName": "Coisa de Nerd",
-            "viewCount": "1.1M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-            "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
-            "localSource": false,
-            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-            "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
-            "subtitlesLang": "en",
-            "subtitlesLabel": "English"
-          },
-          {
-            "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
-            "category": "long-form",
-            "videoId": "6DMvk5aNV64",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "256K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
-            "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
-            "localSource": false
           }
         ]
       }

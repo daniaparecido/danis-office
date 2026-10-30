@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-30T13:57:36-03:00",
+  "generated_at": "2026-10-30T13:58:48-03:00",
   "sections": [
     {
       "id": "featured",
@@ -86,6 +86,14 @@
       "layout": "hero",
       "groups": [
         {
+          "label": "Coisa de Nerd",
+          "shorts_label": "",
+          "video_ids": [
+            "TZfM1yfkFn4",
+            "6DMvk5aNV64"
+          ]
+        },
+        {
           "label": "República Coisa de Nerd",
           "shorts_label": "Short-form",
           "video_ids": [
@@ -98,14 +106,6 @@
             "RXdWLha8dcM",
             "AKzjoEh3DBE",
             "0V-QOBnBbUk"
-          ]
-        },
-        {
-          "label": "Coisa de Nerd",
-          "shorts_label": "",
-          "video_ids": [
-            "TZfM1yfkFn4",
-            "6DMvk5aNV64"
           ]
         }
       ]
