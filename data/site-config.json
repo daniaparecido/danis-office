@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-30T13:31:06-03:00",
+  "generated_at": "2026-10-30T13:37:05-03:00",
   "sections": [
     {
       "id": "featured",
@@ -39,34 +39,6 @@
       ]
     },
     {
-      "id": "coisa-de-nerd",
-      "title": "Coisa de Nerd",
-      "layout": "hero",
-      "groups": [
-        {
-          "label": "República Coisa de Nerd",
-          "shorts_label": "",
-          "video_ids": [
-            "neJeVvhZjc8",
-            "BdxNYDvKhPc",
-            "azk0YjF4BZE",
-            "Iysb-8BMNt8",
-            "RXdWLha8dcM",
-            "gC4SC8j58pI",
-            "nnKNURi__Pc"
-          ]
-        },
-        {
-          "label": "Coisa de Nerd",
-          "shorts_label": "",
-          "video_ids": [
-            "TZfM1yfkFn4",
-            "6DMvk5aNV64"
-          ]
-        }
-      ]
-    },
-    {
       "id": "short-form",
       "title": "Short-form",
       "layout": "hero",
@@ -95,6 +67,34 @@
             "C_s5zdKAAU2",
             "DDprhgUyhfZ",
             "DRNoFKnD2vU"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coisa-de-nerd",
+      "title": "Coisa de Nerd",
+      "layout": "hero",
+      "groups": [
+        {
+          "label": "República Coisa de Nerd",
+          "shorts_label": "Short-form",
+          "video_ids": [
+            "neJeVvhZjc8",
+            "BdxNYDvKhPc",
+            "azk0YjF4BZE",
+            "Iysb-8BMNt8",
+            "RXdWLha8dcM",
+            "gC4SC8j58pI",
+            "nnKNURi__Pc"
+          ]
+        },
+        {
+          "label": "Coisa de Nerd",
+          "shorts_label": "",
+          "video_ids": [
+            "TZfM1yfkFn4",
+            "6DMvk5aNV64"
           ]
         }
       ]

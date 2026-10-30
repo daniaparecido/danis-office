@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:31
+ * Last updated: 2026-10-30 13:37
  */
 
 const totalYouTubeViews = 439040130;
@@ -254,137 +254,6 @@ const sections = [
     ]
   },
   {
-    "id": "coisa-de-nerd",
-    "title": "Coisa de Nerd",
-    "layout": "hero",
-    "groups": [
-      {
-        "label": "República Coisa de Nerd",
-        "shortsLabel": "",
-        "items": [
-          {
-            "title": "O QUE OS GRINGOS ACHAM DO BRASIL?!",
-            "category": "long-form",
-            "videoId": "neJeVvhZjc8",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "802K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
-            "previewVideo": "",
-            "localSource": false
-          },
-          {
-            "title": "LEON BATEU O RECORDE MUNDIAL (DE VERDADE!!!)",
-            "category": "long-form",
-            "videoId": "BdxNYDvKhPc",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "6.0M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=BdxNYDvKhPc",
-            "previewVideo": "",
-            "localSource": false
-          },
-          {
-            "title": "PENSA RÁPIDO! - Quem Sabe Menos #24",
-            "category": "long-form",
-            "videoId": "azk0YjF4BZE",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "891K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=azk0YjF4BZE",
-            "previewVideo": "",
-            "localSource": false
-          },
-          {
-            "title": "MILAGRE!!! UM JOGO QUE O LEON JOGA BEM",
-            "category": "long-form",
-            "videoId": "Iysb-8BMNt8",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "2.5M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=Iysb-8BMNt8",
-            "previewVideo": "",
-            "localSource": false
-          },
-          {
-            "title": "LEON E NILCE = GÊNIOS #desafio",
-            "category": "short-form",
-            "videoId": "RXdWLha8dcM",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "1.3M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
-            "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
-            "localSource": true
-          },
-          {
-            "title": "LEON REAGE AO SEU MEME MAIS PESADO",
-            "category": "short-form",
-            "videoId": "gC4SC8j58pI",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "5.5M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
-            "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
-            "localSource": true
-          },
-          {
-            "title": "GAMBIARRA INÚTIL OU GENIAL? #curioso",
-            "category": "short-form",
-            "videoId": "nnKNURi__Pc",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "615K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=nnKNURi__Pc",
-            "previewVideo": "videos/previews/nnKNURi__Pc.mp4",
-            "localSource": true
-          }
-        ]
-      },
-      {
-        "label": "Coisa de Nerd",
-        "shortsLabel": "",
-        "items": [
-          {
-            "title": "Adeus Windows! Bem-vindo Linux!",
-            "category": "long-form",
-            "videoId": "TZfM1yfkFn4",
-            "platform": "youtube",
-            "channelName": "Coisa de Nerd",
-            "viewCount": "1.1M views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
-            "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
-            "localSource": false,
-            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
-            "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
-            "subtitlesLang": "en",
-            "subtitlesLabel": "English"
-          },
-          {
-            "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
-            "category": "long-form",
-            "videoId": "6DMvk5aNV64",
-            "platform": "youtube",
-            "channelName": "República Coisa de Nerd",
-            "viewCount": "256K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
-            "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
-            "localSource": false
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "short-form",
     "title": "Short-form",
     "layout": "hero",
@@ -565,6 +434,137 @@ const sections = [
             "thumbnail": "images/thumbnails/DRNoFKnD2vU.jpg",
             "url": "https://www.instagram.com/p/DRNoFKnD2vU/",
             "previewVideo": "videos/previews/DRNoFKnD2vU.mp4",
+            "localSource": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coisa-de-nerd",
+    "title": "Coisa de Nerd",
+    "layout": "hero",
+    "groups": [
+      {
+        "label": "República Coisa de Nerd",
+        "shortsLabel": "Short-form",
+        "items": [
+          {
+            "title": "O QUE OS GRINGOS ACHAM DO BRASIL?!",
+            "category": "long-form",
+            "videoId": "neJeVvhZjc8",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "802K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "LEON BATEU O RECORDE MUNDIAL (DE VERDADE!!!)",
+            "category": "long-form",
+            "videoId": "BdxNYDvKhPc",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "6.0M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=BdxNYDvKhPc",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "PENSA RÁPIDO! - Quem Sabe Menos #24",
+            "category": "long-form",
+            "videoId": "azk0YjF4BZE",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "891K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=azk0YjF4BZE",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "MILAGRE!!! UM JOGO QUE O LEON JOGA BEM",
+            "category": "long-form",
+            "videoId": "Iysb-8BMNt8",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "2.5M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=Iysb-8BMNt8",
+            "previewVideo": "",
+            "localSource": false
+          },
+          {
+            "title": "LEON E NILCE = GÊNIOS #desafio",
+            "category": "short-form",
+            "videoId": "RXdWLha8dcM",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "1.3M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=RXdWLha8dcM",
+            "previewVideo": "videos/previews/RXdWLha8dcM.mp4",
+            "localSource": true
+          },
+          {
+            "title": "LEON REAGE AO SEU MEME MAIS PESADO",
+            "category": "short-form",
+            "videoId": "gC4SC8j58pI",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "5.5M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
+            "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
+            "localSource": true
+          },
+          {
+            "title": "GAMBIARRA INÚTIL OU GENIAL? #curioso",
+            "category": "short-form",
+            "videoId": "nnKNURi__Pc",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "615K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=nnKNURi__Pc",
+            "previewVideo": "videos/previews/nnKNURi__Pc.mp4",
+            "localSource": true
+          }
+        ]
+      },
+      {
+        "label": "Coisa de Nerd",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "Adeus Windows! Bem-vindo Linux!",
+            "category": "long-form",
+            "videoId": "TZfM1yfkFn4",
+            "platform": "youtube",
+            "channelName": "Coisa de Nerd",
+            "viewCount": "1.1M views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=TZfM1yfkFn4",
+            "previewVideo": "videos/previews/TZfM1yfkFn4.mp4",
+            "localSource": false,
+            "videoSrc": "https://github.com/daniaparecido/danis-office/releases/download/media/TZfM1yfkFn4.mp4",
+            "subtitles": "videos/subs/TZfM1yfkFn4.en.vtt",
+            "subtitlesLang": "en",
+            "subtitlesLabel": "English"
+          },
+          {
+            "title": "ENTREI NUMA FURADA POR ESSE DRONE! - DJI Mini 5 Pro",
+            "category": "long-form",
+            "videoId": "6DMvk5aNV64",
+            "platform": "youtube",
+            "channelName": "República Coisa de Nerd",
+            "viewCount": "256K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=6DMvk5aNV64",
+            "previewVideo": "videos/previews/6DMvk5aNV64.mp4",
             "localSource": false
           }
         ]
