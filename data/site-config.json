@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-30T13:37:05-03:00",
+  "generated_at": "2026-10-30T13:38:43-03:00",
   "sections": [
     {
       "id": "featured",
@@ -109,16 +109,6 @@
         "WZLSVMVS5o4",
         "3AtLY01qlYk",
         "XuQ1DiWxblg"
-      ]
-    },
-    {
-      "id": "noar",
-      "title": "Noar",
-      "layout": "tall",
-      "video_ids": [
-        "Cz_Ot4XM5ne",
-        "Czt2L6kpCzW",
-        "C1_1fTOOtRS"
       ]
     }
   ]

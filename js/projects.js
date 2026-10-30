@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:37
+ * Last updated: 2026-10-30 13:38
  */
 
 const totalYouTubeViews = 439040130;
@@ -68,39 +68,6 @@ const projects = [
         thumbnail: "",
         url: "https://www.youtube.com/watch?v=XuQ1DiWxblg",
         previewVideo: "videos/previews/XuQ1DiWxblg.mp4"
-    },
-    {
-        title: "Bruxaria? Vídeo rodando no notebook? 👀 Nada disso! Aqui é Noar! 💜 E o @brunoplayhard colocou a prova em um notebookzinho “peso de papel”! 😎🤘🏻 Conta pra gente, qual o dispositivo que você utiliza a Noa",
-        category: "short-form",
-        videoId: "Cz_Ot4XM5ne",
-        platform: "instagram",
-        channelName: "Noar",
-        viewCount: "471 likes",
-        thumbnail: "images/thumbnails/Cz_Ot4XM5ne.jpg",
-        url: "https://www.instagram.com/p/Cz_Ot4XM5ne/",
-        previewVideo: "videos/previews/Cz_Ot4XM5ne.mp4"
-    },
-    {
-        title: "Dos gamers pro mundo 🌎 A @noarcloud vem pra solucionar a falta de acesso a computadores potentes a todos que precisam. Sejam gamers ou autónomos, arquitetos, videomakers e afins. Afinal quando temos u",
-        category: "short-form",
-        videoId: "Czt2L6kpCzW",
-        platform: "instagram",
-        channelName: "Carol Paiffer",
-        viewCount: "894 likes",
-        thumbnail: "images/thumbnails/Czt2L6kpCzW.jpg",
-        url: "https://www.instagram.com/p/Czt2L6kpCzW/",
-        previewVideo: "videos/previews/Czt2L6kpCzW.mp4"
-    },
-    {
-        title: "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
-        category: "short-form",
-        videoId: "C1_1fTOOtRS",
-        platform: "instagram",
-        channelName: "Noar",
-        viewCount: "3 likes",
-        thumbnail: "images/thumbnails/C1_1fTOOtRS.jpg",
-        url: "https://www.instagram.com/p/C1_1fTOOtRS/",
-        previewVideo: "videos/previews/C1_1fTOOtRS.mp4"
     },
 ];
 
@@ -634,49 +601,6 @@ const sections = [
         "thumbnail": "",
         "url": "https://www.youtube.com/watch?v=XuQ1DiWxblg",
         "previewVideo": "videos/previews/XuQ1DiWxblg.mp4",
-        "localSource": false
-      }
-    ]
-  },
-  {
-    "id": "noar",
-    "title": "Noar",
-    "layout": "tall",
-    "items": [
-      {
-        "title": "Bruxaria? Vídeo rodando no notebook? 👀 Nada disso! Aqui é Noar! 💜 E o @brunoplayhard colocou a prova em um notebookzinho “peso de papel”! 😎🤘🏻 Conta pra gente, qual o dispositivo que você utiliza a Noa",
-        "category": "short-form",
-        "videoId": "Cz_Ot4XM5ne",
-        "platform": "instagram",
-        "channelName": "Noar",
-        "viewCount": "471 likes",
-        "thumbnail": "images/thumbnails/Cz_Ot4XM5ne.jpg",
-        "url": "https://www.instagram.com/p/Cz_Ot4XM5ne/",
-        "previewVideo": "videos/previews/Cz_Ot4XM5ne.mp4",
-        "localSource": false
-      },
-      {
-        "title": "Dos gamers pro mundo 🌎 A @noarcloud vem pra solucionar a falta de acesso a computadores potentes a todos que precisam. Sejam gamers ou autónomos, arquitetos, videomakers e afins. Afinal quando temos u",
-        "category": "short-form",
-        "videoId": "Czt2L6kpCzW",
-        "platform": "instagram",
-        "channelName": "Carol Paiffer",
-        "viewCount": "894 likes",
-        "thumbnail": "images/thumbnails/Czt2L6kpCzW.jpg",
-        "url": "https://www.instagram.com/p/Czt2L6kpCzW/",
-        "previewVideo": "videos/previews/Czt2L6kpCzW.mp4",
-        "localSource": false
-      },
-      {
-        "title": "Renderizar em segundos um projeto que levaria horas no seu PC? 👀 Vem pra Noar e dê um upgrade nos seus projetos! 🤘🏻😎 #Noarcloud #Cloudpc #Render #Design #Photoshop #Premiere #Ilustrator",
-        "category": "short-form",
-        "videoId": "C1_1fTOOtRS",
-        "platform": "instagram",
-        "channelName": "Noar",
-        "viewCount": "3 likes",
-        "thumbnail": "images/thumbnails/C1_1fTOOtRS.jpg",
-        "url": "https://www.instagram.com/p/C1_1fTOOtRS/",
-        "previewVideo": "videos/previews/C1_1fTOOtRS.mp4",
         "localSource": false
       }
     ]
