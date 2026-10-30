@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:54
+ * Last updated: 2026-10-30 13:56
  */
 
 const totalYouTubeViews = 439040130;
@@ -410,16 +410,16 @@ const sections = [
             "localSource": false
           },
           {
-            "title": "Revelando como a Bizerra ganhou o Game Changers 😲🤯É o poder da Alienware!   #valorant",
+            "title": "Revelando como a @bizerravlr ganhou o Game Changers 😲🤯 É o poder da @alienware",
             "category": "short-form",
-            "videoId": "5CL6MsP6o6Q",
-            "platform": "youtube",
-            "channelName": "Team Liquid Visa: Valorant BR",
-            "viewCount": "8K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=5CL6MsP6o6Q",
-            "previewVideo": "videos/previews/5CL6MsP6o6Q.mp4",
-            "localSource": true
+            "videoId": "DSIcD5KDRdk",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "1K likes",
+            "thumbnail": "images/thumbnails/DSIcD5KDRdk.jpg",
+            "url": "https://www.instagram.com/p/DSIcD5KDRdk/",
+            "previewVideo": "videos/previews/DSIcD5KDRdk.mp4",
+            "localSource": false
           },
           {
             "title": "O VLOG DA FINAL DO GAME CHANGERS ESTÁ ENTRE NÓS! 💙 É hora de reviver toda a emoção dessa série tão disputada que garantiu nossa vaga no Game Changers Championship 2025. CORRE PRA ASSISTIR NO YOUTUBE!",
