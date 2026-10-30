@@ -5,12 +5,12 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-29 20:00
+ * Last updated: 2026-10-30 12:46
  */
 
-const totalYouTubeViews = 439022018;
-const totalYouTubeVideos = 588;
-const totalVideos = 735;
+const totalYouTubeViews = 439040130;
+const totalYouTubeVideos = 589;
+const totalVideos = 736;
 
 // Flat list of the grid items (legacy shape; the page draws `sections` below).
 const projects = [
@@ -42,7 +42,7 @@ const projects = [
         videoId: "DODyPfskkr6",
         platform: "instagram",
         channelName: "Team Liquid",
-        viewCount: "167 likes",
+        viewCount: "154 likes",
         thumbnail: "images/thumbnails/DODyPfskkr6.jpg",
         url: "https://www.instagram.com/p/DODyPfskkr6/",
         previewVideo: "videos/previews/DODyPfskkr6.mp4"
@@ -65,7 +65,7 @@ const projects = [
         videoId: "DMqBVM4NTsc",
         platform: "instagram",
         channelName: "Team Liquid",
-        viewCount: "85K likes",
+        viewCount: "74K likes",
         thumbnail: "images/thumbnails/DMqBVM4NTsc.jpg",
         url: "https://www.instagram.com/p/DMqBVM4NTsc/",
         previewVideo: "videos/previews/DMqBVM4NTsc.mp4"
@@ -226,7 +226,7 @@ const sections = [
             "videoId": "DW3F1OHfZeo",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "881K views",
+            "viewCount": "885K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
             "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -391,7 +391,7 @@ const sections = [
         "videoId": "DODyPfskkr6",
         "platform": "instagram",
         "channelName": "Team Liquid",
-        "viewCount": "167 likes",
+        "viewCount": "154 likes",
         "thumbnail": "images/thumbnails/DODyPfskkr6.jpg",
         "url": "https://www.instagram.com/p/DODyPfskkr6/",
         "previewVideo": "videos/previews/DODyPfskkr6.mp4",
@@ -415,7 +415,7 @@ const sections = [
         "videoId": "DMqBVM4NTsc",
         "platform": "instagram",
         "channelName": "Team Liquid",
-        "viewCount": "85K likes",
+        "viewCount": "74K likes",
         "thumbnail": "images/thumbnails/DMqBVM4NTsc.jpg",
         "url": "https://www.instagram.com/p/DMqBVM4NTsc/",
         "previewVideo": "videos/previews/DMqBVM4NTsc.mp4",
