@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T13:44:42-03:00",
+  "generated_at": "2026-10-30T13:54:34-03:00",
   "count": 736,
   "items": [
     {
@@ -10263,21 +10263,6 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
-      "id": "mm7etST6pzc",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=mm7etST6pzc",
-      "title": "COELINHO DA PÁSCOA VERSÃO FORTNITE",
-      "channel": "Team Liquid BR",
-      "duration_sec": 16,
-      "views": 16000,
-      "likes": 542,
-      "comments": 1,
-      "published": "2024-03-28",
-      "thumbnail": "https://i.ytimg.com/vi/mm7etST6pzc/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
       "id": "dM6tTcdpf9g",
       "platform": "youtube",
       "category": "short-form",
@@ -10290,6 +10275,21 @@
       "comments": 9,
       "published": "2024-11-29",
       "thumbnail": "https://i.ytimg.com/vi/dM6tTcdpf9g/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
+      "id": "mm7etST6pzc",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=mm7etST6pzc",
+      "title": "COELINHO DA PÁSCOA VERSÃO FORTNITE",
+      "channel": "Team Liquid BR",
+      "duration_sec": 16,
+      "views": 16000,
+      "likes": 542,
+      "comments": 1,
+      "published": "2024-03-28",
+      "thumbnail": "https://i.ytimg.com/vi/mm7etST6pzc/maxresdefault.jpg",
       "last_updated": "2026-10-30 12:45"
     },
     {
@@ -10353,36 +10353,6 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
-      "id": "RufhoTsfXXk",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=RufhoTsfXXk",
-      "title": "GEOGUESSR NO VALORANT",
-      "channel": "Team Liquid Visa: Valorant BR",
-      "duration_sec": 43,
-      "views": 13000,
-      "likes": 1000,
-      "comments": 6,
-      "published": "2023-09-04",
-      "thumbnail": "https://i.ytimg.com/vi/RufhoTsfXXk/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
-      "id": "tDW7MwIeHfk",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=tDW7MwIeHfk",
-      "title": "RAZAH... vem gravar um vídeo de páscoa???",
-      "channel": "Team Liquid R6 | Rainbow Six",
-      "duration_sec": 18,
-      "views": 13000,
-      "likes": 664,
-      "comments": 2,
-      "published": "2024-03-27",
-      "thumbnail": "https://i.ytimg.com/vi/tDW7MwIeHfk/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
       "id": "67odIA_gYp8",
       "platform": "youtube",
       "category": "short-form",
@@ -10413,18 +10383,33 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
-      "id": "gQC7kwlJoAg",
+      "id": "tDW7MwIeHfk",
       "platform": "youtube",
       "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=gQC7kwlJoAg",
-      "title": "COELINHO DA PÁSCOA VERSÃO VALORANT",
+      "url": "https://www.youtube.com/watch?v=tDW7MwIeHfk",
+      "title": "RAZAH... vem gravar um vídeo de páscoa???",
+      "channel": "Team Liquid R6 | Rainbow Six",
+      "duration_sec": 18,
+      "views": 13000,
+      "likes": 664,
+      "comments": 2,
+      "published": "2024-03-27",
+      "thumbnail": "https://i.ytimg.com/vi/tDW7MwIeHfk/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
+      "id": "RufhoTsfXXk",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=RufhoTsfXXk",
+      "title": "GEOGUESSR NO VALORANT",
       "channel": "Team Liquid Visa: Valorant BR",
-      "duration_sec": 11,
-      "views": 12000,
-      "likes": 526,
-      "comments": 8,
-      "published": "2024-03-28",
-      "thumbnail": "https://i.ytimg.com/vi/gQC7kwlJoAg/maxresdefault.jpg",
+      "duration_sec": 43,
+      "views": 13000,
+      "likes": 1000,
+      "comments": 6,
+      "published": "2023-09-04",
+      "thumbnail": "https://i.ytimg.com/vi/RufhoTsfXXk/maxresdefault.jpg",
       "last_updated": "2026-10-30 12:45"
     },
     {
@@ -10473,6 +10458,21 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
+      "id": "gQC7kwlJoAg",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=gQC7kwlJoAg",
+      "title": "COELINHO DA PÁSCOA VERSÃO VALORANT",
+      "channel": "Team Liquid Visa: Valorant BR",
+      "duration_sec": 11,
+      "views": 12000,
+      "likes": 526,
+      "comments": 8,
+      "published": "2024-03-28",
+      "thumbnail": "https://i.ytimg.com/vi/gQC7kwlJoAg/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
       "id": "UkEXXO-o8b8",
       "platform": "youtube",
       "category": "short-form",
@@ -10503,21 +10503,6 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
-      "id": "fdnQTxkHolY",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=fdnQTxkHolY",
-      "title": "FRTTT é EXPULSO da TEAM LIQUID",
-      "channel": "Team Liquid Visa: Valorant BR",
-      "duration_sec": 33,
-      "views": 11000,
-      "likes": 719,
-      "comments": 3,
-      "published": "2024-01-30",
-      "thumbnail": "https://i.ytimg.com/vi/fdnQTxkHolY/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
       "id": "Gj1Iwjw_xr0",
       "platform": "youtube",
       "category": "short-form",
@@ -10533,6 +10518,21 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
+      "id": "fdnQTxkHolY",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=fdnQTxkHolY",
+      "title": "FRTTT é EXPULSO da TEAM LIQUID",
+      "channel": "Team Liquid Visa: Valorant BR",
+      "duration_sec": 33,
+      "views": 11000,
+      "likes": 719,
+      "comments": 3,
+      "published": "2024-01-30",
+      "thumbnail": "https://i.ytimg.com/vi/fdnQTxkHolY/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
       "id": "iMOTjxjUJt0",
       "platform": "youtube",
       "category": "short-form",
@@ -10545,6 +10545,21 @@
       "comments": 2,
       "published": "2026-05-21",
       "thumbnail": "https://i.ytimg.com/vi/iMOTjxjUJt0/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
+      "id": "92Ao8Z3iW-0",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=92Ao8Z3iW-0",
+      "title": "PLAYERS DO RAINBOW SIX, grandes dúvidas na mente do amigo Ribeiretes 🤔 #rainbowsix #r6 #r6siege",
+      "channel": "Team Liquid R6 | Rainbow Six",
+      "duration_sec": 58,
+      "views": 9000,
+      "likes": 249,
+      "comments": 9,
+      "published": "2025-07-17",
+      "thumbnail": "https://i.ytimg.com/vi/92Ao8Z3iW-0/maxresdefault.jpg",
       "last_updated": "2026-10-30 12:45"
     },
     {
@@ -10620,21 +10635,6 @@
       "comments": 6,
       "published": "2024-02-02",
       "thumbnail": "https://i.ytimg.com/vi/ZttrptQvrpE/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
-      "id": "92Ao8Z3iW-0",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=92Ao8Z3iW-0",
-      "title": "PLAYERS DO RAINBOW SIX, grandes dúvidas na mente do amigo Ribeiretes 🤔 #rainbowsix #r6 #r6siege",
-      "channel": "Team Liquid R6 | Rainbow Six",
-      "duration_sec": 58,
-      "views": 9000,
-      "likes": 249,
-      "comments": 9,
-      "published": "2025-07-17",
-      "thumbnail": "https://i.ytimg.com/vi/92Ao8Z3iW-0/maxresdefault.jpg",
       "last_updated": "2026-10-30 12:45"
     },
     {
@@ -10818,21 +10818,6 @@
       "last_updated": "2026-10-30 12:45"
     },
     {
-      "id": "eZQp3l7FTsA",
-      "platform": "youtube",
-      "category": "short-form",
-      "url": "https://www.youtube.com/watch?v=eZQp3l7FTsA",
-      "title": "FRTTT em uma aventura no Japão",
-      "channel": "Team Liquid Visa: Valorant BR",
-      "duration_sec": 60,
-      "views": 4000,
-      "likes": 255,
-      "comments": 2,
-      "published": "2024-06-05",
-      "thumbnail": "https://i.ytimg.com/vi/eZQp3l7FTsA/maxresdefault.jpg",
-      "last_updated": "2026-10-30 12:45"
-    },
-    {
       "id": "d3cuDmuuNVc",
       "platform": "youtube",
       "category": "short-form",
@@ -10845,6 +10830,21 @@
       "comments": 2,
       "published": "2024-12-31",
       "thumbnail": "https://i.ytimg.com/vi/d3cuDmuuNVc/maxresdefault.jpg",
+      "last_updated": "2026-10-30 12:45"
+    },
+    {
+      "id": "eZQp3l7FTsA",
+      "platform": "youtube",
+      "category": "short-form",
+      "url": "https://www.youtube.com/watch?v=eZQp3l7FTsA",
+      "title": "FRTTT em uma aventura no Japão",
+      "channel": "Team Liquid Visa: Valorant BR",
+      "duration_sec": 60,
+      "views": 4000,
+      "likes": 255,
+      "comments": 2,
+      "published": "2024-06-05",
+      "thumbnail": "https://i.ytimg.com/vi/eZQp3l7FTsA/maxresdefault.jpg",
       "last_updated": "2026-10-30 12:45"
     },
     {

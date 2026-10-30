@@ -1,7 +1,7 @@
 {
   "$schema": "./site-config.schema.json",
   "version": 2,
-  "generated_at": "2026-10-30T13:44:36-03:00",
+  "generated_at": "2026-10-30T13:54:29-03:00",
   "sections": [
     {
       "id": "featured",
@@ -35,6 +35,15 @@
             "UkEXXO-o8b8",
             "i9px6iapZd4"
           ]
+        },
+        {
+          "label": "",
+          "shorts_label": "",
+          "video_ids": [
+            "mnO5bES3eQY",
+            "7328144873876491526",
+            "7330001803326524677"
+          ]
         }
       ]
     },
@@ -62,11 +71,11 @@
           "video_ids": [
             "DIOkD4iMlUJ",
             "C71usvjJhMM",
-            "KP81WfLdV8c",
             "k7WFheQ6poI",
             "C_s5zdKAAU2",
-            "DDprhgUyhfZ",
-            "DRNoFKnD2vU"
+            "5CL6MsP6o6Q",
+            "DRNoFKnD2vU",
+            "DDprhgUyhfZ"
           ]
         }
       ]

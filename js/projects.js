@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:44
+ * Last updated: 2026-10-30 13:54
  */
 
 const totalYouTubeViews = 439040130;
@@ -217,6 +217,48 @@ const sections = [
             "localSource": true
           }
         ]
+      },
+      {
+        "label": "",
+        "shortsLabel": "",
+        "items": [
+          {
+            "title": "FRTTT vs 5 NOOBS! - Desafio IMPOSSÍVEL no Valorant",
+            "category": "long-form",
+            "videoId": "mnO5bES3eQY",
+            "platform": "youtube",
+            "channelName": "Team Liquid Visa: Valorant BR",
+            "viewCount": "374K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=mnO5bES3eQY",
+            "previewVideo": "videos/previews/mnO5bES3eQY.mp4",
+            "localSource": false
+          },
+          {
+            "title": "FRTTT é pego CHEATANDO no VALORANT 😱 #Valorant #ValorantBrasil #ValorantClips #ValorantFunny #ValorantMemes",
+            "category": "short-form",
+            "videoId": "7328144873876491526",
+            "platform": "tiktok",
+            "channelName": "teamliquidbr",
+            "viewCount": "46K views",
+            "thumbnail": "images/thumbnails/7328144873876491526.jpg",
+            "url": "https://www.tiktok.com/@teamliquidbr/video/7328144873876491526",
+            "previewVideo": "videos/previews/7328144873876491526.mp4",
+            "localSource": false
+          },
+          {
+            "title": "FRTTT é EXPULSO da TEAM LIQUID 😰 #VALORANT #VALORANTBrasil #VALORANTClips #VALORANTfunny #VALORANTmemes",
+            "category": "short-form",
+            "videoId": "7330001803326524677",
+            "platform": "tiktok",
+            "channelName": "teamliquidbr",
+            "viewCount": "25K views",
+            "thumbnail": "images/thumbnails/7330001803326524677.jpg",
+            "url": "https://www.tiktok.com/@teamliquidbr/video/7330001803326524677",
+            "previewVideo": "videos/previews/7330001803326524677.mp4",
+            "localSource": false
+          }
+        ]
       }
     ]
   },
@@ -344,18 +386,6 @@ const sections = [
             "localSource": false
           },
           {
-            "title": "FRTTT é PEGO CHEATANDO no VALORANT",
-            "category": "short-form",
-            "videoId": "KP81WfLdV8c",
-            "platform": "youtube",
-            "channelName": "Team Liquid Visa: Valorant BR",
-            "viewCount": "444K views",
-            "thumbnail": "",
-            "url": "https://www.youtube.com/watch?v=KP81WfLdV8c",
-            "previewVideo": "videos/previews/KP81WfLdV8c.mp4",
-            "localSource": true
-          },
-          {
             "title": "BOLO OU FAKE VERSÃO VALORANT",
             "category": "short-form",
             "videoId": "k7WFheQ6poI",
@@ -380,16 +410,16 @@ const sections = [
             "localSource": false
           },
           {
-            "title": "INTANKAVEL O FINAL KKKKKKKKKKKK",
+            "title": "Revelando como a Bizerra ganhou o Game Changers 😲🤯É o poder da Alienware!   #valorant",
             "category": "short-form",
-            "videoId": "DDprhgUyhfZ",
-            "platform": "instagram",
-            "channelName": "Team Liquid BR 🇧🇷",
-            "viewCount": "1K likes",
-            "thumbnail": "images/thumbnails/DDprhgUyhfZ.jpg",
-            "url": "https://www.instagram.com/p/DDprhgUyhfZ/",
-            "previewVideo": "videos/previews/DDprhgUyhfZ.mp4",
-            "localSource": false
+            "videoId": "5CL6MsP6o6Q",
+            "platform": "youtube",
+            "channelName": "Team Liquid Visa: Valorant BR",
+            "viewCount": "8K views",
+            "thumbnail": "",
+            "url": "https://www.youtube.com/watch?v=5CL6MsP6o6Q",
+            "previewVideo": "videos/previews/5CL6MsP6o6Q.mp4",
+            "localSource": true
           },
           {
             "title": "O VLOG DA FINAL DO GAME CHANGERS ESTÁ ENTRE NÓS! 💙 É hora de reviver toda a emoção dessa série tão disputada que garantiu nossa vaga no Game Changers Championship 2025. CORRE PRA ASSISTIR NO YOUTUBE!",
@@ -401,6 +431,18 @@ const sections = [
             "thumbnail": "images/thumbnails/DRNoFKnD2vU.jpg",
             "url": "https://www.instagram.com/p/DRNoFKnD2vU/",
             "previewVideo": "videos/previews/DRNoFKnD2vU.mp4",
+            "localSource": false
+          },
+          {
+            "title": "INTANKAVEL O FINAL KKKKKKKKKKKK",
+            "category": "short-form",
+            "videoId": "DDprhgUyhfZ",
+            "platform": "instagram",
+            "channelName": "Team Liquid BR 🇧🇷",
+            "viewCount": "1K likes",
+            "thumbnail": "images/thumbnails/DDprhgUyhfZ.jpg",
+            "url": "https://www.instagram.com/p/DDprhgUyhfZ/",
+            "previewVideo": "videos/previews/DDprhgUyhfZ.mp4",
             "localSource": false
           }
         ]
