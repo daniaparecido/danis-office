@@ -5,7 +5,7 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-10-30 13:56
+ * Last updated: 2026-10-30 13:57
  */
 
 const totalYouTubeViews = 439040130;
@@ -467,7 +467,7 @@ const sections = [
             "viewCount": "802K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
-            "previewVideo": "",
+            "previewVideo": "videos/previews/neJeVvhZjc8.mp4",
             "localSource": false
           },
           {
@@ -479,7 +479,7 @@ const sections = [
             "viewCount": "6.0M views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=BdxNYDvKhPc",
-            "previewVideo": "",
+            "previewVideo": "videos/previews/BdxNYDvKhPc.mp4",
             "localSource": false
           },
           {
@@ -491,7 +491,7 @@ const sections = [
             "viewCount": "891K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=azk0YjF4BZE",
-            "previewVideo": "",
+            "previewVideo": "videos/previews/azk0YjF4BZE.mp4",
             "localSource": false
           },
           {
@@ -503,7 +503,7 @@ const sections = [
             "viewCount": "2.5M views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=Iysb-8BMNt8",
-            "previewVideo": "",
+            "previewVideo": "videos/previews/Iysb-8BMNt8.mp4",
             "localSource": false
           },
           {
