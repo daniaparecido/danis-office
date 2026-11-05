@@ -5,10 +5,10 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-11-04 14:02
+ * Last updated: 2026-11-05 14:15
  */
 
-const totalYouTubeViews = 439154030;
+const totalYouTubeViews = 439179032;
 const totalYouTubeVideos = 589;
 const totalVideos = 736;
 
@@ -110,7 +110,7 @@ const sections = [
             "videoId": "DW3F1OHfZeo",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "910K views",
+            "viewCount": "915K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
             "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -122,7 +122,7 @@ const sections = [
             "videoId": "1m9rl_lxits",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "42K views",
+            "viewCount": "43K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/shorts/1m9rl_lxits",
             "previewVideo": "videos/previews/1m9rl_lxits.mp4",
@@ -176,7 +176,7 @@ const sections = [
             "videoId": "IFmOMTKXhbA",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "65K views",
+            "viewCount": "66K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/shorts/IFmOMTKXhbA",
             "previewVideo": "videos/previews/IFmOMTKXhbA.mp4",
@@ -345,7 +345,7 @@ const sections = [
             "videoId": "r0h4c9QCUuU",
             "platform": "youtube",
             "channelName": "Team Liquid x Nihachu",
-            "viewCount": "117K views",
+            "viewCount": "118K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=r0h4c9QCUuU",
             "previewVideo": "videos/previews/r0h4c9QCUuU.mp4",
@@ -501,7 +501,7 @@ const sections = [
             "videoId": "neJeVvhZjc8",
             "platform": "youtube",
             "channelName": "República Coisa de Nerd",
-            "viewCount": "804K views",
+            "viewCount": "805K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
             "previewVideo": "videos/previews/neJeVvhZjc8.mp4",
