@@ -5,10 +5,10 @@
  *
  * Source: data/library.json (full library) filtered by data/site-config.json.
  * To regenerate, run: python scripts/sync_from_sheet.py
- * Last updated: 2026-11-06 13:43
+ * Last updated: 2026-11-07 12:35
  */
 
-const totalYouTubeViews = 439201036;
+const totalYouTubeViews = 439324036;
 const totalYouTubeVideos = 589;
 const totalVideos = 736;
 
@@ -110,7 +110,7 @@ const sections = [
             "videoId": "DW3F1OHfZeo",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "920K views",
+            "viewCount": "926K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=DW3F1OHfZeo",
             "previewVideo": "videos/previews/DW3F1OHfZeo.mp4",
@@ -152,7 +152,7 @@ const sections = [
             "videoId": "D0tZ5NaRobM",
             "platform": "youtube",
             "channelName": "Team Liquid League of Legends",
-            "viewCount": "211K views",
+            "viewCount": "212K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=D0tZ5NaRobM",
             "previewVideo": "videos/previews/D0tZ5NaRobM.mp4",
@@ -248,7 +248,7 @@ const sections = [
             "videoId": "mnO5bES3eQY",
             "platform": "youtube",
             "channelName": "Team Liquid Visa: Valorant BR",
-            "viewCount": "374K views",
+            "viewCount": "375K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=mnO5bES3eQY",
             "previewVideo": "videos/previews/mnO5bES3eQY.mp4",
@@ -501,7 +501,7 @@ const sections = [
             "videoId": "neJeVvhZjc8",
             "platform": "youtube",
             "channelName": "República Coisa de Nerd",
-            "viewCount": "805K views",
+            "viewCount": "806K views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=neJeVvhZjc8",
             "previewVideo": "videos/previews/neJeVvhZjc8.mp4",
@@ -565,7 +565,7 @@ const sections = [
             "videoId": "gC4SC8j58pI",
             "platform": "youtube",
             "channelName": "República Coisa de Nerd",
-            "viewCount": "5.5M views",
+            "viewCount": "5.6M views",
             "thumbnail": "",
             "url": "https://www.youtube.com/watch?v=gC4SC8j58pI",
             "previewVideo": "videos/previews/gC4SC8j58pI.mp4",
