@@ -873,69 +873,9 @@
     // Initialization
     // ============================================
 
-    // ============================================
-    // Mobile Tabs
-    // ============================================
-
-    function initMobileTabs() {
-        const tabsContainer = document.getElementById('mobile-tabs');
-        if (!tabsContainer) return;
-
-        // One tab per rendered section, labelled with the section title.
-        const sectionEls = Array.from(document.querySelectorAll('#sections-root > .section'));
-        tabsContainer.innerHTML = '';
-        sectionEls.forEach(sec => {
-            const btn = document.createElement('button');
-            btn.className = 'mobile-tab';
-            btn.type = 'button';
-            btn.dataset.tab = sec.id.replace(/^section-/, '');
-            const t = sec.querySelector('.section-title');
-            btn.textContent = (t && t.textContent) || btn.dataset.tab;
-            tabsContainer.appendChild(btn);
-        });
-        const tabs = Array.from(tabsContainer.querySelectorAll('.mobile-tab'));
-        if (!tabs.length) return;
-        const defaultTab = tabs[0].dataset.tab;
-
-        function switchTab(tabName) {
-            tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
-            sectionEls.forEach(sec => sec.classList.toggle('mobile-hidden', sec.id !== 'section-' + tabName));
-        }
-
-        tabs.forEach(tab => tab.addEventListener('click', () => switchTab(tab.dataset.tab)));
-
-        // Set initial state on mobile: show the first tab's section
-        const mq = window.matchMedia('(max-width: 768px)');
-        if (mq.matches) switchTab(defaultTab);
-
-        // Listen for resize to show/hide sections appropriately
-        mq.addEventListener('change', e => {
-            if (e.matches) {
-                const activeTab = tabsContainer.querySelector('.mobile-tab.active');
-                switchTab(activeTab ? activeTab.dataset.tab : defaultTab);
-            } else {
-                sectionEls.forEach(sec => sec.classList.remove('mobile-hidden'));
-            }
-        });
-    }
-
-    // Keep --header-h in sync with the real header height so the mobile sticky
-    // tabs pin flush below the (also sticky) header even as it wraps to 1-3 rows.
-    function initStickyHeaderOffset() {
-        const header = document.querySelector('.header');
-        if (!header) return;
-        const apply = () => {
-            document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
-        };
-        apply();
-        window.addEventListener('resize', apply);
-        if (typeof ResizeObserver !== 'undefined') {
-            new ResizeObserver(apply).observe(header);
-        }
-        if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(apply);
-        }
-    }
+    // Phones scroll the same page as desktop: every section stays visible with
+    // its title. The per-section phone tabs (initMobileTabs) and the header
+    // offset they pinned under (initStickyHeaderOffset) were removed 2026-11-12.
 
     function initVideoListDropdown() {
         const toggle = document.getElementById('video-list-toggle');
@@ -988,8 +928,6 @@
         initVideoListDropdown();
         initCopyEmail();
         updateViewCounter();
-        initMobileTabs();
-        initStickyHeaderOffset();
     }
 
     if (document.readyState === 'loading') {

@@ -1227,13 +1227,6 @@ button {
 }
 
 /* ========================================
-   Mobile Tabs (hidden on desktop)
-   ======================================== */
-.mobile-tabs {
-    display: none;
-}
-
-/* ========================================
    Responsive Design - Tablet
    ======================================== */
 @media (max-width: 1024px) {
@@ -1353,68 +1346,23 @@ button {
         font-size: 11px;
     }
 
-    /* Mobile tabs — pinned directly below the (also sticky) header.
-       --header-h is measured in JS so the tabs sit flush even as the header
-       wraps to different heights; the 96px fallback covers first paint. */
-    .mobile-tabs {
-        display: flex;
-        position: sticky;
-        top: var(--header-h, 96px);
-        z-index: 150;
-        background-color: #000000;
-        border-bottom: 1px solid #222222;
-        padding: 0;
-    }
-
-    .mobile-tabs {
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    .mobile-tabs::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Any number of sections: tabs share the width, and once they would get
-       narrower than a quarter of the screen the strip scrolls sideways. */
-    .mobile-tab {
-        flex: 1 0 auto;
-        min-width: 25%;
-        white-space: nowrap;
-        padding: 12px 10px;
-        font-family: inherit;
-        font-size: 11px;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #888888;
-        background: none;
-        border: none;
-        border-bottom: 2px solid transparent;
-        cursor: pointer;
-        transition: color 0.2s cubic-bezier(0.23, 1, 0.32, 1),
-                    border-color 0.2s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .mobile-tab.active {
-        color: #ffffff;
-        border-bottom-color: #ffffff;
-    }
-
-    .mobile-tab:active {
-        transform: scale(0.97);
-    }
-
-    /* Hide section titles on mobile (tabs replace them) */
-    .section-title {
-        display: none;
-    }
-
+    /* One continuous scroll on the phone, like desktop (the phone tabs were
+       removed 2026-11-12): section titles stay, a little smaller, with less
+       room between sections. */
     .section {
-        margin-bottom: 0;
+        margin-bottom: 40px;
     }
 
-    /* Featured is its own tab on mobile, so stack the main + shorts layout */
+    .section-title {
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+
+    .section-title::after {
+        margin-top: 10px;
+    }
+
+    /* Stack the main + shorts layout on the phone */
     .featured-container {
         gap: 20px;
     }
@@ -1487,13 +1435,7 @@ button {
         font-size: 10px;
     }
 
-    /* Hide inactive section on mobile */
-    .section.mobile-hidden {
-        display: none;
-    }
-
-    /* Header stays sticky on mobile too (base .header is sticky top:0 z-index:200);
-       the mobile tabs pin just below it via --header-h. */
+    /* Header stays sticky on mobile too (base .header is sticky top:0 z-index:200). */
 
     .main {
         padding: 8px;
